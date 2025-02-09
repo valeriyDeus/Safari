@@ -2402,12 +2402,12 @@ body {
 .total-order-checkout__value span {
   margin-right: .3125rem
 }
-.webpt-order {
+.present-order {
   display: grid;
   row-gap: 1rem;
   letter-spacing: .0125rem
 }
-.webpt-order__body {
+.present-order__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2422,15 +2422,15 @@ body {
   column-gap: 1rem;
   row-gap: .625rem
 }
-.webpt-order__label {
+.present-order__label {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1
 }
-.webpt-order__text {
+.present-order__text {
   font-size: .875rem
 }
-.options.webpt {
+.options-present {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2444,12 +2444,12 @@ body {
   column-gap: 2.0625rem;
   row-gap: .625rem
 }
-.options.webpt__input:checked+.options.webpt__label {
+.options-present__input:checked+.options-present__label {
   border-color: transparent;
   background-color: #ed165f;
   color: #fff
 }
-.options.webpt__label {
+.options-present__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4127,7 +4127,7 @@ span.flatpickr-weekday {
   .order-checkout__orders {
     padding-bottom: 4rem
   }
-  .order-checkout_.webpt:not(:last-child) {
+  .order-checkout__present:not(:last-child) {
     margin-bottom: 4rem
   }
   .prices-order-checkout {
@@ -4154,7 +4154,7 @@ span.flatpickr-weekday {
   .total-order-checkout {
     padding-right: 2rem
   }
-  .webpt-order:not(:last-child) {
+  .present-order:not(:last-child) {
     margin-bottom: 4rem
   }
 }
@@ -4385,10 +4385,10 @@ span.flatpickr-weekday {
   .order-checkout__summary:not(:last-child) {
     margin-bottom: 1rem
   }
-  .order-checkout_.webpt:not(:last-child) {
+  .order-checkout__present:not(:last-child) {
     margin-bottom: 2rem
   }
-  .webpt-order:not(:last-child) {
+  .present-order:not(:last-child) {
     margin-bottom: 2rem
   }
 }
@@ -6135,22 +6135,22 @@ span.flatpickr-weekday {
     }
   }
   @supports (margin-bottom:clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)) {
-    .order-checkout_.webpt:not(:last-child) {
+    .order-checkout__present:not(:last-child) {
       margin-bottom: clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)
     }
   }
   @supports not (margin-bottom:clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)) {
-    .order-checkout_.webpt:not(:last-child) {
+    .order-checkout__present:not(:last-child) {
       margin-bottom: calc(2rem + 2*(100vw - 20rem)/ 70)
     }
   }
   @supports (margin-bottom:clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)) {
-    .webpt-order:not(:last-child) {
+    .present-order:not(:last-child) {
       margin-bottom: clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)
     }
   }
   @supports not (margin-bottom:clamp(2rem ,1.4285714286rem + 2.8571428571vw ,4rem)) {
-    .webpt-order:not(:last-child) {
+    .present-order:not(:last-child) {
       margin-bottom: calc(2rem + 2*(100vw - 20rem)/ 70)
     }
   }
@@ -6386,7 +6386,7 @@ span.flatpickr-weekday {
   .quantity-cart__button:hover svg {
     color: #ed165f
   }
-  .options.webpt__label:hover {
+  .options-present__label:hover {
     border-color: #ed165f;
     color: #ed165f
   }
