@@ -2,112 +2,112 @@
   "products":[
     {
       "id":"product-1",
-      "image":"01.png",
+      "image":"01.webp",
       "title":"Multicolored armless top",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-2",
-      "image":"02.png",
+      "image":"02.webp",
       "title":"Grey bee wrist-watch",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-3",
-      "image":"03.png",
+      "image":"03.webp",
       "title":"Mini skirt",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-4",
-      "image":"04.png",
+      "image":"04.webp",
       "title":"Red lightweight gown",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-5",
-      "image":"05.png",
+      "image":"05.webp",
       "title":"Blue botton-down gown",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-6",
-      "image":"06.png",
+      "image":"06.webp",
       "title":"Moon and star neckpiece",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-7",
-      "image":"07.png",
+      "image":"07.webp",
       "title":"Tambourine Crossbody Bag",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-8",
-      "image":"08.png",
+      "image":"08.webp",
       "title":"Katy Perry Killer Queen EDP",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-9",
-      "image":"09.png",
+      "image":"09.webp",
       "title":"High heels ladies shoes",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-10",
-      "image":"10.png",
+      "image":"10.webp",
       "title":"Nerdy oval glasses",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-11",
-      "image":"11.png",
+      "image":"11.webp",
       "title":"Diamond ladies ring",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-12",
-      "image":"12.png",
+      "image":"12.webp",
       "title":"Ladies bush pants",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-13",
-      "image":"13.png",
+      "image":"13.webp",
       "title":"Guilhermina Embellished Slides",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-14",
-      "image":"14.png",
+      "image":"14.webp",
       "title":"Superga Plaid Sneakers",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-15",
-      "image":"15.png",
+      "image":"15.webp",
       "title":"Checked ladies trouser",
       "currency":"₦",
       "price":"10,000"
     },
     {
       "id":"product-16",
-      "image":"16.png",
+      "image":"16.webp",
       "title":"Beanie winter fleece",
       "currency":"₦",
       "price":"10,000"
