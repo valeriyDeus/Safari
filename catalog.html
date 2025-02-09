@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Catalog</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250209151406">
+	<link rel="icon" href="favicon.png" sizes="96x96" type="image/png">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container header__container--fluid">
+				<div class="header__menu menu">
+					<button type="button" aria-label="Open menu" data-burger-button class="menu__burger burger-menu">
+						<span></span>
+					</button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link menu__link--home menu__link--active">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Clothes</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Shoes</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Accessories</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a href="#" class="header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+				<div class="header__actions actions-header">
+					<form action="#" data-form class="actions-header__search search-header">
+						<div class="search-header__body">
+							<input data-required data-validate type="text" autocomplete="off" name="form[search]" placeholder="Search..." class="search-header__input input">
+							<button type="submit" aria-label="Search" class="search-header__submit action-icon search-button">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg>
+							</button>
+						</div>
+						<button type="button" aria-label="Search" class="search-header__button action-icon search-button search-button--icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<a href="#" aria-label="Account" class="actions-header__link undefined action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#account"></use>
+						</svg>
+					</a>
+					<a href="#" aria-label="Cart" class="actions-header__link undefined action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#cart"></use>
+						</svg>
+					</a>
+					<a href="#" aria-label="Wishlist" class="actions-header__link action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#wishlist"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__catalog section-padding catalog">
+				<div class="catalog__container">
+					<h1 class="catalog__title">CLOTHES</h1>
+					<div class="catalog__body grid-layout grid-layout--catalog">
+						<button class="grid-layout__button grid-layout__button--catalog" aria-label="Open filter menu" data-button-filter-menu>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<aside class="catalog__filter grid-layout__menu filter" data-filter>
+							<button class="filter__close close-menu-button close-menu-button--filter" type="button" aria-label="Close filter menu">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#clear"></use>
+								</svg>
+							</button>
+							<div class="filter__block">
+								<div class="filter__header">
+									<div class="filter__title">CATEGORY</div>
+								</div>
+								<div class="filter__body categories-filter">
+									<ul class="categories-filter__list">
+										<li class="categories-filter__item">
+											<a class="categories-filter__link categories-filter__link--active" href="#">All</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Dresses</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Denim</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Jeans</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Jumpsuits</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Tops</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Jackets and coats</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Pants</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Shorts</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Skirts</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Loungerie & underwear</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Leather</a>
+										</li>
+										<li class="categories-filter__item">
+											<a class="categories-filter__link" href="#">Sweaters & knits</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter__block">
+								<div class="filter__header">
+									<div class="filter__title">SIZE</div>
+									<button class="filter__clear" type="button">
+										<span>Clear</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#clear"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="filter__body size-filter">
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-xxs">
+										<label class="checkbox__label size-chekbox__label" for="size-xxs">XXS</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-xs">
+										<label class="checkbox__label size-chekbox__label" for="size-xs">XS</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-s">
+										<label class="checkbox__label size-chekbox__label" for="size-s">S</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-m">
+										<label class="checkbox__label size-chekbox__label" for="size-m">M</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-l">
+										<label class="checkbox__label size-chekbox__label" for="size-l">L</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-xl">
+										<label class="checkbox__label size-chekbox__label" for="size-xl">XL</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-23">
+										<label class="checkbox__label size-chekbox__label" for="size-23">23</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-24">
+										<label class="checkbox__label size-chekbox__label" for="size-24">24</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-25">
+										<label class="checkbox__label size-chekbox__label" for="size-25">25</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-26">
+										<label class="checkbox__label size-chekbox__label" for="size-26">26</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-27">
+										<label class="checkbox__label size-chekbox__label" for="size-27">27</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-28">
+										<label class="checkbox__label size-chekbox__label" for="size-28">28</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-29">
+										<label class="checkbox__label size-chekbox__label" for="size-29">29</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-30">
+										<label class="checkbox__label size-chekbox__label" for="size-30">30</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-31">
+										<label class="checkbox__label size-chekbox__label" for="size-31">31</label>
+									</div>
+									<div class="size-filter__item checkbox size-chekbox">
+										<input class="checkbox__input size-chekbox__input" type="checkbox" name="size" id="size-32">
+										<label class="checkbox__label size-chekbox__label" for="size-32">32</label>
+									</div>
+								</div>
+							</div>
+							<div class="filter__block">
+								<div class="filter__header">
+									<div class="filter__title">COLOR</div>
+									<button class="filter__clear" type="button">
+										<span>Clear</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#clear"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="filter__body color-filter">
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-beige">
+										<label class="checkbox__label color-chekbox__label" style="--color: #f3ecdb" for="color-beige">Beige
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-blue">
+										<label class="checkbox__label color-chekbox__label" style="--color: #465ba3" for="color-blue">Blue
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-black">
+										<label class="checkbox__label color-chekbox__label" style="--color: #000000" for="color-black">Black
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-orange">
+										<label class="checkbox__label color-chekbox__label" style="--color: #f07b4e" for="color-orange">Orange
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-green">
+										<label class="checkbox__label color-chekbox__label" style="--color: #41854d" for="color-green">Green
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-brown">
+										<label class="checkbox__label color-chekbox__label" style="--color: #665147" for="color-brown">Brown
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-purple">
+										<label class="checkbox__label color-chekbox__label" style="--color: #893d88" for="color-purple">Purple
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-gold">
+										<label class="checkbox__label color-chekbox__label" style="--color: #f3b121" for="color-gold">Gold
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-taupe">
+										<label class="checkbox__label color-chekbox__label" style="--color: #cac1b8" for="color-taupe">Taupe
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-white">
+										<label class="checkbox__label color-chekbox__label color-chekbox__label--border" style="--color: #ffffff" for="color-white">White
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-pink">
+										<label class="checkbox__label color-chekbox__label" style="--color: #f2a1b1" for="color-pink">Pink
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+									<div class="color-filter__item checkbox color-chekbox">
+										<input class="checkbox__input color-chekbox__input" type="checkbox" name="color" id="color-red">
+										<label class="checkbox__label color-chekbox__label" style="--color: #d23c47" for="color-red">Red
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="filter__block">
+								<div class="filter__header">
+									<div class="filter__title">Price</div>
+									<button class="filter__clear" type="button">
+										<span>Clear</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#clear"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="filter__body price-filter">
+									<div class="price-filter__item checkbox price-chekbox">
+										<input class="checkbox__input price-chekbox__input" type="checkbox" name="price" id="price-to-10000">
+										<label class="checkbox__label price-chekbox__label" for="price-to-10000">
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+											₦ 0 - ₦ 10,000
+										</label>
+									</div>
+									<div class="price-filter__item checkbox price-chekbox">
+										<input class="checkbox__input price-chekbox__input" type="checkbox" name="price" id="price-from-10000-to-20000">
+										<label class="checkbox__label price-chekbox__label" for="price-from-10000-to-20000">
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+											₦ 10,000 - ₦ 20,000
+										</label>
+									</div>
+									<div class="price-filter__item checkbox price-chekbox">
+										<input class="checkbox__input price-chekbox__input" type="checkbox" name="price" id="price-from-20000-to-50000">
+										<label class="checkbox__label price-chekbox__label" for="price-from-20000-to-50000">
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+											₦ 20,000 - ₦ 50,000
+										</label>
+									</div>
+									<div class="price-filter__item checkbox price-chekbox">
+										<input class="checkbox__input price-chekbox__input" type="checkbox" name="price" id="price-from-50000-to-100000">
+										<label class="checkbox__label price-chekbox__label" for="price-from-50000-to-100000">
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+											₦ 50,000 - ₦ 100,000
+										</label>
+									</div>
+									<div class="price-filter__item checkbox price-chekbox">
+										<input class="checkbox__input price-chekbox__input" type="checkbox" name="price" id="price-from-100000-to-200000">
+										<label class="checkbox__label price-chekbox__label" for="price-from-100000-to-200000">
+											<svg class="size-check-icon">
+												<use xlink:href="img/icons/icons.svg#check"></use>
+											</svg>
+											₦ 100,000 - ₦ 200,000
+										</label>
+									</div>
+									<div class="price-filter__item price-inputs">
+										<div class="price-inputs__body">
+											<input class="price-inputs__input input" type="number" name="price" placeholder="₦" minlength="0" maxlength="200000">
+											<span class="price-inputs__text">to</span>
+											<input class="price-inputs__input input" type="number" name="price" placeholder="₦" minlength="0" maxlength="200000">
+											<button class="price-inputs__button" type="button">Apply</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</aside>
+
+						<div class="catalog__content grid-layout__content">
+							<div class="catalog__header">
+								<select class="catalog__select select-catalog" name="select" title="Sort by category">
+									<option value="MostPopular">Most popular</option>
+									<option value="BestSelling">Best Selling</option>
+									<option value="Price:HighToLow">Price: High to Low</option>
+									<option value="Price:LowToHigh">Price: Low to High</option>
+								</select>
+							</div>
+							<div data-watch data-watch-once class="catalog__items items-catalog items-catalog--catalog-page"></div>
+							<div data-watch class="catalog__pagination pagination">
+								<a href="#" aria-label="Previous page" class="pagination__arrow pagination__arrow--prev">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#arrow"></use>
+									</svg>
+								</a>
+								<ul class="pagination__list">
+									<li class="pagination__item pagination__item--active">
+										<a href="#" class="pagination__link">1</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__link">2</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__link">3</a>
+									</li>
+								</ul>
+								<a href="#" aria-label="Next page" class="pagination__arrow pagination__arrow--next">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#arrow"></use>
+									</svg>
+								</a>
+								<div class="pagination__line"></div>
+							</div>
+							<button type="button" data-goto=".catalog" data-goto-header aria-label="Scroll up" class="scroll-up">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container footer__container--fluid">
+				<a href="#" class="footer__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+				<div class="footer__body">
+					<div class="footer__menu menu-footer">
+						<nav class="menu-footer__nav">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">About us</a>
+								</li>
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">Contact</a>
+								</li>
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">Terms & Conditions</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="menu-footer__social-footer social-footer">
+						<ul class="social-footer__list">
+							<li class="social-footer__item">
+								<a aria-label="Facebook" href="#" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#facebook"></use>
+									</svg>
+									Facebook
+								</a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Twitter" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#twitter"></use>
+									</svg>
+									Twitter
+								</a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Instagram" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#instagram"></use>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+					<form action="#" data-form class="menu-footer__subscribe subscribe-footer">
+						<h4 class="subscribe-footer__title">Subscribe to our newsletter</h4>
+						<div class="subscribe-footer__body">
+							<input type="email" class="subscribe-footer__input input" name="form[email]" data-validate data-required="email" placeholder="Email Address" aria-label="Email Address">
+							<button type="submit" aria-label="Subscribe to newsletter" class="subscribe-footer__submit submit-button submit-button--footer">
+								Ok
+							</button>
+						</div>
+					</form>
+				</div>
+				<address class="footer__contacts contacts-footer">
+					<ul class="contacts-footer__list">
+						<li class="contacts-footer__item">
+							<p class="contacts-footer__address">497 Evergreen Rd. Rosevill, CA 95673</p>
+						</li>
+						<li class="contacts-footer__item">
+							<a class="contacts-footer__link" href="tel:44345678903">44 345 678 903</a>
+						</li>
+						<li class="contacts-footer__item">
+							<a class="contacts-footer__link" href="mailto:adobexd@mail.com">adobexd@mail.com</a>
+						</li>
+					</ul>
+				</address>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250209151406"></script>
+</body>
+
+</html>

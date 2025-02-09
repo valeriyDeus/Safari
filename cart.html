@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Cart</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250209151406">
+	<link rel="icon" href="favicon.png" sizes="96x96" type="image/png">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container header__container--fluid">
+				<div class="header__menu menu">
+					<button type="button" aria-label="Open menu" data-burger-button class="menu__burger burger-menu">
+						<span></span>
+					</button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link menu__link--home menu__link--active">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Clothes</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Shoes</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Accessories</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<a href="#" class="header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+				<div class="header__actions actions-header">
+					<form action="#" data-form class="actions-header__search search-header">
+						<div class="search-header__body">
+							<input data-required data-validate type="text" autocomplete="off" name="form[search]" placeholder="Search..." class="search-header__input input">
+							<button type="submit" aria-label="Search" class="search-header__submit action-icon search-button">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg>
+							</button>
+						</div>
+						<button type="button" aria-label="Search" class="search-header__button action-icon search-button search-button--icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<a href="#" aria-label="Account" class="actions-header__link  action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#account"></use>
+						</svg>
+					</a>
+					<a href="#" aria-label="Cart" class="actions-header__link actions-header__link--active action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#cart"></use>
+						</svg>
+					</a>
+					<a href="#" aria-label="Wishlist" class="actions-header__link action-icon">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#wishlist"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__cart cart section-padding-account">
+				<div class="cart__container">
+					<h1 class="cart__title title-sign-in title-sign-in--cart">Shopping Cart <span></span></h1>
+					<div class="cart__content">
+						<div class="cart__info info-cart">
+							<div class="info-cart__item">ITEM DESCRIPTION</div>
+							<div class="info-cart__item">QUANTITY</div>
+							<div class="info-cart__item">UNIT PRICE</div>
+							<div class="info-cart__item">SUB TOTAL</div>
+						</div>
+						<div class="cart__products products-cart">
+							<div class="products-cart__item shadow-decor">
+								<article data-currency="₦" data-price="10000" class="products-cart__order order">
+									<div class="order__body">
+										<div class="order__product">
+											<a class="order__image" href="#">
+												<img src="img/account/01.webp" alt="Image">
+											</a>
+										</div>
+										<div class="order__info">
+											<h4 class="order__title order__title--big">
+												<a class="order__link-title" href="#">Casual flat loafers</a>
+											</h4>
+											<ul class="order__list list-order">
+												<li class="list-order__item list-order__item--size list-order__item--grey">
+													Size - EU: 36 US: 5.5
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="order__buttons">
+										<button class="order__button submit-button submit-button--no-border submit-button--transparent" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#wishlist"></use>
+											</svg>
+											MOVE TO FAVORITES
+										</button>
+										<button class="order__button submit-button submit-button--no-border submit-button--transparent" type="button" data-remove-order-button>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#remove"></use>
+											</svg>
+											REMOVE
+										</button>
+									</div>
+								</article>
+								<div class="products-cart__quantity quantity-cart">
+									<div data-quantity class="quantity-cart__body">
+										<div class="quantity-cart__input">
+											<input data-quantity-value data-quantity-max="5" data-quantity-min="1" type="text" name="form[quantity]" value="1" />
+										</div>
+										<div class="quantity-cart__buttons">
+											<button data-quantity-plus type="button" class="quantity-cart__button quantity-cart__button--plus">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</button>
+											<button data-quantity-minus type="button" disabled class="quantity-cart__button quantity-cart__button--minus">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="products-cart__price"></div>
+								<div class="products-cart__total"></div>
+							</div>
+							<div class="products-cart__item shadow-decor">
+								<article data-currency="₦" data-price="10000" class="products-cart__order order">
+									<div class="order__body">
+										<div class="order__product">
+											<a class="order__image" href="#">
+												<img src="img/account/02.webp" alt="Image">
+											</a>
+										</div>
+										<div class="order__info">
+											<h4 class="order__title order__title--big">
+												<a class="order__link-title" href="#">Multicolored armless top</a>
+											</h4>
+											<ul class="order__list list-order">
+												<li class="list-order__item list-order__item--size list-order__item--grey">
+													Size - XS
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="order__buttons">
+										<button class="order__button submit-button submit-button--no-border submit-button--transparent" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#wishlist"></use>
+											</svg>
+											MOVE TO FAVORITES
+										</button>
+										<button class="order__button submit-button submit-button--no-border submit-button--transparent" type="button" data-remove-order-button>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#remove"></use>
+											</svg>
+											REMOVE
+										</button>
+									</div>
+								</article>
+								<div class="products-cart__quantity quantity-cart">
+									<div data-quantity class="quantity-cart__body">
+										<div class="quantity-cart__input">
+											<input data-quantity-value data-quantity-max="5" data-quantity-min="1" type="text" name="form[quantity]" value="2" />
+										</div>
+										<div class="quantity-cart__buttons">
+											<button data-quantity-plus type="button" class="quantity-cart__button quantity-cart__button--plus">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</button>
+											<button data-quantity-minus type="button" disabled class="quantity-cart__button quantity-cart__button--minus">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="products-cart__price"></div>
+								<div class="products-cart__total"></div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__total total-cart">
+						<div class="total-cart__item">
+							<div class="total-cart__label">TOTAL:</div>
+							<div class="total-cart__value">₦ 20,000</div>
+						</div>
+						<div class="total-cart__text">
+							<p>Delivery fee not included yet</p>
+						</div>
+					</div>
+					<div class="cart__buttons">
+						<a class="cart__button submit-button submit-button--transparent" href="#">CONTINUE SHOPPING</a>
+						<a class="cart__button submit-button" href="#">PROCEED TO CHECKOUT</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container footer__container--fluid">
+				<a href="#" class="footer__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+				<div class="footer__body">
+					<div class="footer__menu menu-footer">
+						<nav class="menu-footer__nav">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">About us</a>
+								</li>
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">Contact</a>
+								</li>
+								<li class="menu-footer__item">
+									<a href="#" class="menu-footer__link">Terms & Conditions</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="menu-footer__social-footer social-footer">
+						<ul class="social-footer__list">
+							<li class="social-footer__item">
+								<a aria-label="Facebook" href="#" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#facebook"></use>
+									</svg>
+									Facebook
+								</a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Twitter" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#twitter"></use>
+									</svg>
+									Twitter
+								</a>
+							</li>
+							<li class="social-footer__item">
+								<a href="#" aria-label="Instagram" class="social-footer__link">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#instagram"></use>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+					<form action="#" data-form class="menu-footer__subscribe subscribe-footer">
+						<h4 class="subscribe-footer__title">Subscribe to our newsletter</h4>
+						<div class="subscribe-footer__body">
+							<input type="email" class="subscribe-footer__input input" name="form[email]" data-validate data-required="email" placeholder="Email Address" aria-label="Email Address">
+							<button type="submit" aria-label="Subscribe to newsletter" class="subscribe-footer__submit submit-button submit-button--footer">
+								Ok
+							</button>
+						</div>
+					</form>
+				</div>
+				<address class="footer__contacts contacts-footer">
+					<ul class="contacts-footer__list">
+						<li class="contacts-footer__item">
+							<p class="contacts-footer__address">497 Evergreen Rd. Rosevill, CA 95673</p>
+						</li>
+						<li class="contacts-footer__item">
+							<a class="contacts-footer__link" href="tel:44345678903">44 345 678 903</a>
+						</li>
+						<li class="contacts-footer__item">
+							<a class="contacts-footer__link" href="mailto:adobexd@mail.com">adobexd@mail.com</a>
+						</li>
+					</ul>
+				</address>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250209151406"></script>
+</body>
+
+</html>
