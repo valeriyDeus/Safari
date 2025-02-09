@@ -10568,9 +10568,9 @@
                 order ? order.classList.add("remove") : null;
                 setTimeout((() => {
                     order.remove();
+                    updateTitleItems();
+                    totalCart();
                 }), speedStyle);
-                updateTitleItems();
-                totalCart();
             }
             if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) {
                 const quantityInput = target.closest("[data-quantity]").querySelector("[data-quantity-value]");
