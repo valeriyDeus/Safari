@@ -1524,44 +1524,6 @@ body {
   background-color: #000;
   border-radius: 50%
 }
-.options.webpt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-column-gap: 2.0625rem;
-  -moz-column-gap: 2.0625rem;
-  column-gap: 2.0625rem;
-  row-gap: .625rem
-}
-.options.webpt__input:checked+.options.webpt__label {
-  border-color: transparent;
-  background-color: #ed165f;
-  color: #fff
-}
-.options.webpt__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 2.9375rem;
-  padding: .625rem 0;
-  font-weight: 600;
-  background-color: rgba(0,0,0,0);
-  border: .0625rem solid #000;
-  border-radius: .3125rem;
-  -webkit-transition: background-color .3s,color .3s,border-color .3s;
-  transition: background-color .3s,color .3s,border-color .3s
-}
 .hero {
   position: relative;
   padding-top: var(--header-height);
@@ -2467,6 +2429,44 @@ body {
 }
 .webpt-order__text {
   font-size: .875rem
+}
+.options.webpt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 2.0625rem;
+  -moz-column-gap: 2.0625rem;
+  column-gap: 2.0625rem;
+  row-gap: .625rem
+}
+.options.webpt__input:checked+.options.webpt__label {
+  border-color: transparent;
+  background-color: #ed165f;
+  color: #fff
+}
+.options.webpt__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.9375rem;
+  padding: .625rem 0;
+  font-weight: 600;
+  background-color: rgba(0,0,0,0);
+  border: .0625rem solid #000;
+  border-radius: .3125rem;
+  -webkit-transition: background-color .3s,color .3s,border-color .3s;
+  transition: background-color .3s,color .3s,border-color .3s
 }
 .swiper {
   overflow: hidden
@@ -6384,6 +6384,10 @@ span.flatpickr-weekday {
     color: #ed165f
   }
   .quantity-cart__button:hover svg {
+    color: #ed165f
+  }
+  .options.webpt__label:hover {
+    border-color: #ed165f;
     color: #ed165f
   }
 }
