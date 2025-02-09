@@ -1975,6 +1975,9 @@ body {
   row-gap: .625rem;
   border-right: 1.5px solid #e1e1e1
 }
+.order.order-checkout__order {
+  grid-template-columns: auto
+}
 .order.favorites-account__order {
   grid-template-columns: auto;
   -webkit-box-flex: 0;
@@ -2329,9 +2332,6 @@ body {
 .order-checkout__orders {
   display: grid;
   row-gap: 2rem
-}
-.order-checkout__order {
-  grid-template-columns: auto
 }
 .order-checkout__order .order__body {
   padding: 0
@@ -4659,7 +4659,10 @@ span.flatpickr-weekday {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
   }
   .order__body {
     padding-top: .9375rem
