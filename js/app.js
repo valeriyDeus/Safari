@@ -10541,7 +10541,10 @@
                     if (+valueElement.dataset.quantityMin) {
                         +valueElement.dataset.quantityMin === value ? quantityMinus.disabled = true : null;
                         if (+valueElement.dataset.quantityMin > value) value = valueElement.dataset.quantityMin;
-                    } else if (value < 1) value = 1;
+                    } else if (value < 1) {
+                        value = valueElement.dataset.quantityMin;
+                        quantityMinus.disabled = true;
+                    }
                 }
                 target.closest("[data-quantity]").querySelector("[data-quantity-value]").value = value;
             }
@@ -10698,26 +10701,26 @@
         document.addEventListener("click", checkoutTotalCount);
         function checkoutTotalCount(e) {
             const {target} = e;
-            if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) updateCartSubTotal();
+            if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) setTimeout((() => {
+                updateCartSubTotal();
+            }), 100);
         }
         function updateCartSubTotal() {
             cartTotal = [];
             quantityArr = [];
             let currency;
-            setTimeout((() => {
-                orders.forEach((order => {
-                    const itemPrice = order.querySelector(".list-order__item--price");
-                    const quantityValue = order.querySelector("[data-quantity-value]").value;
-                    const {price} = itemPrice.dataset;
-                    currency = itemPrice.dataset.currency;
-                    cartTotal.push(+price);
-                    quantityArr.push(+quantityValue);
-                }));
-                totalCheck = [ ...cartTotal ].map(((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item * 1)).reduce(((sum, price) => sum + price), 0);
-                checkSubTotal.innerHTML = `<span>${currency}</span>${totalCheck}`;
-                checkSubTotal.setAttribute("data-total", totalCheck);
-                total.innerHTML = `<span>${currency}</span>${totalCheck}`;
-            }), 500);
+            orders.forEach((order => {
+                const itemPrice = order.querySelector(".list-order__item--price");
+                const quantityValue = order.querySelector("[data-quantity-value]").value;
+                const {price} = itemPrice.dataset;
+                currency = itemPrice.dataset.currency;
+                cartTotal.push(+price);
+                quantityArr.push(+quantityValue);
+            }));
+            totalCheck = [ ...cartTotal ].map(((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item = 0)).reduce(((sum, price) => sum + price), 0);
+            checkSubTotal.innerHTML = `<span>${currency}</span>${totalCheck}`;
+            checkSubTotal.setAttribute("data-total", totalCheck);
+            total.innerHTML = `<span>${currency}</span>${totalCheck}`;
         }
     }
     window["FLS"] = false;
