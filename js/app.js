@@ -1,6 +1,6 @@
 (() => {
     var __webpack_modules__ = {
-        958: function(module) {
+        958(module) {
             /*!
  * dist/inputmask.min
  * https://github.com/RobinHerbots/Inputmask
@@ -10,7 +10,7 @@
  */
             !function(e, t) {
                 if (true) module.exports = t(); else ;
-            }("undefined" != typeof self && self, (function() {
+            }("undefined" != typeof self && self, function() {
                 return function() {
                     "use strict";
                     var e = {
@@ -110,7 +110,7 @@
                                 value: !0
                             }), t.Event = void 0, t.off = function(e, t) {
                                 var n, i;
-                                u(this[0]) && e && (n = this[0].eventRegistry, i = this[0], e.split(" ").forEach((function(e) {
+                                u(this[0]) && e && (n = this[0].eventRegistry, i = this[0], e.split(" ").forEach(function(e) {
                                     var a = o(e.split("."), 2);
                                     (function(e, i) {
                                         var a, r, o = [];
@@ -133,25 +133,25 @@
                                             handler: t
                                         });
                                         return o;
-                                    })(a[0], a[1]).forEach((function(e) {
+                                    })(a[0], a[1]).forEach(function(e) {
                                         var t = e.ev, a = e.handler;
                                         !function(e, t, a) {
                                             if (e in n == 1) if (i.removeEventListener ? i.removeEventListener(e, a, !1) : i.detachEvent && i.detachEvent("on".concat(e), a), 
                                             "global" === t) for (var r in n[e]) n[e][r].splice(n[e][r].indexOf(a), 1); else n[e][t].splice(n[e][t].indexOf(a), 1);
                                         }(t, e.namespace, a);
-                                    }));
-                                })));
+                                    });
+                                }));
                                 return this;
                             }, t.on = function(e, t) {
                                 if (u(this[0])) {
                                     var n = this[0].eventRegistry, i = this[0];
-                                    e.split(" ").forEach((function(e) {
+                                    e.split(" ").forEach(function(e) {
                                         var a = o(e.split("."), 2), r = a[0], l = a[1];
                                         !function(e, a) {
                                             i.addEventListener ? i.addEventListener(e, t, !1) : i.attachEvent && i.attachEvent("on".concat(e), t), 
                                             n[e] = n[e] || {}, n[e][a] = n[e][a] || [], n[e][a].push(t);
                                         }(r, void 0 === l ? "global" : l);
-                                    }));
+                                    });
                                 }
                                 return this;
                             }, t.trigger = function(e) {
@@ -178,9 +178,9 @@
                                         arguments[0] = arguments[0].type ? arguments[0] : r.default.Event(arguments[0]), 
                                         arguments[0].detail = arguments.slice(1);
                                         var v = n[f];
-                                        ("global" === p ? Object.values(v).flat() : v[p]).forEach((function(e) {
+                                        ("global" === p ? Object.values(v).flat() : v[p]).forEach(function(e) {
                                             return e.apply(i, t);
-                                        }));
+                                        });
                                     }
                                 }
                                 return this;
@@ -368,33 +368,33 @@
                                 function b() {}
                                 function x() {}
                                 var w = {};
-                                u(w, l, (function() {
+                                u(w, l, function() {
                                     return this;
-                                }));
+                                });
                                 var P = Object.getPrototypeOf, S = P && P(P(L([])));
                                 S && S !== n && a.call(S, l) && (w = S);
                                 var O = x.prototype = k.prototype = Object.create(w);
                                 function _(e) {
-                                    [ "next", "throw", "return" ].forEach((function(t) {
-                                        u(e, t, (function(e) {
+                                    [ "next", "throw", "return" ].forEach(function(t) {
+                                        u(e, t, function(e) {
                                             return this._invoke(t, e);
-                                        }));
-                                    }));
+                                        });
+                                    });
                                 }
                                 function M(e, t) {
                                     function n(r, o, l, s) {
                                         var c = d(e[r], e, o);
                                         if ("throw" !== c.type) {
                                             var u = c.arg, f = u.value;
-                                            return f && "object" == i(f) && a.call(f, "__await") ? t.resolve(f.__await).then((function(e) {
+                                            return f && "object" == i(f) && a.call(f, "__await") ? t.resolve(f.__await).then(function(e) {
                                                 n("next", e, l, s);
-                                            }), (function(e) {
+                                            }, function(e) {
                                                 n("throw", e, l, s);
-                                            })) : t.resolve(f).then((function(e) {
+                                            }) : t.resolve(f).then(function(e) {
                                                 u.value = e, l(u);
-                                            }), (function(e) {
+                                            }, function(e) {
                                                 return n("throw", e, l, s);
-                                            }));
+                                            });
                                         }
                                         s(c.arg);
                                     }
@@ -402,9 +402,9 @@
                                     r(this, "_invoke", {
                                         value: function(e, i) {
                                             function a() {
-                                                return new t((function(t, a) {
+                                                return new t(function(t, a) {
                                                     n(e, i, t, a);
-                                                }));
+                                                });
                                             }
                                             return o = o ? o.then(a, a) : a();
                                         }
@@ -507,19 +507,19 @@
                                     return {
                                         __await: e
                                     };
-                                }, _(M.prototype), u(M.prototype, s, (function() {
+                                }, _(M.prototype), u(M.prototype, s, function() {
                                     return this;
-                                })), t.AsyncIterator = M, t.async = function(e, n, i, a, r) {
+                                }), t.AsyncIterator = M, t.async = function(e, n, i, a, r) {
                                     void 0 === r && (r = Promise);
                                     var o = new M(f(e, n, i, a), r);
-                                    return t.isGeneratorFunction(n) ? o : o.next().then((function(e) {
+                                    return t.isGeneratorFunction(n) ? o : o.next().then(function(e) {
                                         return e.done ? e.value : o.next();
-                                    }));
-                                }, _(O), u(O, c, "Generator"), u(O, l, (function() {
+                                    });
+                                }, _(O), u(O, c, "Generator"), u(O, l, function() {
                                     return this;
-                                })), u(O, "toString", (function() {
+                                }), u(O, "toString", function() {
                                     return "[object Generator]";
-                                })), t.keys = function(e) {
+                                }), t.keys = function(e) {
                                     var t = Object(e), n = [];
                                     for (var i in t) n.push(i);
                                     return n.reverse(), function e() {
@@ -693,14 +693,14 @@
                                     !0 === f.getTest.call(o, k.end - 1).match.static && k.end--, k.begin = c.seekPrevious.call(o, k.end, !0), 
                                     k.begin >= 0 && k.end > 0 && (e.preventDefault(), c.caret.call(o, v, k.begin, k.end))) : (k.begin = c.seekNext.call(o, k.begin, !0), 
                                     k.end = c.seekNext.call(o, k.begin, !0), k.end < h.maskLength && k.end--, k.begin <= h.maskLength && (e.preventDefault(), 
-                                    c.caret.call(o, v, k.begin, k.end))) : e.shiftKey || (p.insertModeVisual && !1 === p.insertMode ? g === s.keys.ArrowRight ? setTimeout((function() {
+                                    c.caret.call(o, v, k.begin, k.end))) : e.shiftKey || (p.insertModeVisual && !1 === p.insertMode ? g === s.keys.ArrowRight ? setTimeout(function() {
                                         var e = c.caret.call(o, v);
                                         c.caret.call(o, v, e.begin);
-                                    }), 0) : g === s.keys.ArrowLeft && setTimeout((function() {
+                                    }, 0) : g === s.keys.ArrowLeft && setTimeout(function() {
                                         var e = c.translatePosition.call(o, v.inputmask.caretPos.begin);
                                         c.translatePosition.call(o, v.inputmask.caretPos.end);
                                         o.isRTL ? c.caret.call(o, v, e + (e === h.maskLength ? 0 : 1)) : c.caret.call(o, v, e - (0 === e ? 0 : 1));
-                                    }), 0) : void 0 === o.keyEventHook || o.keyEventHook(e)) : u.isSelection.call(o, k) ? p.insertMode = !p.insertMode : (p.insertMode = !p.insertMode, 
+                                    }, 0) : void 0 === o.keyEventHook || o.keyEventHook(e)) : u.isSelection.call(o, k) ? p.insertMode = !p.insertMode : (p.insertMode = !p.insertMode, 
                                     c.caret.call(o, v, k.begin, k.begin));
                                     return o.isComposing = g == s.keys.Process || g == s.keys.Unidentified, o.ignorable = g.length > 1 && !("textarea" === v.tagName.toLowerCase() && g == s.keys.Enter), 
                                     y.keypressEvent.call(this, e, t, n, i, a);
@@ -717,22 +717,22 @@
                                             var y = u.isValid.call(r, g, v, i, void 0, void 0, void 0, t);
                                             if (!1 !== y && (c.resetMaskSet.call(r, !0), m = void 0 !== y.caret ? y.caret : c.seekNext.call(r, y.pos.begin ? y.pos.begin : y.pos), 
                                             p.p = m), m = o.numericInput && void 0 === y.caret ? c.seekPrevious.call(r, m) : m, 
-                                            !1 !== n && (setTimeout((function() {
+                                            !1 !== n && (setTimeout(function() {
                                                 o.onKeyValidation.call(d, v, y);
-                                            }), 0), p.writeOutBuffer && !1 !== y)) {
+                                            }, 0), p.writeOutBuffer && !1 !== y)) {
                                                 var k = c.getBuffer.call(r);
                                                 (0, l.writeBuffer)(d, k, m, e, !0 !== t);
                                             }
                                             if (e.preventDefault(), t) return !1 !== y && (y.forwardPosition = m), y;
                                         }
                                     } else v === s.keys.Enter && r.undoValue !== r._valueGet(!0) && (r.undoValue = r._valueGet(!0), 
-                                    setTimeout((function() {
+                                    setTimeout(function() {
                                         h.trigger("change");
-                                    }), 0));
+                                    }, 0));
                                 },
-                                pasteEvent: (m = p().mark((function e(t) {
+                                pasteEvent: (m = p().mark(function e(t) {
                                     var n, i, a, r, s, u;
-                                    return p().wrap((function(e) {
+                                    return p().wrap(function(e) {
                                         for (;;) switch (e.prev = e.next) {
                                           case 0:
                                             n = function(e, n, i, a, o) {
@@ -768,10 +768,10 @@
                                           case "end":
                                             return e.stop();
                                         }
-                                    }), e, this);
-                                })), g = function() {
+                                    }, e, this);
+                                }), g = function() {
                                     var e = this, t = arguments;
-                                    return new Promise((function(n, i) {
+                                    return new Promise(function(n, i) {
                                         var a = m.apply(e, t);
                                         function r(e) {
                                             v(a, n, i, r, o, "next", e);
@@ -780,7 +780,7 @@
                                             v(a, n, i, r, o, "throw", e);
                                         }
                                         r(void 0);
-                                    }));
+                                    });
                                 }, function(e) {
                                     return g.apply(this, arguments);
                                 }),
@@ -823,12 +823,12 @@
                                         a.action) {
                                           case "insertText":
                                           case "insertReplacementText":
-                                            a.data.forEach((function(e, n) {
+                                            a.data.forEach(function(e, n) {
                                                 var a = new i.Event("keypress");
                                                 a.key = e, t.ignorable = !1, y.keypressEvent.call(o, a);
-                                            })), setTimeout((function() {
+                                            }), setTimeout(function() {
                                                 t.$el.trigger("keyup");
-                                            }), 0);
+                                            }, 0);
                                             break;
 
                                           case "deleteContentBackward":
@@ -883,9 +883,9 @@
                                         (0, l.HandleNativePlaceholder)(r, t.originalPlaceholder);
                                         var o = r.inputmask._valueGet(), s = c.getBuffer.call(t).slice();
                                         "" !== o && (n.clearMaskOnLostFocus && (-1 === c.getLastValidPosition.call(t) && o === c.getBufferTemplate.call(t).join("") ? s = [] : l.clearOptionalTail.call(t, s)), 
-                                        !1 === u.isComplete.call(t, s) && (setTimeout((function() {
+                                        !1 === u.isComplete.call(t, s) && (setTimeout(function() {
                                             a.trigger("incomplete");
-                                        }), 0), n.clearIncomplete && (c.resetMaskSet.call(t, !1), s = n.clearMaskOnLostFocus ? [] : c.getBufferTemplate.call(t).slice())), 
+                                        }, 0), n.clearIncomplete && (c.resetMaskSet.call(t, !1), s = n.clearMaskOnLostFocus ? [] : c.getBufferTemplate.call(t).slice())), 
                                         (0, l.writeBuffer)(r, s, void 0, e)), o = t._valueGet(!0), t.undoValue !== o && ("" != o || t.undoValue != c.getBufferTemplate.call(t).join("") || t.undoValue == c.getBufferTemplate.call(t).join("") && t.maskset.validPositions.length > 0) && (t.undoValue = o, 
                                         a.trigger("change"));
                                     }
@@ -901,15 +901,15 @@
                                     var e = this.inputmask, t = e.opts;
                                     e.undoValue !== e._valueGet(!0) && e.$el.trigger("change"), -1 === c.getLastValidPosition.call(e) && e._valueGet && e._valueGet() === c.getBufferTemplate.call(e).join("") && e._valueSet(""), 
                                     t.clearIncomplete && !1 === u.isComplete.call(e, c.getBuffer.call(e)) && e._valueSet(""), 
-                                    t.removeMaskOnSubmit && (e._valueSet(e.unmaskedvalue(), !0), setTimeout((function() {
+                                    t.removeMaskOnSubmit && (e._valueSet(e.unmaskedvalue(), !0), setTimeout(function() {
                                         (0, l.writeBuffer)(e.el, c.getBuffer.call(e));
-                                    }), 0));
+                                    }, 0));
                                 },
                                 resetEvent: function() {
                                     var e = this.inputmask;
-                                    e.refreshValue = !0, setTimeout((function() {
+                                    e.refreshValue = !0, setTimeout(function() {
                                         (0, l.applyInputValue)(e.el, e._valueGet(!0));
-                                    }), 0);
+                                    }, 0);
                                 }
                             };
                         },
@@ -938,11 +938,11 @@
                                                   case "click":
                                                   case "focus":
                                                     return u.validationEvent ? (u.validationEvent = !1, e.blur(), (0, a.HandleNativePlaceholder)(e, (u.isRTL ? l.getBufferTemplate.call(u).slice().reverse() : l.getBufferTemplate.call(u)).join("")), 
-                                                    setTimeout((function() {
+                                                    setTimeout(function() {
                                                         e.focus();
-                                                    }), f.validationEventTimeOut), !1) : (s = arguments, void setTimeout((function() {
+                                                    }, f.validationEventTimeOut), !1) : (s = arguments, void setTimeout(function() {
                                                         e.inputmask && n.apply(c, s);
-                                                    }), 0));
+                                                    }, 0));
                                                 }
                                                 var d = n.apply(c, arguments);
                                                 return !1 === d && (t.preventDefault(), t.stopPropagation()), d;
@@ -1082,11 +1082,11 @@
 
                                           case "month":
                                             if ("mmm" === n || "mmmm" === n) {
-                                                e[i] = _("mmm" === n ? m.monthNames.slice(0, 12).findIndex((function(e) {
+                                                e[i] = _("mmm" === n ? m.monthNames.slice(0, 12).findIndex(function(e) {
                                                     return t.toLowerCase() === e.toLowerCase();
-                                                })) + 1 : m.monthNames.slice(12, 24).findIndex((function(e) {
+                                                }) + 1 : m.monthNames.slice(12, 24).findIndex(function(e) {
                                                     return t.toLowerCase() === e.toLowerCase();
-                                                })) + 1, 2), e[i] = "00" === e[i] ? "" : e[i].toString(), e["raw" + i] = e[i];
+                                                }) + 1, 2), e[i] = "00" === e[i] ? "" : e[i].toString(), e["raw" + i] = e[i];
                                                 break;
                                             }
 
@@ -1133,17 +1133,17 @@
                                     return _(Date.prototype.getMonth.call(this) + 1, 2);
                                 } ],
                                 mmm: [ m.monthNames.slice(0, 12).join("|"), function(e) {
-                                    var t = m.monthNames.slice(0, 12).findIndex((function(t) {
+                                    var t = m.monthNames.slice(0, 12).findIndex(function(t) {
                                         return e.toLowerCase() === t.toLowerCase();
-                                    }));
+                                    });
                                     return -1 !== t && Date.prototype.setMonth.call(this, t);
                                 }, "month", function() {
                                     return m.monthNames.slice(0, 12)[Date.prototype.getMonth.call(this)];
                                 } ],
                                 mmmm: [ m.monthNames.slice(12, 24).join("|"), function(e) {
-                                    var t = m.monthNames.slice(12, 24).findIndex((function(t) {
+                                    var t = m.monthNames.slice(12, 24).findIndex(function(t) {
                                         return e.toLowerCase() === t.toLowerCase();
-                                    }));
+                                    });
                                     return -1 !== t && Date.prototype.setMonth.call(this, t);
                                 }, "month", function() {
                                     return m.monthNames.slice(12, 24)[Date.prototype.getMonth.call(this)];
@@ -1197,9 +1197,9 @@
                                 TT: [ "[AP]M", b, "ampm", x, 2 ],
                                 Z: [ ".*", void 0, "Z", function() {
                                     var e = this.toString().match(/\((.+)\)/)[1];
-                                    e.includes(" ") && (e = (e = e.replace("-", " ").toUpperCase()).split(" ").map((function(e) {
+                                    e.includes(" ") && (e = (e = e.replace("-", " ").toUpperCase()).split(" ").map(function(e) {
                                         return s(e, 1)[0];
-                                    })).join(""));
+                                    }).join(""));
                                     return e;
                                 } ],
                                 o: [ "" ],
@@ -2006,7 +2006,7 @@
                                     begin: g
                                 };
                                 var k = [], b = u.caretPos;
-                                if (v.forEach((function(e, t) {
+                                if (v.forEach(function(e, t) {
                                     if (void 0 !== e) {
                                         var i = new h.Event("_checkval");
                                         i.key = e, m += e;
@@ -2029,7 +2029,7 @@
                                             end: c.forwardPosition
                                         }, b = u.caretPos) : void 0 === f.validPositions[t] && v[t] === s.getPlaceholder.call(u, t) && o.isMask.call(u, t, !0) ? u.caretPos.begin++ : u.caretPos = b;
                                     }
-                                })), k.length > 0) {
+                                }), k.length > 0) {
                                     var x, w, P = o.seekNext.call(u, -1, void 0, !1);
                                     if (!l.isComplete.call(u, o.getBuffer.call(u)) && k.length <= P || l.isComplete.call(u, o.getBuffer.call(u)) && k.length > 0 && k.length !== P && 0 === k[0]) for (var S = P; void 0 !== (x = k.shift()); ) if (x < S) {
                                         var O = new h.Event("_checkval");
@@ -2055,9 +2055,9 @@
                                 if (void 0 !== e && (e.inputmask._valueSet(t.join("")), void 0 === n || void 0 !== i && "blur" === i.type || o.caret.call(s, e, n, void 0, void 0, void 0 !== i && "keydown" === i.type && (i.key === r.keys.Delete || i.key === r.keys.Backspace)), 
                                 void 0 === e.inputmask.writeBufferHook || e.inputmask.writeBufferHook(n), !0 === a)) {
                                     var d = u(e), h = e.inputmask._valueGet();
-                                    e.inputmask.skipInputEvent = !0, d.trigger("input"), setTimeout((function() {
+                                    e.inputmask.skipInputEvent = !0, d.trigger("input"), setTimeout(function() {
                                         h === o.getBufferTemplate.call(s).join("") ? d.trigger("cleared") : !0 === l.isComplete.call(s, t) && d.trigger("complete");
-                                    }), 0);
+                                    }, 0);
                                 }
                             }
                         },
@@ -2107,7 +2107,7 @@
                                 mask: function(e) {
                                     var t = this;
                                     return "string" == typeof e && (e = m.getElementById(e) || m.querySelectorAll(e)), 
-                                    (e = e.nodeName ? [ e ] : Array.isArray(e) ? e : [].slice.call(e)).forEach((function(e, n) {
+                                    (e = e.nodeName ? [ e ] : Array.isArray(e) ? e : [].slice.call(e)).forEach(function(e, n) {
                                         var i = r.default.extend(!0, {}, t.opts);
                                         if (function(e, t, n, i) {
                                             function a(t, a) {
@@ -2142,7 +2142,7 @@
                                             e.inputmask.$el = (0, r.default)(e), e.inputmask.maskset = a, r.default.data(e, g, t.userOptions), 
                                             c.mask.call(e.inputmask));
                                         }
-                                    })), e && e[0] && e[0].inputmask || this;
+                                    }), e && e[0] && e[0].inputmask || this;
                                 },
                                 option: function(e, t) {
                                     return "string" == typeof e ? this.opts[e] : "object" === h(e) ? (r.default.extend(this.userOptions, e), 
@@ -2185,9 +2185,9 @@
                                     if (this.maskset = this.maskset || (0, u.generateMaskSet)(this.opts, this.noMasksCache), 
                                     Array.isArray(this.maskset.metadata)) {
                                         var e = d.getMaskTemplate.call(this, !0, 0, !1).join("");
-                                        return this.maskset.metadata.forEach((function(t) {
+                                        return this.maskset.metadata.forEach(function(t) {
                                             return t.mask !== e || (e = t, !1);
-                                        })), e;
+                                        }), e;
                                     }
                                     return this.maskset.metadata;
                                 },
@@ -2227,13 +2227,13 @@
                             }, y.isValid = function(e, t) {
                                 return y(t).isValid(e);
                             }, y.remove = function(e) {
-                                "string" == typeof e && (e = m.getElementById(e) || m.querySelectorAll(e)), (e = e.nodeName ? [ e ] : e).forEach((function(e) {
+                                "string" == typeof e && (e = m.getElementById(e) || m.querySelectorAll(e)), (e = e.nodeName ? [ e ] : e).forEach(function(e) {
                                     e.inputmask && e.inputmask.remove();
-                                }));
+                                });
                             }, y.setValue = function(e, t) {
-                                "string" == typeof e && (e = m.getElementById(e) || m.querySelectorAll(e)), (e = e.nodeName ? [ e ] : e).forEach((function(e) {
+                                "string" == typeof e && (e = m.getElementById(e) || m.querySelectorAll(e)), (e = e.nodeName ? [ e ] : e).forEach(function(e) {
                                     e.inputmask ? e.inputmask.setValue(t) : (0, r.default)(e).trigger("setvalue", [ t ]);
-                                }));
+                                });
                             }, y.dependencyLib = r.default, l.default.Inputmask = y;
                             t.default = y;
                         },
@@ -2322,7 +2322,7 @@
                                 if (Reflect.construct.sham) return !1;
                                 if ("function" == typeof Proxy) return !0;
                                 try {
-                                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), 
+                                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {})), 
                                     !0;
                                 } catch (e) {
                                     return !1;
@@ -2444,9 +2444,9 @@
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
                                     var i = Object.getOwnPropertySymbols(e);
-                                    t && (i = i.filter((function(t) {
+                                    t && (i = i.filter(function(t) {
                                         return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                                    }))), n.push.apply(n, i);
+                                    })), n.push.apply(n, i);
                                 }
                                 return n;
                             }
@@ -2480,11 +2480,11 @@
                             var l = t.keyCode = function(e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {};
-                                    t % 2 ? r(Object(n), !0).forEach((function(t) {
+                                    t % 2 ? r(Object(n), !0).forEach(function(t) {
                                         o(e, t, n[t]);
-                                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : r(Object(n)).forEach((function(t) {
+                                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : r(Object(n)).forEach(function(t) {
                                         Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                                    }));
+                                    });
                                 }
                                 return e;
                             }({
@@ -2535,15 +2535,15 @@
                                 ScrollLock: 145,
                                 Tab: 9,
                                 Unidentified: 229
-                            }), s = Object.entries(l).reduce((function(e, t) {
+                            }), s = Object.entries(l).reduce(function(e, t) {
                                 var n = i(t, 2), a = n[0], r = n[1];
                                 return e[r] = void 0 === e[r] ? a : e[r], e;
-                            }), {});
-                            t.keys = Object.entries(l).reduce((function(e, t) {
+                            }, {});
+                            t.keys = Object.entries(l).reduce(function(e, t) {
                                 var n = i(t, 2), a = n[0];
                                 n[1];
                                 return e[a] = "Space" === a ? " " : a, e;
-                            }), {});
+                            }, {});
                         },
                         2391: function(e, t, n) {
                             Object.defineProperty(t, "__esModule", {
@@ -2566,7 +2566,7 @@
                                                 placeholder: "object" === l(n.placeholder) ? n.placeholder[v.matches.length] : void 0,
                                                 nativeDef: i
                                             });
-                                        } else h && (i = i[i.length - 1]), i.split("").forEach((function(t, i) {
+                                        } else h && (i = i[i.length - 1]), i.split("").forEach(function(t, i) {
                                             o = e.matches[a - 1], e.matches.splice(a++, 0, {
                                                 fn: /[a-z]/i.test(n.staticDefinitionSymbol || t) ? new RegExp("[" + (n.staticDefinitionSymbol || t) + "]", n.casing ? "i" : "") : null,
                                                 static: !0,
@@ -2577,7 +2577,7 @@
                                                 placeholder: void 0 !== n.staticDefinitionSymbol ? t : "object" === l(n.placeholder) ? n.placeholder[v.matches.length] : void 0,
                                                 nativeDef: (h ? "'" : "") + t
                                             });
-                                        }));
+                                        });
                                         h = !1;
                                     } else {
                                         var c = n.definitions && n.definitions[i] || n.usePrototypeDefinitions && r.default.prototype.definitions[i];
@@ -2714,12 +2714,12 @@
                                 y && w();
                                 for (;m.length > 0; ) s = m.pop(), v.matches.push(s);
                                 v.matches.length > 0 && (!function e(i) {
-                                    i && i.matches && i.matches.forEach((function(a, r) {
+                                    i && i.matches && i.matches.forEach(function(a, r) {
                                         var o = i.matches[r + 1];
                                         (void 0 === o || void 0 === o.matches || !1 === o.isQuantifier) && a && a.isGroup && (a.isGroup = !1, 
                                         t || (k(a, n.groupmarker[0], 0), !0 !== a.openGroup && k(a, n.groupmarker[1]))), 
                                         e(a);
-                                    }));
+                                    });
                                 }(v), g.push(v));
                                 (n.numericInput || n.isRTL) && function e(t) {
                                     for (var i in t.matches = t.matches.reverse(), t.matches) if (Object.prototype.hasOwnProperty.call(t.matches, i)) {
@@ -2745,7 +2745,7 @@
                                     }
                                     if (!0 === o) {
                                         var f = e.match(new RegExp("(.)\\[([^\\]]*)\\]", "g"));
-                                        f && f.forEach((function(t, n) {
+                                        f && f.forEach(function(t, n) {
                                             var i = function(e, t) {
                                                 return function(e) {
                                                     if (Array.isArray(e)) return e;
@@ -2782,7 +2782,7 @@
                                             }(t.split("["), 2), r = i[0], o = i[1];
                                             o = o.replace("]", ""), e = e.replace(new RegExp("".concat((0, a.default)(r), "\\[").concat((0, 
                                             a.default)(o), "\\]")), r.charAt(0) === o.charAt(0) ? "(".concat(r, "|").concat(r).concat(o, ")") : "".concat(r, "[").concat(o, "]"));
-                                        }));
+                                        });
                                     }
                                     return e;
                                 }
@@ -2811,9 +2811,9 @@
                                     if (e.mask.length > 1) {
                                         null === e.keepStatic && (e.keepStatic = !0);
                                         var u = e.groupmarker[0];
-                                        return (e.isRTL ? e.mask.reverse() : e.mask).forEach((function(t) {
+                                        return (e.isRTL ? e.mask.reverse() : e.mask).forEach(function(t) {
                                             u.length > 1 && (u += e.alternatormarker), void 0 !== t.mask && "function" != typeof t.mask ? u += t.mask : u += t;
-                                        })), c(u += e.groupmarker[1], e.mask, e);
+                                        }), c(u += e.groupmarker[1], e.mask, e);
                                     }
                                     e.mask = e.mask.pop();
                                 }
@@ -2913,11 +2913,11 @@
                                                     };
                                                 }
                                             }(t.type), function(e) {
-                                                r.EventRuler.on(e, "mouseenter", (function() {
+                                                r.EventRuler.on(e, "mouseenter", function() {
                                                     var e = this, t = e.inputmask._valueGet(!0);
                                                     t != (e.inputmask.isRTL ? l.getBuffer.call(e.inputmask).slice().reverse() : l.getBuffer.call(e.inputmask)).join("") && (0, 
                                                     o.applyInputValue)(e, t);
-                                                }));
+                                                });
                                             }(t));
                                         }
                                     }(t) : t.inputmask = void 0, a;
@@ -2979,9 +2979,9 @@
                         9302: function() {
                             var e = Function.bind.call(Function.call, Array.prototype.reduce), t = Function.bind.call(Function.call, Object.prototype.propertyIsEnumerable), n = Function.bind.call(Function.call, Array.prototype.concat), i = Object.keys;
                             Object.entries || (Object.entries = function(a) {
-                                return e(i(a), (function(e, i) {
+                                return e(i(a), function(e, i) {
                                     return n(e, "string" == typeof i && t(a, i) ? [ [ i, a[i] ] ] : []);
-                                }), []);
+                                }, []);
                             });
                         },
                         7149: function() {
@@ -3224,9 +3224,9 @@
                             function f(e, t) {
                                 var n = this.opts, i = 0, a = function(e, t) {
                                     var n = 0, i = !1;
-                                    t.forEach((function(e) {
+                                    t.forEach(function(e) {
                                         e.match.optionality && (0 !== n && n !== e.match.optionality && (i = !0), (0 === n || n > e.match.optionality) && (n = e.match.optionality));
-                                    })), n && (0 == e || 1 == t.length ? n = 0 : i || (n = 0));
+                                    }), n && (0 == e || 1 == t.length ? n = 0 : i || (n = 0));
                                     return n;
                                 }(e, t);
                                 e = e > 0 ? e - 1 : 0;
@@ -3236,9 +3236,9 @@
                                     var f = t[u];
                                     r = l(f, c.length);
                                     var d = Math.abs(r - c);
-                                    (!0 !== f.unMatchedAlternationStopped || t.filter((function(e) {
+                                    (!0 !== f.unMatchedAlternationStopped || t.filter(function(e) {
                                         return !0 !== e.unMatchedAlternationStopped;
-                                    })).length <= 1) && (void 0 === o || "" !== r && d < o || s && !n.greedy && s.match.optionality && s.match.optionality - a > 0 && "master" === s.match.newBlockMarker && (!f.match.optionality || f.match.optionality - a < 1 || !f.match.newBlockMarker) || s && !n.greedy && s.match.optionalQuantifier && !f.match.optionalQuantifier) && (o = d, 
+                                    }).length <= 1) && (void 0 === o || "" !== r && d < o || s && !n.greedy && s.match.optionality && s.match.optionality - a > 0 && "master" === s.match.newBlockMarker && (!f.match.optionality || f.match.optionality - a < 1 || !f.match.newBlockMarker) || s && !n.greedy && s.match.optionalQuantifier && !f.match.optionalQuantifier) && (o = d, 
                                     s = f);
                                 }
                                 return s;
@@ -3261,18 +3261,18 @@
                                     function f(r, l, p) {
                                         function v(e, t) {
                                             var n = 0 === t.matches.indexOf(e);
-                                            return n || t.matches.every((function(i, a) {
+                                            return n || t.matches.every(function(i, a) {
                                                 return !0 === i.isQuantifier ? n = v(e, t.matches[a - 1]) : Object.prototype.hasOwnProperty.call(i, "matches") && (n = v(e, i)), 
                                                 !n;
-                                            })), n;
+                                            }), n;
                                         }
                                         function w(e, t, n) {
                                             var i, a;
-                                            if ((s.tests[e] || s.validPositions[e]) && (s.validPositions[e] ? [ s.validPositions[e] ] : s.tests[e]).every((function(e, r) {
+                                            if ((s.tests[e] || s.validPositions[e]) && (s.validPositions[e] ? [ s.validPositions[e] ] : s.tests[e]).every(function(e, r) {
                                                 if (e.mloc[t]) return i = e, !1;
                                                 var o = void 0 !== n ? n : e.alternation, l = void 0 !== e.locator[o] ? e.locator[o].toString().indexOf(t) : -1;
                                                 return (void 0 === a || l < a) && -1 !== l && (i = e, a = l), !0;
-                                            })), i) {
+                                            }), i) {
                                                 var r = i.locator[i.alternation], o = i.mloc[t] || i.mloc[r] || i.locator;
                                                 if (-1 !== o[o.length - 1].toString().indexOf(":")) o.pop();
                                                 return o.slice((void 0 !== n ? n : i.alternation) + 1);
@@ -3323,9 +3323,9 @@
                                             if (r.isOptional) return function() {
                                                 var t = r, a = m.length;
                                                 if (r = b(r, n, l, p), m.length > 0) {
-                                                    if (m.forEach((function(e, t) {
+                                                    if (m.forEach(function(e, t) {
                                                         t >= a && (e.match.optionality = e.match.optionality ? e.match.optionality + 1 : 1);
-                                                    })), i = m[m.length - 1].match, void 0 !== p || !v(i, t)) return r;
+                                                    }), i = m[m.length - 1].match, void 0 !== p || !v(i, t)) return r;
                                                     g = !0, h = e;
                                                 }
                                             }();
@@ -3383,9 +3383,9 @@
                                                             N || y.push(F);
                                                         }
                                                     }
-                                                    m = b.concat(y), h = e, g = m.length > 0 && k, r = y.length > 0 && !k, k && g && !r && m.forEach((function(e, t) {
+                                                    m = b.concat(y), h = e, g = m.length > 0 && k, r = y.length > 0 && !k, k && g && !r && m.forEach(function(e, t) {
                                                         e.unMatchedAlternationStopped = !0;
-                                                    })), n = j.slice();
+                                                    }), n = j.slice();
                                                 } else r = f(v.matches[_] || t.matches[_], [ _ ].concat(l), p);
                                                 if (r) return !0;
                                             }();
@@ -3393,12 +3393,12 @@
                                                 for (var a = r, o = !1, u = n.length > 0 ? n.shift() : 0; u < (isNaN(a.quantifier.max) ? u + 1 : a.quantifier.max) && h <= e; u++) {
                                                     var p = t.matches[t.matches.indexOf(a) - 1];
                                                     if (r = f(p, [ u ].concat(l), p)) {
-                                                        if (m.forEach((function(t, n) {
+                                                        if (m.forEach(function(t, n) {
                                                             (i = x(p, t.match) ? t.match : m[m.length - 1].match).optionalQuantifier = u >= a.quantifier.min, 
                                                             i.jit = (u + 1) * (p.matches.indexOf(i) + 1) > a.quantifier.jit, i.optionalQuantifier && v(i, p) && (g = !0, 
                                                             h = e, c.greedy && null == s.validPositions[e - 1] && u > a.quantifier.min && -1 != [ "*", "+" ].indexOf(a.quantifier.max) && (m.pop(), 
                                                             y = void 0), o = !0, r = !1), !o && i.jit && (s.jitOffset[e] = p.matches.length - p.matches.indexOf(i));
-                                                        })), o) break;
+                                                        }), o) break;
                                                         return !0;
                                                     }
                                                 }
@@ -3414,18 +3414,18 @@
                                 }
                                 function x(e, t) {
                                     var n = -1 != e.matches.indexOf(t);
-                                    return n || e.matches.forEach((function(e, i) {
+                                    return n || e.matches.forEach(function(e, i) {
                                         void 0 === e.matches || n || (n = x(e, t));
-                                    })), n;
+                                    }), n;
                                 }
                                 if (e > -1) {
                                     if (void 0 === t) {
                                         for (var w, P = e - 1; void 0 === (w = s.validPositions[P] || s.tests[P]) && P > -1; ) P--;
                                         void 0 !== w && P > -1 && (v = function(e, t) {
                                             var n, i = [];
-                                            return Array.isArray(t) || (t = [ t ]), t.length > 0 && (void 0 === t[0].alternation || !0 === c.keepStatic ? 0 === (i = f.call(o, e, t.slice()).locator.slice()).length && (i = t[0].locator.slice()) : t.forEach((function(e) {
+                                            return Array.isArray(t) || (t = [ t ]), t.length > 0 && (void 0 === t[0].alternation || !0 === c.keepStatic ? 0 === (i = f.call(o, e, t.slice()).locator.slice()).length && (i = t[0].locator.slice()) : t.forEach(function(e) {
                                                 "" !== e.def && (0 === i.length ? (n = e.alternation, i = e.locator.slice()) : e.locator[n] && -1 === i[n].toString().indexOf(e.locator[n]) && (i[n] += "," + e.locator[n]));
-                                            }))), i;
+                                            })), i;
                                         }(P, w), y = v.join(""), h = P);
                                     }
                                     if (s.tests[e] && s.tests[e][0].cd === y) return s.tests[e];
@@ -3440,15 +3440,15 @@
                                         def: "",
                                         placeholder: ""
                                     },
-                                    locator: k && 0 === m.filter((function(e) {
+                                    locator: k && 0 === m.filter(function(e) {
                                         return !0 !== e.unMatchedAlternationStopped;
-                                    })).length ? [ 0 ] : [],
+                                    }).length ? [ 0 ] : [],
                                     mloc: {},
                                     cd: y
                                 }), void 0 !== t && s.tests[e] ? r = l.extend(!0, [], m) : (s.tests[e] = l.extend(!0, [], m), 
-                                r = s.tests[e]), m.forEach((function(e) {
+                                r = s.tests[e]), m.forEach(function(e) {
                                     e.match.optionality = e.match.defOptionality || !1;
-                                })), r;
+                                }), r;
                             }
                         },
                         7215: function(e, t, n) {
@@ -3571,19 +3571,19 @@
                                 function w(e) {
                                     if (void 0 !== e) {
                                         if (void 0 !== e.remove && (Array.isArray(e.remove) || (e.remove = [ e.remove ]), 
-                                        e.remove.sort((function(e, t) {
+                                        e.remove.sort(function(e, t) {
                                             return g.isRTL ? e.pos - t.pos : t.pos - e.pos;
-                                        })).forEach((function(e) {
+                                        }).forEach(function(e) {
                                             v.call(g, {
                                                 begin: e,
                                                 end: e + 1
                                             });
-                                        })), e.remove = void 0), void 0 !== e.insert && (Array.isArray(e.insert) || (e.insert = [ e.insert ]), 
-                                        e.insert.sort((function(e, t) {
+                                        }), e.remove = void 0), void 0 !== e.insert && (Array.isArray(e.insert) || (e.insert = [ e.insert ]), 
+                                        e.insert.sort(function(e, t) {
                                             return g.isRTL ? t.pos - e.pos : e.pos - t.pos;
-                                        })).forEach((function(e) {
+                                        }).forEach(function(e) {
                                             "" !== e.c && f.call(g, e.pos, e.c, void 0 === e.strict || e.strict, void 0 !== e.fromIsValid ? e.fromIsValid : i);
-                                        })), e.insert = void 0), e.refreshFromBuffer && e.buffer) {
+                                        }), e.insert = void 0), e.refreshFromBuffer && e.buffer) {
                                             var t = e.refreshFromBuffer;
                                             d.call(g, !0 === t ? t : t.start, t.end, e.buffer), e.refreshFromBuffer = void 0;
                                         }
@@ -3593,7 +3593,7 @@
                                 }
                                 function P(t, n, a) {
                                     var l = !1;
-                                    return o.getTests.call(g, t).every((function(c, f) {
+                                    return o.getTests.call(g, t).every(function(c, f) {
                                         var p = c.match;
                                         if (r.getBuffer.call(g, !0), !1 !== (l = (!p.jit || void 0 !== b.validPositions[r.seekPrevious.call(g, t)]) && (null != p.fn ? p.fn.test(n, b, t, a, k, u.call(g, e)) : (n === p.def || n === k.skipOptionalPartCharacter) && "" !== p.def && {
                                             c: o.getPlaceholder.call(g, t, p, !0) || p.def,
@@ -3606,7 +3606,7 @@
                                             }), i, h) && (l = !1), !1);
                                         }
                                         return !0;
-                                    })), l;
+                                    }), l;
                                 }
                                 void 0 !== e.begin && (x = g.isRTL ? e.end : e.begin);
                                 var S = !0, O = y.extend(!0, [], b.validPositions);
@@ -3760,7 +3760,7 @@
                         e.default = a.default;
                     }(), i;
                 }();
-            }));
+            });
         }
     };
     var __webpack_module_cache__ = {};
@@ -3806,14 +3806,8 @@
                     },
                     errorMesseges: {
                         valueMissing: "Будь ласка, заповніть це поле",
-                        tooShort: _ref => {
-                            let {minLength} = _ref;
-                            return `Занадто коротке значення, мінімум символів — ${minLength}`;
-                        },
-                        tooLong: _ref2 => {
-                            let {maxLength} = _ref2;
-                            return `Занадто довге значення, обмеження символів — ${maxLength}`;
-                        },
+                        tooShort: ({minLength}) => `Занадто коротке значення, мінімум символів — ${minLength}`,
+                        tooLong: ({maxLength}) => `Занадто довге значення, обмеження символів — ${maxLength}`,
                         email: {
                             invalidEmail: value => `Адреса електронної пошти повинна мати символ "@".В адресі "${value}" немає символу "@".`
                         },
@@ -3858,23 +3852,19 @@
                 this.options.autoHeight ? this.autoHeight() : null;
             }
             eventsForm() {
-                document.addEventListener("focusin", (_ref3 => {
-                    let {target} = _ref3;
+                document.addEventListener("focusin", ({target}) => {
                     this.focusIn(target);
-                }));
-                document.addEventListener("focusout", (_ref4 => {
-                    let {target} = _ref4;
+                });
+                document.addEventListener("focusout", ({target}) => {
                     this.focusOut(target);
-                }));
-                document.addEventListener("change", (_ref5 => {
-                    let {target} = _ref5;
+                });
+                document.addEventListener("change", ({target}) => {
                     this.inputChange(target);
-                }));
-                if (this.options.viewpass) document.addEventListener("click", (_ref6 => {
-                    let {target} = _ref6;
+                });
+                if (this.options.viewpass) document.addEventListener("click", ({target}) => {
                     this.inputViewPass(target);
-                }));
-                document.addEventListener("submit", (e => this.formSubmit(e)));
+                });
+                document.addEventListener("submit", e => this.formSubmit(e));
             }
             formSubmit(e) {
                 const formElement = e.target.closest("[data-form]");
@@ -3920,38 +3910,37 @@
                     form.classList.remove(this.options.classes.formSending);
                 }
             }
-            formSending(form) {
-                arguments.length > 1 && arguments[1] !== void 0 && arguments[1];
+            formSending(form, responseResult = ``) {
                 document.dispatchEvent(new CustomEvent("formSent", {
                     detail: {
                         form
                     }
                 }));
-                setTimeout((() => {
+                setTimeout(() => {
                     if (objectModules.modal) {
                         const {modalMessage} = form.dataset;
                         modalMessage ? objectModules.modal.open(modalMessage) : null;
                     }
-                }), 0);
+                }, 0);
                 this.options.on.formSend(form);
                 this.formClean(form);
                 this.formLogging(`Форму відправлено!`);
             }
             formClean(form) {
                 form.reset();
-                setTimeout((() => {
+                setTimeout(() => {
                     const inputs = form.querySelectorAll("input,textarea");
                     const checkboxes = form.querySelectorAll("input[type=checkbox]");
                     const radioButtons = form.querySelectorAll("input[type=radio]");
-                    inputs.forEach((input => this.removeError(input)));
-                    if (checkboxes.length > 0) checkboxes.forEach((checkbox => checkbox.checked = false));
-                    if (radioButtons.length > 0) radioButtons.forEach((radio => radio.checked = false));
+                    inputs.forEach(input => this.removeError(input));
+                    if (checkboxes.length > 0) checkboxes.forEach(checkbox => checkbox.checked = false);
+                    if (radioButtons.length > 0) radioButtons.forEach(radio => radio.checked = false);
                     if (objectModules.select) objectModules.select.removeActiveItems();
-                    if (objectModules.selects) objectModules.selects.forEach((select => {
+                    if (objectModules.selects) objectModules.selects.forEach(select => {
                         console.log(select);
                         select.removeActiveItems();
-                    }));
-                }), 0);
+                    });
+                }, 0);
             }
             inputViewPass(target) {
                 if (target.closest(`[class*="__${this.options.classes.viewPass}"]`)) {
@@ -3962,7 +3951,7 @@
             }
             autoHeight() {
                 const textareas = document.querySelectorAll(`textarea[${this.options.attributes.autoHeight}]`);
-                if (textareas.length > 0) textareas.forEach((textarea => {
+                if (textareas.length > 0) textareas.forEach(textarea => {
                     const startHeight = textarea.hasAttribute(this.options.attributes.autoHeightMin) ? +textarea.dataset.autoheightMin : +textarea.offsetHeight;
                     const maxHeight = textarea.hasAttribute(this.options.attributes.autoHeightMax) ? +textarea.dataset.autoheightMax : 1 / 0;
                     this._setTextAreaHeight(textarea, Math.min(startHeight, maxHeight));
@@ -3972,7 +3961,7 @@
                             this._setTextAreaHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
                         }
                     }.bind(this));
-                }));
+                });
             }
             _setTextAreaHeight(textarea, height) {
                 textarea.style.height = `${height}px`;
@@ -4004,9 +3993,9 @@
             getErrorField(form) {
                 let error = 0;
                 const formRequiredItems = form.querySelectorAll(`*[${this.options.attributes.required}]`);
-                if (formRequiredItems.length) formRequiredItems.forEach((formRequiredItem => {
+                if (formRequiredItems.length) formRequiredItems.forEach(formRequiredItem => {
                     if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) error += this.validateField(formRequiredItem);
-                }));
+                });
                 return error;
             }
             validateField(formRequiredItem) {
@@ -4059,19 +4048,19 @@
                 }
                 if (type === "radio") {
                     const {name} = formRequiredItem;
-                    const isChecked = [ ...document.querySelectorAll(`input[name="${name}"]`) ].some((radio => radio.checked));
+                    const isChecked = [ ...document.querySelectorAll(`input[name="${name}"]`) ].some(radio => radio.checked);
                     if (!isChecked) {
-                        document.querySelectorAll(`input[name="${name}"]`).forEach((radio => {
+                        document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
                             this.addError(radio, this.options.errorMesseges.valueMissing);
                             this.removeSuccess(radio);
                             radio.setAttribute("aria-invalid", "true");
-                        }));
+                        });
                         error++;
-                    } else document.querySelectorAll(`input[name="${name}"]`).forEach((radio => {
+                    } else document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
                         this.removeError(radio);
                         this.addSuccess(radio);
                         radio.setAttribute("aria-invalid", "false");
-                    }));
+                    });
                 }
                 if (!formRequiredItem.value.trim()) {
                     this.addError(formRequiredItem, this.options.errorMesseges.valueMissing);
@@ -4081,8 +4070,7 @@
                 }
                 return error;
             }
-            addError(formRequiredItem) {
-                let errorMessage = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "";
+            addError(formRequiredItem, errorMessage = "") {
                 const parentFormField = formRequiredItem.parentElement;
                 const inputError = parentFormField.querySelector(".form__error");
                 inputError ? parentFormField.removeChild(inputError) : null;
@@ -4133,9 +4121,7 @@
             hash = hash ? `#${hash}` : window.location.href.split("#")[0];
             history.pushState("", "", hash);
         };
-        const _slideUp = function(target) {
-            let duration = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 500;
-            let showmore = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+        const _slideUp = (target, duration = 500, showmore = 0) => {
             if (!target.classList.contains("slide")) {
                 target.classList.add("slide");
                 target.style.transitionProperty = "height, margin, padding";
@@ -4148,7 +4134,7 @@
                 target.style.paddingBottom = 0;
                 target.style.marginTop = 0;
                 target.style.marginBottom = 0;
-                window.setTimeout((() => {
+                window.setTimeout(() => {
                     target.hidden = !showmore ? true : false;
                     !showmore ? target.style.removeProperty("height") : null;
                     target.style.removeProperty("padding-top");
@@ -4164,12 +4150,10 @@
                             target
                         }
                     }));
-                }), duration);
+                }, duration);
             }
         };
-        const _slideDown = function(target) {
-            let duration = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 500;
-            let showmore = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+        const _slideDown = (target, duration = 500, showmore = 0) => {
             if (!target.classList.contains("slide")) {
                 target.classList.add("slide");
                 target.hidden = target.hidden ? false : null;
@@ -4189,7 +4173,7 @@
                 target.style.removeProperty("padding-bottom");
                 target.style.removeProperty("margin-top");
                 target.style.removeProperty("margin-bottom");
-                window.setTimeout((() => {
+                window.setTimeout(() => {
                     target.style.removeProperty("height");
                     target.style.removeProperty("overflow");
                     target.style.removeProperty("transition-duration");
@@ -4200,58 +4184,55 @@
                             target
                         }
                     }));
-                }), duration);
+                }, duration);
             }
         };
         let bodyLockStatus = true;
-        const bodyLockToggle = function() {
-            let delay = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 500;
+        const bodyLockToggle = (delay = 500) => {
             document.documentElement.classList.contains("lock") ? bodyUnlock(delay) : bodyLock(delay);
         };
-        const bodyUnlock = function() {
-            let delay = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 500;
+        const bodyUnlock = (delay = 500) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
-                setTimeout((() => {
-                    lockPaddingElements.forEach((lockPaddingElement => {
+                setTimeout(() => {
+                    lockPaddingElements.forEach(lockPaddingElement => {
                         lockPaddingElement.style.paddingRight = "";
-                    }));
+                    });
                     document.body.style.paddingRight = "";
                     document.documentElement.classList.remove("lock");
-                }), delay);
+                }, delay);
                 bodyLockStatus = false;
-                setTimeout((() => {
+                setTimeout(() => {
                     bodyLockStatus = true;
-                }), delay);
+                }, delay);
             }
         };
-        const bodyLock = function() {
-            let delay = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 500;
+        const bodyLock = (delay = 500) => {
             if (bodyLockStatus) {
                 const lockPaddingElements = document.querySelectorAll("[data-lp]");
                 const lockPaddingValue = window.innerWidth - document.body.offsetWidth + "px";
-                lockPaddingElements.forEach((lockPaddingElement => {
+                lockPaddingElements.forEach(lockPaddingElement => {
                     lockPaddingElement.style.paddingRight = lockPaddingValue;
-                }));
+                });
                 document.body.style.paddingRight = lockPaddingValue;
                 document.documentElement.classList.add("lock");
                 bodyLockStatus = false;
-                setTimeout((() => {
+                setTimeout(() => {
                     bodyLockStatus = true;
-                }), delay);
+                }, delay);
             }
         };
         const FLS = message => {
-            setTimeout((() => {
+            setTimeout(() => {
                 if (window.FLS) console.log(message);
-            }), 0);
+            }, 0);
         };
-        const uniqArray = array => array.filter(((item, index, self) => self.indexOf(item) === index));
+        const uniqArray = array => array.filter((item, index, self) => self.indexOf(item) === index);
         function dataMediaQueries(array, dataSetValue) {
-            const media = Array.from(array).filter((item => item.dataset[dataSetValue] ? item.dataset[dataSetValue].split(",")[0] : null));
+            const media = Array.from(array).filter(item => item.dataset[dataSetValue] ? item.dataset[dataSetValue].split(",")[0] : null);
             if (!media.length) return;
             const breakpointsArray = [];
-            media.forEach((item => {
+            media.forEach(item => {
                 const params = item.dataset[dataSetValue];
                 const breakpoint = {};
                 const paramsArray = params.split(",");
@@ -4259,31 +4240,30 @@
                 breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
                 breakpoint.item = item;
                 breakpointsArray.push(breakpoint);
-            }));
-            let mdQueries = breakpointsArray.map((item => `(${item.type}-width: ${item.value}px),${item.value},${item.type}`));
+            });
+            let mdQueries = breakpointsArray.map(item => `(${item.type}-width: ${item.value}px),${item.value},${item.type}`);
             mdQueries = uniqArray(mdQueries);
             const mdQueriesArray = [];
             if (mdQueries.length) {
-                mdQueries.forEach((breakpoint => {
+                mdQueries.forEach(breakpoint => {
                     const paramsArray = breakpoint.split(",");
                     const mediaBreakpoint = paramsArray[1];
                     const mediaType = paramsArray[2];
                     const matchMedia = window.matchMedia(paramsArray[0]);
-                    const itemsArray = breakpointsArray.filter((item => {
+                    const itemsArray = breakpointsArray.filter(item => {
                         if (item.value === mediaBreakpoint && item.type === mediaType) return true;
-                    }));
+                    });
                     mdQueriesArray.push({
                         itemsArray,
                         matchMedia
                     });
-                }));
+                });
                 return mdQueriesArray;
             }
         }
         function burgerMenu() {
             const burger = document.querySelector(".burger-menu");
-            if (burger) document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            if (burger) document.addEventListener("click", ({target}) => {
                 if (bodyLockStatus && target.closest(".burger-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
@@ -4293,20 +4273,19 @@
                     bodyLockToggle();
                     document.documentElement.classList.remove("menu-open");
                 }
-            }));
+            });
         }
         function searchHeaderShow() {
-            document.addEventListener("click", (e => {
+            document.addEventListener("click", e => {
                 const {target} = e;
                 if (target.closest(".search-button--icon")) {
                     e.preventDefault();
                     document.documentElement.classList.add("search-show");
                 }
                 if (!target.closest(".search-header") && document.documentElement.classList.contains("search-show")) document.documentElement.classList.remove("search-show");
-            }));
+            });
         }
-        const gotoBlock_gotoBlock = function(targetSelector) {
-            let config = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+        const gotoBlock_gotoBlock = (targetSelector, config = {}) => {
             const targetBlockElement = document.querySelector(targetSelector);
             if (!targetBlockElement) {
                 FLS(`[gotoBlock]: Такого блоку немає на сторінці: ${targetSelector}`);
@@ -4329,9 +4308,9 @@
                     headerElement.classList.add("header-scroll");
                     headerHeight = headerElement.offsetHeight;
                     headerElement.classList.remove("header-scroll");
-                    setTimeout((() => {
+                    setTimeout(() => {
                         headerElement.style.cssText = ``;
-                    }), 0);
+                    }, 0);
                 } else headerHeight = headerElement.offsetHeight;
                 return headerHeight;
             };
@@ -4411,9 +4390,10 @@
         function extend(target, src) {
             if (target === void 0) target = {};
             if (src === void 0) src = {};
-            Object.keys(src).forEach((key => {
+            const noExtend = [ "__proto__", "constructor", "prototype" ];
+            Object.keys(src).filter(key => noExtend.indexOf(key) < 0).forEach(key => {
                 if (typeof target[key] === "undefined") target[key] = src[key]; else if (ssr_window_esm_isObject(src[key]) && ssr_window_esm_isObject(target[key]) && Object.keys(src[key]).length > 0) extend(target[key], src[key]);
-            }));
+            });
         }
         const ssrDocument = {
             body: {},
@@ -4530,18 +4510,18 @@
         }
         function utils_classesToTokens(classes) {
             if (classes === void 0) classes = "";
-            return classes.trim().split(" ").filter((c => !!c.trim()));
+            return classes.trim().split(" ").filter(c => !!c.trim());
         }
         function deleteProps(obj) {
             const object = obj;
-            Object.keys(object).forEach((key => {
+            Object.keys(object).forEach(key => {
                 try {
                     object[key] = null;
                 } catch (e) {}
                 try {
                     delete object[key];
                 } catch (e) {}
-            }));
+            });
         }
         function utils_nextTick(callback, delay) {
             if (delay === void 0) delay = 0;
@@ -4567,7 +4547,7 @@
             const curStyle = utils_getComputedStyle(el);
             if (window.WebKitCSSMatrix) {
                 curTransform = curStyle.transform || curStyle.webkitTransform;
-                if (curTransform.split(",").length > 6) curTransform = curTransform.split(", ").map((a => a.replace(",", "."))).join(", ");
+                if (curTransform.split(",").length > 6) curTransform = curTransform.split(", ").map(a => a.replace(",", ".")).join(", ");
                 transformMatrix = new window.WebKitCSSMatrix(curTransform === "none" ? "" : curTransform);
             } else {
                 transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform || curStyle.transform || curStyle.getPropertyValue("transform").replace("translate(", "matrix(1, 0, 0, 1,");
@@ -4590,7 +4570,7 @@
             for (let i = 1; i < arguments.length; i += 1) {
                 const nextSource = i < 0 || arguments.length <= i ? void 0 : arguments[i];
                 if (nextSource !== void 0 && nextSource !== null && !isNode(nextSource)) {
-                    const keysArray = Object.keys(Object(nextSource)).filter((key => noExtend.indexOf(key) < 0));
+                    const keysArray = Object.keys(Object(nextSource)).filter(key => noExtend.indexOf(key) < 0);
                     for (let nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex += 1) {
                         const nextKey = keysArray[nextIndex];
                         const desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
@@ -4630,12 +4610,12 @@
                 if (isOutOfBound(currentPosition, targetPosition)) {
                     swiper.wrapperEl.style.overflow = "hidden";
                     swiper.wrapperEl.style.scrollSnapType = "";
-                    setTimeout((() => {
+                    setTimeout(() => {
                         swiper.wrapperEl.style.overflow = "";
                         swiper.wrapperEl.scrollTo({
                             [side]: currentPosition
                         });
-                    }));
+                    });
                     window.cancelAnimationFrame(swiper.cssModeFrameID);
                     return;
                 }
@@ -4649,14 +4629,14 @@
             const children = [ ...element.children ];
             if (window.HTMLSlotElement && element instanceof HTMLSlotElement) children.push(...element.assignedElements());
             if (!selector) return children;
-            return children.filter((el => el.matches(selector)));
+            return children.filter(el => el.matches(selector));
         }
         function elementIsChildOfSlot(el, slot) {
             const elementsQueue = [ slot ];
             while (elementsQueue.length > 0) {
                 const elementToCheck = elementsQueue.shift();
                 if (el === elementToCheck) return true;
-                elementsQueue.push(...elementToCheck.children, ...elementToCheck.shadowRoot?.children || [], ...elementToCheck.assignedElements?.() || []);
+                elementsQueue.push(...elementToCheck.children, ...elementToCheck.shadowRoot ? elementToCheck.shadowRoot.children : [], ...elementToCheck.assignedElements ? elementToCheck.assignedElements() : []);
             }
         }
         function elementIsChildOf(el, parent) {
@@ -4748,7 +4728,13 @@
             return el.offsetWidth;
         }
         function utils_makeElementsArray(el) {
-            return (Array.isArray(el) ? el : [ el ]).filter((e => !!e));
+            return (Array.isArray(el) ? el : [ el ]).filter(e => !!e);
+        }
+        function utils_setInnerHTML(el, html) {
+            if (html === void 0) html = "";
+            if (typeof trustedTypes !== "undefined") el.innerHTML = trustedTypes.createPolicy("html", {
+                createHTML: s => s
+            }).createHTML(html); else el.innerHTML = html;
         }
         let support;
         function calcSupport() {
@@ -4815,7 +4801,7 @@
             if (isSafari()) {
                 const ua = String(window.navigator.userAgent);
                 if (ua.includes("Version/")) {
-                    const [major, minor] = ua.split("Version/")[1].split(" ")[0].split(".").map((num => Number(num)));
+                    const [major, minor] = ua.split("Version/")[1].split(" ")[0].split(".").map(num => Number(num));
                     needPerspectiveFix = major < 16 || major === 16 && minor < 2;
                 }
             }
@@ -4845,20 +4831,20 @@
             };
             const createObserver = () => {
                 if (!swiper || swiper.destroyed || !swiper.initialized) return;
-                observer = new ResizeObserver((entries => {
-                    animationFrame = window.requestAnimationFrame((() => {
+                observer = new ResizeObserver(entries => {
+                    animationFrame = window.requestAnimationFrame(() => {
                         const {width, height} = swiper;
                         let newWidth = width;
                         let newHeight = height;
-                        entries.forEach((_ref2 => {
+                        entries.forEach(_ref2 => {
                             let {contentBoxSize, contentRect, target} = _ref2;
                             if (target && target !== swiper.el) return;
                             newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize;
                             newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize;
-                        }));
+                        });
                         if (newWidth !== width || newHeight !== height) resizeHandler();
-                    }));
-                }));
+                    });
+                });
                 observer.observe(swiper.el);
             };
             const removeObserver = () => {
@@ -4872,19 +4858,19 @@
                 if (!swiper || swiper.destroyed || !swiper.initialized) return;
                 emit("orientationchange");
             };
-            on("init", (() => {
+            on("init", () => {
                 if (swiper.params.resizeObserver && typeof window.ResizeObserver !== "undefined") {
                     createObserver();
                     return;
                 }
                 window.addEventListener("resize", resizeHandler);
                 window.addEventListener("orientationchange", orientationChangeHandler);
-            }));
-            on("destroy", (() => {
+            });
+            on("destroy", () => {
                 removeObserver();
                 window.removeEventListener("resize", resizeHandler);
                 window.removeEventListener("orientationchange", orientationChangeHandler);
-            }));
+            });
         }
         function Observer(_ref) {
             let {swiper, extendParams, on, emit} = _ref;
@@ -4893,7 +4879,7 @@
             const attach = function(target, options) {
                 if (options === void 0) options = {};
                 const ObserverFunc = window.MutationObserver || window.WebkitMutationObserver;
-                const observer = new ObserverFunc((mutations => {
+                const observer = new ObserverFunc(mutations => {
                     if (swiper.__preventObserver__) return;
                     if (mutations.length === 1) {
                         emit("observerUpdate", mutations[0]);
@@ -4903,7 +4889,7 @@
                         emit("observerUpdate", mutations[0]);
                     };
                     if (window.requestAnimationFrame) window.requestAnimationFrame(observerUpdate); else window.setTimeout(observerUpdate, 0);
-                }));
+                });
                 observer.observe(target, {
                     attributes: typeof options.attributes === "undefined" ? true : options.attributes,
                     childList: swiper.isElement || (typeof options.childList === "undefined" ? true : options).childList,
@@ -4925,9 +4911,9 @@
                 });
             };
             const destroy = () => {
-                observers.forEach((observer => {
+                observers.forEach(observer => {
                     observer.disconnect();
-                }));
+                });
                 observers.splice(0, observers.length);
             };
             extendParams({
@@ -4944,10 +4930,10 @@
                 if (!self.eventsListeners || self.destroyed) return self;
                 if (typeof handler !== "function") return self;
                 const method = priority ? "unshift" : "push";
-                events.split(" ").forEach((event => {
+                events.split(" ").forEach(event => {
                     if (!self.eventsListeners[event]) self.eventsListeners[event] = [];
                     self.eventsListeners[event][method](handler);
-                }));
+                });
                 return self;
             },
             once(events, handler, priority) {
@@ -4983,11 +4969,11 @@
                 const self = this;
                 if (!self.eventsListeners || self.destroyed) return self;
                 if (!self.eventsListeners) return self;
-                events.split(" ").forEach((event => {
-                    if (typeof handler === "undefined") self.eventsListeners[event] = []; else if (self.eventsListeners[event]) self.eventsListeners[event].forEach(((eventHandler, index) => {
+                events.split(" ").forEach(event => {
+                    if (typeof handler === "undefined") self.eventsListeners[event] = []; else if (self.eventsListeners[event]) self.eventsListeners[event].forEach((eventHandler, index) => {
                         if (eventHandler === handler || eventHandler.__emitterProxy && eventHandler.__emitterProxy === handler) self.eventsListeners[event].splice(index, 1);
-                    }));
-                }));
+                    });
+                });
                 return self;
             },
             emit() {
@@ -5009,14 +4995,14 @@
                 }
                 data.unshift(context);
                 const eventsArray = Array.isArray(events) ? events : events.split(" ");
-                eventsArray.forEach((event => {
-                    if (self.eventsAnyListeners && self.eventsAnyListeners.length) self.eventsAnyListeners.forEach((eventHandler => {
+                eventsArray.forEach(event => {
+                    if (self.eventsAnyListeners && self.eventsAnyListeners.length) self.eventsAnyListeners.forEach(eventHandler => {
                         eventHandler.apply(context, [ event, ...data ]);
-                    }));
-                    if (self.eventsListeners && self.eventsListeners[event]) self.eventsListeners[event].forEach((eventHandler => {
+                    });
+                    if (self.eventsListeners && self.eventsListeners[event]) self.eventsListeners[event].forEach(eventHandler => {
                         eventHandler.apply(context, data);
-                    }));
-                }));
+                    });
+                });
                 return self;
             }
         };
@@ -5065,11 +5051,11 @@
             if (typeof swiperSize === "undefined") return;
             if (typeof spaceBetween === "string" && spaceBetween.indexOf("%") >= 0) spaceBetween = parseFloat(spaceBetween.replace("%", "")) / 100 * swiperSize; else if (typeof spaceBetween === "string") spaceBetween = parseFloat(spaceBetween);
             swiper.virtualSize = -spaceBetween;
-            slides.forEach((slideEl => {
+            slides.forEach(slideEl => {
                 if (rtl) slideEl.style.marginLeft = ""; else slideEl.style.marginRight = "";
                 slideEl.style.marginBottom = "";
                 slideEl.style.marginTop = "";
-            }));
+            });
             if (params.centeredSlides && params.cssMode) {
                 utils_setCSSProperty(wrapperEl, "--swiper-centered-offset-before", "");
                 utils_setCSSProperty(wrapperEl, "--swiper-centered-offset-after", "");
@@ -5077,7 +5063,7 @@
             const gridEnabled = params.grid && params.grid.rows > 1 && swiper.grid;
             if (gridEnabled) swiper.grid.initSlides(slides); else if (swiper.grid) swiper.grid.unsetSlides();
             let slideSize;
-            const shouldResetSlideSize = params.slidesPerView === "auto" && params.breakpoints && Object.keys(params.breakpoints).filter((key => typeof params.breakpoints[key].slidesPerView !== "undefined")).length > 0;
+            const shouldResetSlideSize = params.slidesPerView === "auto" && params.breakpoints && Object.keys(params.breakpoints).filter(key => typeof params.breakpoints[key].slidesPerView !== "undefined").length > 0;
             for (let i = 0; i < slidesLength; i += 1) {
                 slideSize = 0;
                 let slide;
@@ -5161,42 +5147,42 @@
             if (snapGrid.length === 0) snapGrid = [ 0 ];
             if (spaceBetween !== 0) {
                 const key = swiper.isHorizontal() && rtl ? "marginLeft" : swiper.getDirectionLabel("marginRight");
-                slides.filter(((_, slideIndex) => {
+                slides.filter((_, slideIndex) => {
                     if (!params.cssMode || params.loop) return true;
                     if (slideIndex === slides.length - 1) return false;
                     return true;
-                })).forEach((slideEl => {
+                }).forEach(slideEl => {
                     slideEl.style[key] = `${spaceBetween}px`;
-                }));
+                });
             }
             if (params.centeredSlides && params.centeredSlidesBounds) {
                 let allSlidesSize = 0;
-                slidesSizesGrid.forEach((slideSizeValue => {
+                slidesSizesGrid.forEach(slideSizeValue => {
                     allSlidesSize += slideSizeValue + (spaceBetween || 0);
-                }));
+                });
                 allSlidesSize -= spaceBetween;
                 const maxSnap = allSlidesSize > swiperSize ? allSlidesSize - swiperSize : 0;
-                snapGrid = snapGrid.map((snap => {
+                snapGrid = snapGrid.map(snap => {
                     if (snap <= 0) return -offsetBefore;
                     if (snap > maxSnap) return maxSnap + offsetAfter;
                     return snap;
-                }));
+                });
             }
             if (params.centerInsufficientSlides) {
                 let allSlidesSize = 0;
-                slidesSizesGrid.forEach((slideSizeValue => {
+                slidesSizesGrid.forEach(slideSizeValue => {
                     allSlidesSize += slideSizeValue + (spaceBetween || 0);
-                }));
+                });
                 allSlidesSize -= spaceBetween;
                 const offsetSize = (params.slidesOffsetBefore || 0) + (params.slidesOffsetAfter || 0);
                 if (allSlidesSize + offsetSize < swiperSize) {
                     const allSlidesOffset = (swiperSize - allSlidesSize - offsetSize) / 2;
-                    snapGrid.forEach(((snap, snapIndex) => {
+                    snapGrid.forEach((snap, snapIndex) => {
                         snapGrid[snapIndex] = snap - allSlidesOffset;
-                    }));
-                    slidesGrid.forEach(((snap, snapIndex) => {
+                    });
+                    slidesGrid.forEach((snap, snapIndex) => {
                         slidesGrid[snapIndex] = snap + allSlidesOffset;
-                    }));
+                    });
                 }
             }
             Object.assign(swiper, {
@@ -5210,8 +5196,8 @@
                 utils_setCSSProperty(wrapperEl, "--swiper-centered-offset-after", `${swiper.size / 2 - slidesSizesGrid[slidesSizesGrid.length - 1] / 2}px`);
                 const addToSnapGrid = -swiper.snapGrid[0];
                 const addToSlidesGrid = -swiper.slidesGrid[0];
-                swiper.snapGrid = swiper.snapGrid.map((v => v + addToSnapGrid));
-                swiper.slidesGrid = swiper.slidesGrid.map((v => v + addToSlidesGrid));
+                swiper.snapGrid = swiper.snapGrid.map(v => v + addToSnapGrid);
+                swiper.slidesGrid = swiper.slidesGrid.map(v => v + addToSlidesGrid);
             }
             if (slidesLength !== previousSlidesLength) swiper.emit("slidesLengthChange");
             if (snapGrid.length !== previousSnapGridLength) {
@@ -5240,9 +5226,9 @@
                 if (isVirtual) return swiper.slides[swiper.getSlideIndexByData(index)];
                 return swiper.slides[index];
             };
-            if (swiper.params.slidesPerView !== "auto" && swiper.params.slidesPerView > 1) if (swiper.params.centeredSlides) (swiper.visibleSlides || []).forEach((slide => {
+            if (swiper.params.slidesPerView !== "auto" && swiper.params.slidesPerView > 1) if (swiper.params.centeredSlides) (swiper.visibleSlides || []).forEach(slide => {
                 activeSlides.push(slide);
-            })); else for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
+            }); else for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
                 const index = swiper.activeIndex + i;
                 if (index > swiper.slides.length && !isVirtual) break;
                 activeSlides.push(getSlideByIndex(index));
@@ -5359,9 +5345,9 @@
                 if (slideIndex >= swiper.virtual.slides.length) slideIndex -= swiper.virtual.slides.length;
                 activeSlide = getFilteredSlide(`[data-swiper-slide-index="${slideIndex}"]`);
             } else activeSlide = getFilteredSlide(`[data-swiper-slide-index="${activeIndex}"]`); else if (gridEnabled) {
-                activeSlide = slides.find((slideEl => slideEl.column === activeIndex));
-                nextSlide = slides.find((slideEl => slideEl.column === activeIndex + 1));
-                prevSlide = slides.find((slideEl => slideEl.column === activeIndex - 1));
+                activeSlide = slides.find(slideEl => slideEl.column === activeIndex);
+                nextSlide = slides.find(slideEl => slideEl.column === activeIndex + 1);
+                prevSlide = slides.find(slideEl => slideEl.column === activeIndex - 1);
             } else activeSlide = slides[activeIndex];
             if (activeSlide) if (!gridEnabled) {
                 nextSlide = elementNextAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
@@ -5369,11 +5355,11 @@
                 prevSlide = elementPrevAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
                 if (params.loop && !prevSlide === 0) prevSlide = slides[slides.length - 1];
             }
-            slides.forEach((slideEl => {
+            slides.forEach(slideEl => {
                 toggleSlideClasses(slideEl, slideEl === activeSlide, params.slideActiveClass);
                 toggleSlideClasses(slideEl, slideEl === nextSlide, params.slideNextClass);
                 toggleSlideClasses(slideEl, slideEl === prevSlide, params.slidePrevClass);
-            }));
+            });
             swiper.emitSlidesClasses();
         }
         const processLazyPreloader = (swiper, imageEl) => {
@@ -5382,12 +5368,12 @@
             const slideEl = imageEl.closest(slideSelector());
             if (slideEl) {
                 let lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
-                if (!lazyEl && swiper.isElement) if (slideEl.shadowRoot) lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`); else requestAnimationFrame((() => {
+                if (!lazyEl && swiper.isElement) if (slideEl.shadowRoot) lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`); else requestAnimationFrame(() => {
                     if (slideEl.shadowRoot) {
                         lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`);
                         if (lazyEl) lazyEl.remove();
                     }
-                }));
+                });
                 if (lazyEl) lazyEl.remove();
             }
         };
@@ -5409,10 +5395,10 @@
                 const preloadColumns = [ activeColumn - amount ];
                 preloadColumns.push(...Array.from({
                     length: amount
-                }).map(((_, i) => activeColumn + slidesPerView + i)));
-                swiper.slides.forEach(((slideEl, i) => {
+                }).map((_, i) => activeColumn + slidesPerView + i));
+                swiper.slides.forEach((slideEl, i) => {
                     if (preloadColumns.includes(slideEl.column)) unlazy(swiper, i);
-                }));
+                });
                 return;
             }
             const slideIndexLastInView = activeIndex + slidesPerView - 1;
@@ -5463,7 +5449,7 @@
             const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
             let realIndex;
             if (swiper.virtual && params.virtual.enabled && params.loop) realIndex = getVirtualRealIndex(activeIndex); else if (gridEnabled) {
-                const firstSlideInColumn = swiper.slides.find((slideEl => slideEl.column === activeIndex));
+                const firstSlideInColumn = swiper.slides.find(slideEl => slideEl.column === activeIndex);
                 let activeSlideIndex = parseInt(firstSlideInColumn.getAttribute("data-swiper-slide-index"), 10);
                 if (Number.isNaN(activeSlideIndex)) activeSlideIndex = Math.max(swiper.slides.indexOf(firstSlideInColumn), 0);
                 realIndex = Math.floor(activeSlideIndex / params.grid.rows);
@@ -5491,9 +5477,9 @@
             const swiper = this;
             const params = swiper.params;
             let slide = el.closest(`.${params.slideClass}, swiper-slide`);
-            if (!slide && swiper.isElement && path && path.length > 1 && path.includes(el)) [ ...path.slice(path.indexOf(el) + 1, path.length) ].forEach((pathEl => {
+            if (!slide && swiper.isElement && path && path.length > 1 && path.includes(el)) [ ...path.slice(path.indexOf(el) + 1, path.length) ].forEach(pathEl => {
                 if (!slide && pathEl.matches && pathEl.matches(`.${params.slideClass}, swiper-slide`)) slide = pathEl;
-            }));
+            });
             let slideFound = false;
             let slideIndex;
             if (slide) for (let i = 0; i < swiper.slides.length; i += 1) if (swiper.slides[i] === slide) {
@@ -5644,11 +5630,7 @@
             let dir = direction;
             if (!dir) if (activeIndex > previousIndex) dir = "next"; else if (activeIndex < previousIndex) dir = "prev"; else dir = "reset";
             swiper.emit(`transition${step}`);
-            if (runCallbacks && activeIndex !== previousIndex) {
-                if (dir === "reset") {
-                    swiper.emit(`slideResetTransition${step}`);
-                    return;
-                }
+            if (runCallbacks && dir === "reset") swiper.emit(`slideResetTransition${step}`); else if (runCallbacks && activeIndex !== previousIndex) {
                 swiper.emit(`slideChangeTransition${step}`);
                 if (dir === "next") swiper.emit(`slideNextTransition${step}`); else swiper.emit(`slidePrevTransition${step}`);
             }
@@ -5738,14 +5720,14 @@
                     }
                     if (isVirtual && !swiper._cssModeVirtualInitialSet && swiper.params.initialSlide > 0) {
                         swiper._cssModeVirtualInitialSet = true;
-                        requestAnimationFrame((() => {
+                        requestAnimationFrame(() => {
                             wrapperEl[isH ? "scrollLeft" : "scrollTop"] = t;
-                        }));
+                        });
                     } else wrapperEl[isH ? "scrollLeft" : "scrollTop"] = t;
-                    if (isVirtual) requestAnimationFrame((() => {
+                    if (isVirtual) requestAnimationFrame(() => {
                         swiper.wrapperEl.style.scrollSnapType = "";
                         swiper._immediateVirtual = false;
-                    }));
+                    });
                 } else {
                     if (!swiper.support.smoothScroll) {
                         animateCSSModeScroll({
@@ -5762,6 +5744,9 @@
                 }
                 return true;
             }
+            const browser = getBrowser();
+            const isSafari = browser.isSafari;
+            if (isVirtual && !initial && isSafari && swiper.isElement) swiper.virtual.update(false, false, slideIndex);
             swiper.setTransition(speed);
             swiper.setTranslate(translate);
             swiper.updateActiveIndex(slideIndex);
@@ -5798,7 +5783,7 @@
                 let targetSlideIndex;
                 if (gridEnabled) {
                     const slideIndex = newIndex * swiper.params.grid.rows;
-                    targetSlideIndex = swiper.slides.find((slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === slideIndex)).column;
+                    targetSlideIndex = swiper.slides.find(slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === slideIndex).column;
                 } else targetSlideIndex = swiper.getSlideIndexByData(newIndex);
                 const cols = gridEnabled ? Math.ceil(swiper.slides.length / swiper.params.grid.rows) : swiper.slides.length;
                 const {centeredSlides} = swiper.params;
@@ -5821,12 +5806,12 @@
                 }
                 if (gridEnabled) {
                     const slideIndex = newIndex * swiper.params.grid.rows;
-                    newIndex = swiper.slides.find((slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === slideIndex)).column;
+                    newIndex = swiper.slides.find(slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === slideIndex).column;
                 } else newIndex = swiper.getSlideIndexByData(newIndex);
             }
-            requestAnimationFrame((() => {
+            requestAnimationFrame(() => {
                 swiper.slideTo(newIndex, speed, runCallbacks, internal);
-            }));
+            });
             return swiper;
         }
         function slideNext(speed, runCallbacks, internal) {
@@ -5846,9 +5831,9 @@
                 });
                 swiper._clientLeft = swiper.wrapperEl.clientLeft;
                 if (swiper.activeIndex === swiper.slides.length - 1 && params.cssMode) {
-                    requestAnimationFrame((() => {
+                    requestAnimationFrame(() => {
                         swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
-                    }));
+                    });
                     return true;
                 }
             }
@@ -5875,14 +5860,15 @@
                 return Math.floor(val);
             }
             const normalizedTranslate = normalize(translate);
-            const normalizedSnapGrid = snapGrid.map((val => normalize(val)));
+            const normalizedSnapGrid = snapGrid.map(val => normalize(val));
+            const isFreeMode = params.freeMode && params.freeMode.enabled;
             let prevSnap = snapGrid[normalizedSnapGrid.indexOf(normalizedTranslate) - 1];
-            if (typeof prevSnap === "undefined" && params.cssMode) {
+            if (typeof prevSnap === "undefined" && (params.cssMode || isFreeMode)) {
                 let prevSnapIndex;
-                snapGrid.forEach(((snap, snapIndex) => {
+                snapGrid.forEach((snap, snapIndex) => {
                     if (normalizedTranslate >= snap) prevSnapIndex = snapIndex;
-                }));
-                if (typeof prevSnapIndex !== "undefined") prevSnap = snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
+                });
+                if (typeof prevSnapIndex !== "undefined") prevSnap = isFreeMode ? snapGrid[prevSnapIndex] : snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
             }
             let prevIndex = 0;
             if (typeof prevSnap !== "undefined") {
@@ -5897,9 +5883,9 @@
                 const lastIndex = swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
                 return swiper.slideTo(lastIndex, speed, runCallbacks, internal);
             } else if (params.loop && swiper.activeIndex === 0 && params.cssMode) {
-                requestAnimationFrame((() => {
+                requestAnimationFrame(() => {
                     swiper.slideTo(prevIndex, speed, runCallbacks, internal);
-                }));
+                });
                 return true;
             }
             return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
@@ -5939,24 +5925,19 @@
             if (swiper.destroyed) return;
             const {params, slidesEl} = swiper;
             const slidesPerView = params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : params.slidesPerView;
-            let slideToIndex = swiper.clickedIndex;
+            let slideToIndex = swiper.getSlideIndexWhenGrid(swiper.clickedIndex);
             let realIndex;
             const slideSelector = swiper.isElement ? `swiper-slide` : `.${params.slideClass}`;
+            const isGrid = swiper.grid && swiper.params.grid && swiper.params.grid.rows > 1;
             if (params.loop) {
                 if (swiper.animating) return;
                 realIndex = parseInt(swiper.clickedSlide.getAttribute("data-swiper-slide-index"), 10);
-                if (params.centeredSlides) if (slideToIndex < swiper.loopedSlides - slidesPerView / 2 || slideToIndex > swiper.slides.length - swiper.loopedSlides + slidesPerView / 2) {
+                if (params.centeredSlides) swiper.slideToLoop(realIndex); else if (slideToIndex > (isGrid ? (swiper.slides.length - slidesPerView) / 2 - (swiper.params.grid.rows - 1) : swiper.slides.length - slidesPerView)) {
                     swiper.loopFix();
                     slideToIndex = swiper.getSlideIndex(utils_elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
-                    utils_nextTick((() => {
+                    utils_nextTick(() => {
                         swiper.slideTo(slideToIndex);
-                    }));
-                } else swiper.slideTo(slideToIndex); else if (slideToIndex > swiper.slides.length - slidesPerView) {
-                    swiper.loopFix();
-                    slideToIndex = swiper.getSlideIndex(utils_elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
-                    utils_nextTick((() => {
-                        swiper.slideTo(slideToIndex);
-                    }));
+                    });
                 } else swiper.slideTo(slideToIndex);
             } else swiper.slideTo(slideToIndex);
         }
@@ -5969,17 +5950,28 @@
             slideToClosest,
             slideToClickedSlide
         };
-        function loopCreate(slideRealIndex) {
+        function loopCreate(slideRealIndex, initial) {
             const swiper = this;
             const {params, slidesEl} = swiper;
             if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
             const initSlides = () => {
                 const slides = utils_elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
-                slides.forEach(((el, index) => {
+                slides.forEach((el, index) => {
                     el.setAttribute("data-swiper-slide-index", index);
-                }));
+                });
+            };
+            const clearBlankSlides = () => {
+                const slides = utils_elementChildren(slidesEl, `.${params.slideBlankClass}`);
+                slides.forEach(el => {
+                    el.remove();
+                });
+                if (slides.length > 0) {
+                    swiper.recalcSlides();
+                    swiper.updateSlides();
+                }
             };
             const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
+            if (params.loopAddBlankSlides && (params.slidesPerGroup > 1 || gridEnabled)) clearBlankSlides();
             const slidesPerGroup = params.slidesPerGroup * (gridEnabled ? params.grid.rows : 1);
             const shouldFillGroup = swiper.slides.length % slidesPerGroup !== 0;
             const shouldFillGrid = gridEnabled && swiper.slides.length % params.grid.rows !== 0;
@@ -6008,16 +6000,17 @@
             } else initSlides();
             swiper.loopFix({
                 slideRealIndex,
-                direction: params.centeredSlides ? void 0 : "next"
+                direction: params.centeredSlides ? void 0 : "next",
+                initial
             });
         }
         function loopFix(_temp) {
-            let {slideRealIndex, slideTo = true, direction, setTranslate, activeSlideIndex, byController, byMousewheel} = _temp === void 0 ? {} : _temp;
+            let {slideRealIndex, slideTo = true, direction, setTranslate, activeSlideIndex, initial, byController, byMousewheel} = _temp === void 0 ? {} : _temp;
             const swiper = this;
             if (!swiper.params.loop) return;
             swiper.emit("beforeLoopFix");
             const {slides, allowSlidePrev, allowSlideNext, slidesEl, params} = swiper;
-            const {centeredSlides} = params;
+            const {centeredSlides, initialSlide} = params;
             swiper.allowSlidePrev = true;
             swiper.allowSlideNext = true;
             if (swiper.virtual && params.virtual.enabled) {
@@ -6033,21 +6026,22 @@
                 if (centeredSlides && slidesPerView % 2 === 0) slidesPerView += 1;
             }
             const slidesPerGroup = params.slidesPerGroupAuto ? slidesPerView : params.slidesPerGroup;
-            let loopedSlides = slidesPerGroup;
+            let loopedSlides = centeredSlides ? Math.max(slidesPerGroup, Math.ceil(slidesPerView / 2)) : slidesPerGroup;
             if (loopedSlides % slidesPerGroup !== 0) loopedSlides += slidesPerGroup - loopedSlides % slidesPerGroup;
             loopedSlides += params.loopAdditionalSlides;
             swiper.loopedSlides = loopedSlides;
             const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
-            if (slides.length < slidesPerView + loopedSlides) showWarning("Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters"); else if (gridEnabled && params.grid.fill === "row") showWarning("Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`");
+            if (slides.length < slidesPerView + loopedSlides || swiper.params.effect === "cards" && slides.length < slidesPerView + loopedSlides * 2) showWarning("Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled or not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters"); else if (gridEnabled && params.grid.fill === "row") showWarning("Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`");
             const prependSlidesIndexes = [];
             const appendSlidesIndexes = [];
-            let activeIndex = swiper.activeIndex;
-            if (typeof activeSlideIndex === "undefined") activeSlideIndex = swiper.getSlideIndex(slides.find((el => el.classList.contains(params.slideActiveClass)))); else activeIndex = activeSlideIndex;
+            const cols = gridEnabled ? Math.ceil(slides.length / params.grid.rows) : slides.length;
+            const isInitialOverflow = initial && cols - initialSlide < slidesPerView && !centeredSlides;
+            let activeIndex = isInitialOverflow ? initialSlide : swiper.activeIndex;
+            if (typeof activeSlideIndex === "undefined") activeSlideIndex = swiper.getSlideIndex(slides.find(el => el.classList.contains(params.slideActiveClass))); else activeIndex = activeSlideIndex;
             const isNext = direction === "next" || !direction;
             const isPrev = direction === "prev" || !direction;
             let slidesPrepended = 0;
             let slidesAppended = 0;
-            const cols = gridEnabled ? Math.ceil(slides.length / params.grid.rows) : slides.length;
             const activeColIndex = gridEnabled ? slides[activeSlideIndex].column : activeSlideIndex;
             const activeColIndexWithShift = activeColIndex + (centeredSlides && typeof setTranslate === "undefined" ? -slidesPerView / 2 + .5 : 0);
             if (activeColIndexWithShift < loopedSlides) {
@@ -6061,31 +6055,36 @@
                 }
             } else if (activeColIndexWithShift + slidesPerView > cols - loopedSlides) {
                 slidesAppended = Math.max(activeColIndexWithShift - (cols - loopedSlides * 2), slidesPerGroup);
+                if (isInitialOverflow) slidesAppended = Math.max(slidesAppended, slidesPerView - cols + initialSlide + 1);
                 for (let i = 0; i < slidesAppended; i += 1) {
                     const index = i - Math.floor(i / cols) * cols;
-                    if (gridEnabled) slides.forEach(((slide, slideIndex) => {
+                    if (gridEnabled) slides.forEach((slide, slideIndex) => {
                         if (slide.column === index) appendSlidesIndexes.push(slideIndex);
-                    })); else appendSlidesIndexes.push(index);
+                    }); else appendSlidesIndexes.push(index);
                 }
             }
             swiper.__preventObserver__ = true;
-            requestAnimationFrame((() => {
+            requestAnimationFrame(() => {
                 swiper.__preventObserver__ = false;
-            }));
-            if (isPrev) prependSlidesIndexes.forEach((index => {
+            });
+            if (swiper.params.effect === "cards" && slides.length < slidesPerView + loopedSlides * 2) {
+                if (appendSlidesIndexes.includes(activeSlideIndex)) appendSlidesIndexes.splice(appendSlidesIndexes.indexOf(activeSlideIndex), 1);
+                if (prependSlidesIndexes.includes(activeSlideIndex)) prependSlidesIndexes.splice(prependSlidesIndexes.indexOf(activeSlideIndex), 1);
+            }
+            if (isPrev) prependSlidesIndexes.forEach(index => {
                 slides[index].swiperLoopMoveDOM = true;
                 slidesEl.prepend(slides[index]);
                 slides[index].swiperLoopMoveDOM = false;
-            }));
-            if (isNext) appendSlidesIndexes.forEach((index => {
+            });
+            if (isNext) appendSlidesIndexes.forEach(index => {
                 slides[index].swiperLoopMoveDOM = true;
                 slidesEl.append(slides[index]);
                 slides[index].swiperLoopMoveDOM = false;
-            }));
+            });
             swiper.recalcSlides();
-            if (params.slidesPerView === "auto") swiper.updateSlides(); else if (gridEnabled && (prependSlidesIndexes.length > 0 && isPrev || appendSlidesIndexes.length > 0 && isNext)) swiper.slides.forEach(((slide, slideIndex) => {
+            if (params.slidesPerView === "auto") swiper.updateSlides(); else if (gridEnabled && (prependSlidesIndexes.length > 0 && isPrev || appendSlidesIndexes.length > 0 && isNext)) swiper.slides.forEach((slide, slideIndex) => {
                 swiper.grid.updateSlide(slideIndex, slide, swiper.slides);
-            }));
+            });
             if (params.watchSlidesProgress) swiper.updateSlidesOffset();
             if (slideTo) if (prependSlidesIndexes.length > 0 && isPrev) {
                 if (typeof slideRealIndex === "undefined") {
@@ -6129,12 +6128,12 @@
                     activeSlideIndex,
                     byController: true
                 };
-                if (Array.isArray(swiper.controller.control)) swiper.controller.control.forEach((c => {
+                if (Array.isArray(swiper.controller.control)) swiper.controller.control.forEach(c => {
                     if (!c.destroyed && c.params.loop) c.loopFix({
                         ...loopParams,
                         slideTo: c.params.slidesPerView === params.slidesPerView ? slideTo : false
                     });
-                })); else if (swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop) swiper.controller.control.loopFix({
+                }); else if (swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop) swiper.controller.control.loopFix({
                     ...loopParams,
                     slideTo: swiper.controller.control.params.slidesPerView === params.slidesPerView ? slideTo : false
                 });
@@ -6144,19 +6143,19 @@
         function loopDestroy() {
             const swiper = this;
             const {params, slidesEl} = swiper;
-            if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
+            if (!params.loop || !slidesEl || swiper.virtual && swiper.params.virtual.enabled) return;
             swiper.recalcSlides();
             const newSlidesOrder = [];
-            swiper.slides.forEach((slideEl => {
+            swiper.slides.forEach(slideEl => {
                 const index = typeof slideEl.swiperSlideIndex === "undefined" ? slideEl.getAttribute("data-swiper-slide-index") * 1 : slideEl.swiperSlideIndex;
                 newSlidesOrder[index] = slideEl;
-            }));
-            swiper.slides.forEach((slideEl => {
+            });
+            swiper.slides.forEach(slideEl => {
                 slideEl.removeAttribute("data-swiper-slide-index");
-            }));
-            newSlidesOrder.forEach((slideEl => {
+            });
+            newSlidesOrder.forEach(slideEl => {
                 slidesEl.append(slideEl);
-            }));
+            });
             swiper.recalcSlides();
             swiper.slideTo(swiper.realIndex, 0);
         }
@@ -6172,18 +6171,18 @@
             if (swiper.isElement) swiper.__preventObserver__ = true;
             el.style.cursor = "move";
             el.style.cursor = moving ? "grabbing" : "grab";
-            if (swiper.isElement) requestAnimationFrame((() => {
+            if (swiper.isElement) requestAnimationFrame(() => {
                 swiper.__preventObserver__ = false;
-            }));
+            });
         }
         function unsetGrabCursor() {
             const swiper = this;
             if (swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) return;
             if (swiper.isElement) swiper.__preventObserver__ = true;
             swiper[swiper.params.touchEventsTarget === "container" ? "el" : "wrapperEl"].style.cursor = "";
-            if (swiper.isElement) requestAnimationFrame((() => {
+            if (swiper.isElement) requestAnimationFrame(() => {
                 swiper.__preventObserver__ = false;
-            }));
+            });
         }
         var grabCursor = {
             setGrabCursor,
@@ -6294,7 +6293,7 @@
             }
             let targetTouch;
             if (e.type === "touchmove") {
-                targetTouch = [ ...e.changedTouches ].find((t => t.identifier === data.touchId));
+                targetTouch = [ ...e.changedTouches ].find(t => t.identifier === data.touchId);
                 if (!targetTouch || targetTouch.identifier !== data.touchId) return;
             } else targetTouch = e;
             if (!data.isTouched) {
@@ -6327,7 +6326,7 @@
                     data.isMoved = false;
                     return;
                 }
-            } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate()) return;
+            } else if (rtl && (pageX > touches.startX && -swiper.translate <= swiper.maxTranslate() || pageX < touches.startX && -swiper.translate >= swiper.minTranslate())) return; else if (!rtl && (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate())) return;
             if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== e.target && e.pointerType !== "mouse") document.activeElement.blur();
             if (document.activeElement) if (e.target === document.activeElement && e.target.matches(data.focusableElements)) {
                 data.isMoved = true;
@@ -6398,7 +6397,7 @@
             }
             let loopFixed;
             (new Date).getTime();
-            if (data.isMoved && data.allowThresholdMove && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1) {
+            if (params._loopSwapReset !== false && data.isMoved && data.allowThresholdMove && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1) {
                 Object.assign(touches, {
                     startX: pageX,
                     startY: pageY,
@@ -6475,7 +6474,7 @@
                 if (e.pointerId !== data.pointerId) return;
                 targetTouch = e;
             } else {
-                targetTouch = [ ...e.changedTouches ].find((t => t.identifier === data.touchId));
+                targetTouch = [ ...e.changedTouches ].find(t => t.identifier === data.touchId);
                 if (!targetTouch || targetTouch.identifier !== data.touchId) return;
             }
             if ([ "pointercancel", "pointerout", "pointerleave", "contextmenu" ].includes(e.type)) {
@@ -6505,9 +6504,9 @@
                 if (timeDiff < 300 && touchEndTime - data.lastClickTime < 300) swiper.emit("doubleTap doubleClick", e);
             }
             data.lastClickTime = utils_now();
-            utils_nextTick((() => {
+            utils_nextTick(() => {
                 if (!swiper.destroyed) swiper.allowClick = true;
-            }));
+            });
             if (!data.isTouched || !data.isMoved || !swiper.swipeDirection || touches.diff === 0 && !data.loopSwapReset || data.currentTranslate === data.startTranslate && !data.loopSwapReset) {
                 data.isTouched = false;
                 data.isMoved = false;
@@ -6581,9 +6580,9 @@
             if ((params.slidesPerView === "auto" || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides && !isVirtualLoop) swiper.slideTo(swiper.slides.length - 1, 0, false, true); else if (swiper.params.loop && !isVirtual) swiper.slideToLoop(swiper.realIndex, 0, false, true); else swiper.slideTo(swiper.activeIndex, 0, false, true);
             if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
                 clearTimeout(swiper.autoplay.resizeTimeout);
-                swiper.autoplay.resizeTimeout = setTimeout((() => {
+                swiper.autoplay.resizeTimeout = setTimeout(() => {
                     if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) swiper.autoplay.resume();
-                }), 500);
+                }, 500);
             }
             swiper.allowSlidePrev = allowSlidePrev;
             swiper.allowSlideNext = allowSlideNext;
@@ -6727,13 +6726,13 @@
                 swiper.emitContainerClasses();
             }
             if (wasGrabCursor && !isGrabCursor) swiper.unsetGrabCursor(); else if (!wasGrabCursor && isGrabCursor) swiper.setGrabCursor();
-            [ "navigation", "pagination", "scrollbar" ].forEach((prop => {
+            [ "navigation", "pagination", "scrollbar" ].forEach(prop => {
                 if (typeof breakpointParams[prop] === "undefined") return;
                 const wasModuleEnabled = params[prop] && params[prop].enabled;
                 const isModuleEnabled = breakpointParams[prop] && breakpointParams[prop].enabled;
                 if (wasModuleEnabled && !isModuleEnabled) swiper[prop].disable();
                 if (!wasModuleEnabled && isModuleEnabled) swiper[prop].enable();
-            }));
+            });
             const directionChanged = breakpointParams.direction && breakpointParams.direction !== params.direction;
             const needsReLoop = params.loop && (breakpointParams.slidesPerView !== params.slidesPerView || directionChanged);
             const wasLoop = params.loop;
@@ -6765,7 +6764,7 @@
             let breakpoint = false;
             const window = ssr_window_esm_getWindow();
             const currentHeight = base === "window" ? window.innerHeight : containerEl.clientHeight;
-            const points = Object.keys(breakpoints).map((point => {
+            const points = Object.keys(breakpoints).map(point => {
                 if (typeof point === "string" && point.indexOf("@") === 0) {
                     const minRatio = parseFloat(point.substr(1));
                     const value = currentHeight * minRatio;
@@ -6778,8 +6777,8 @@
                     value: point,
                     point
                 };
-            }));
-            points.sort(((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10)));
+            });
+            points.sort((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10));
             for (let i = 0; i < points.length; i += 1) {
                 const {point, value} = points[i];
                 if (base === "window") {
@@ -6794,11 +6793,11 @@
         };
         function prepareClasses(entries, prefix) {
             const resultClasses = [];
-            entries.forEach((item => {
-                if (typeof item === "object") Object.keys(item).forEach((classNames => {
+            entries.forEach(item => {
+                if (typeof item === "object") Object.keys(item).forEach(classNames => {
                     if (item[classNames]) resultClasses.push(prefix + classNames);
-                })); else if (typeof item === "string") resultClasses.push(prefix + item);
-            }));
+                }); else if (typeof item === "string") resultClasses.push(prefix + item);
+            });
             return resultClasses;
         }
         function addClasses() {
@@ -6999,12 +6998,12 @@
                 const document = ssr_window_esm_getDocument();
                 if (params.el && typeof params.el === "string" && document.querySelectorAll(params.el).length > 1) {
                     const swipers = [];
-                    document.querySelectorAll(params.el).forEach((containerEl => {
+                    document.querySelectorAll(params.el).forEach(containerEl => {
                         const newParams = utils_extend({}, params, {
                             el: containerEl
                         });
                         swipers.push(new Swiper(newParams));
-                    }));
+                    });
                     return swipers;
                 }
                 const swiper = this;
@@ -7019,7 +7018,7 @@
                 swiper.modules = [ ...swiper.__modules__ ];
                 if (params.modules && Array.isArray(params.modules)) swiper.modules.push(...params.modules);
                 const allModulesParams = {};
-                swiper.modules.forEach((mod => {
+                swiper.modules.forEach(mod => {
                     mod({
                         params,
                         swiper,
@@ -7029,14 +7028,14 @@
                         off: swiper.off.bind(swiper),
                         emit: swiper.emit.bind(swiper)
                     });
-                }));
+                });
                 const swiperParams = utils_extend({}, defaults, allModulesParams);
                 swiper.params = utils_extend({}, swiperParams, extendedDefaults, params);
                 swiper.originalParams = utils_extend({}, swiper.params);
                 swiper.passedParams = utils_extend({}, params);
-                if (swiper.params && swiper.params.on) Object.keys(swiper.params.on).forEach((eventName => {
+                if (swiper.params && swiper.params.on) Object.keys(swiper.params.on).forEach(eventName => {
                     swiper.on(eventName, swiper.params.on[eventName]);
-                }));
+                });
                 if (swiper.params && swiper.params.onAny) swiper.onAny(swiper.params.onAny);
                 Object.assign(swiper, {
                     enabled: swiper.params.enabled,
@@ -7120,7 +7119,11 @@
                 return utils_elementIndex(slideEl) - firstSlideIndex;
             }
             getSlideIndexByData(index) {
-                return this.getSlideIndex(this.slides.find((slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === index)));
+                return this.getSlideIndex(this.slides.find(slideEl => slideEl.getAttribute("data-swiper-slide-index") * 1 === index));
+            }
+            getSlideIndexWhenGrid(index) {
+                if (this.grid && this.params.grid && this.params.grid.rows > 1) if (this.params.grid.fill === "column") index = Math.floor(index / this.params.grid.rows); else if (this.params.grid.fill === "row") index %= Math.ceil(this.slides.length / this.params.grid.rows);
+                return index;
             }
             recalcSlides() {
                 const swiper = this;
@@ -7154,26 +7157,26 @@
             emitContainerClasses() {
                 const swiper = this;
                 if (!swiper.params._emitClasses || !swiper.el) return;
-                const cls = swiper.el.className.split(" ").filter((className => className.indexOf("swiper") === 0 || className.indexOf(swiper.params.containerModifierClass) === 0));
+                const cls = swiper.el.className.split(" ").filter(className => className.indexOf("swiper") === 0 || className.indexOf(swiper.params.containerModifierClass) === 0);
                 swiper.emit("_containerClasses", cls.join(" "));
             }
             getSlideClasses(slideEl) {
                 const swiper = this;
                 if (swiper.destroyed) return "";
-                return slideEl.className.split(" ").filter((className => className.indexOf("swiper-slide") === 0 || className.indexOf(swiper.params.slideClass) === 0)).join(" ");
+                return slideEl.className.split(" ").filter(className => className.indexOf("swiper-slide") === 0 || className.indexOf(swiper.params.slideClass) === 0).join(" ");
             }
             emitSlidesClasses() {
                 const swiper = this;
                 if (!swiper.params._emitClasses || !swiper.el) return;
                 const updates = [];
-                swiper.slides.forEach((slideEl => {
+                swiper.slides.forEach(slideEl => {
                     const classNames = swiper.getSlideClasses(slideEl);
                     updates.push({
                         slideEl,
                         classNames
                     });
                     swiper.emit("_slideClass", slideEl, classNames);
-                }));
+                });
                 swiper.emit("_slideClasses", updates);
             }
             slidesPerViewDynamic(view, exact) {
@@ -7210,9 +7213,9 @@
                 if (!swiper || swiper.destroyed) return;
                 const {snapGrid, params} = swiper;
                 if (params.breakpoints) swiper.setBreakpoint();
-                [ ...swiper.el.querySelectorAll('[loading="lazy"]') ].forEach((imageEl => {
+                [ ...swiper.el.querySelectorAll('[loading="lazy"]') ].forEach(imageEl => {
                     if (imageEl.complete) processLazyPreloader(swiper, imageEl);
-                }));
+                });
                 swiper.updateSize();
                 swiper.updateSlides();
                 swiper.updateProgress();
@@ -7248,9 +7251,9 @@
                 swiper.el.classList.add(`${swiper.params.containerModifierClass}${newDirection}`);
                 swiper.emitContainerClasses();
                 swiper.params.direction = newDirection;
-                swiper.slides.forEach((slideEl => {
+                swiper.slides.forEach(slideEl => {
                     if (newDirection === "vertical") slideEl.style.width = ""; else slideEl.style.height = "";
-                }));
+                });
                 swiper.emit("changeDirection");
                 if (needUpdate) swiper.update();
                 return swiper;
@@ -7289,9 +7292,9 @@
                 if (!wrapperEl && swiper.params.createElements) {
                     wrapperEl = utils_createElement("div", swiper.params.wrapperClass);
                     el.append(wrapperEl);
-                    utils_elementChildren(el, `.${swiper.params.slideClass}`).forEach((slideEl => {
+                    utils_elementChildren(el, `.${swiper.params.slideClass}`).forEach(slideEl => {
                         wrapperEl.append(slideEl);
-                    }));
+                    });
                 }
                 Object.assign(swiper, {
                     el,
@@ -7318,15 +7321,15 @@
                 if (swiper.params.watchOverflow) swiper.checkOverflow();
                 if (swiper.params.grabCursor && swiper.enabled) swiper.setGrabCursor();
                 if (swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) swiper.slideTo(swiper.params.initialSlide + swiper.virtual.slidesBefore, 0, swiper.params.runCallbacksOnInit, false, true); else swiper.slideTo(swiper.params.initialSlide, 0, swiper.params.runCallbacksOnInit, false, true);
-                if (swiper.params.loop) swiper.loopCreate();
+                if (swiper.params.loop) swiper.loopCreate(void 0, true);
                 swiper.attachEvents();
                 const lazyElements = [ ...swiper.el.querySelectorAll('[loading="lazy"]') ];
                 if (swiper.isElement) lazyElements.push(...swiper.hostEl.querySelectorAll('[loading="lazy"]'));
-                lazyElements.forEach((imageEl => {
-                    if (imageEl.complete) processLazyPreloader(swiper, imageEl); else imageEl.addEventListener("load", (e => {
+                lazyElements.forEach(imageEl => {
+                    if (imageEl.complete) processLazyPreloader(swiper, imageEl); else imageEl.addEventListener("load", e => {
                         processLazyPreloader(swiper, e.target);
-                    }));
-                }));
+                    });
+                });
                 preload(swiper);
                 swiper.initialized = true;
                 preload(swiper);
@@ -7348,16 +7351,16 @@
                     swiper.removeClasses();
                     if (el && typeof el !== "string") el.removeAttribute("style");
                     if (wrapperEl) wrapperEl.removeAttribute("style");
-                    if (slides && slides.length) slides.forEach((slideEl => {
+                    if (slides && slides.length) slides.forEach(slideEl => {
                         slideEl.classList.remove(params.slideVisibleClass, params.slideFullyVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
                         slideEl.removeAttribute("style");
                         slideEl.removeAttribute("data-swiper-slide-index");
-                    }));
+                    });
                 }
                 swiper.emit("destroy");
-                Object.keys(swiper.eventsListeners).forEach((eventName => {
+                Object.keys(swiper.eventsListeners).forEach(eventName => {
                     swiper.off(eventName);
-                }));
+                });
                 if (deleteInstance !== false) {
                     if (swiper.el && typeof swiper.el !== "string") swiper.el.swiper = null;
                     deleteProps(swiper);
@@ -7381,18 +7384,18 @@
             }
             static use(module) {
                 if (Array.isArray(module)) {
-                    module.forEach((m => Swiper.installModule(m)));
+                    module.forEach(m => Swiper.installModule(m));
                     return Swiper;
                 }
                 Swiper.installModule(module);
                 return Swiper;
             }
         }
-        Object.keys(prototypes).forEach((prototypeGroup => {
-            Object.keys(prototypes[prototypeGroup]).forEach((protoMethod => {
+        Object.keys(prototypes).forEach(prototypeGroup => {
+            Object.keys(prototypes[prototypeGroup]).forEach(protoMethod => {
                 Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
-            }));
-        }));
+            });
+        });
         Swiper.use([ Resize, Observer ]);
         function Keyboard(_ref) {
             let {swiper, extendParams, on, emit} = _ref;
@@ -7424,7 +7427,7 @@
                 if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowDown || isPageDown)) return false;
                 if (!swiper.allowSlidePrev && (swiper.isHorizontal() && isArrowLeft || swiper.isVertical() && isArrowUp || isPageUp)) return false;
                 if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                if (document.activeElement && document.activeElement.nodeName && (document.activeElement.nodeName.toLowerCase() === "input" || document.activeElement.nodeName.toLowerCase() === "textarea")) return;
+                if (document.activeElement && (document.activeElement.isContentEditable || document.activeElement.nodeName && (document.activeElement.nodeName.toLowerCase() === "input" || document.activeElement.nodeName.toLowerCase() === "textarea"))) return;
                 if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPageDown || isArrowLeft || isArrowRight || isArrowUp || isArrowDown)) {
                     let inView = false;
                     if (utils_elementParents(swiper.el, `.${swiper.params.slideClass}, swiper-slide`).length > 0 && utils_elementParents(swiper.el, `.${swiper.params.slideActiveClass}`).length === 0) return;
@@ -7467,19 +7470,19 @@
                 document.removeEventListener("keydown", handle);
                 swiper.keyboard.enabled = false;
             }
-            on("init", (() => {
+            on("init", () => {
                 if (swiper.params.keyboard.enabled) enable();
-            }));
-            on("destroy", (() => {
+            });
+            on("destroy", () => {
                 if (swiper.keyboard.enabled) disable();
-            }));
+            });
             Object.assign(swiper.keyboard, {
                 enable,
                 disable
             });
         }
         function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
-            if (swiper.params.createElements) Object.keys(checkProps).forEach((key => {
+            if (swiper.params.createElements) Object.keys(checkProps).forEach(key => {
                 if (!params[key] && params.auto === true) {
                     let element = utils_elementChildren(swiper.el, `.${checkProps[key]}`)[0];
                     if (!element) {
@@ -7490,12 +7493,12 @@
                     params[key] = element;
                     originalParams[key] = element;
                 }
-            }));
+            });
             return params;
         }
         function classes_to_selector_classesToSelector(classes) {
             if (classes === void 0) classes = "";
-            return `.${classes.trim().replace(/([\.:!+\/])/g, "\\$1").replace(/ /g, ".")}`;
+            return `.${classes.trim().replace(/([\.:!+\/()[\]])/g, "\\$1").replace(/ /g, ".")}`;
         }
         function Pagination(_ref) {
             let {swiper, extendParams, on, emit} = _ref;
@@ -7594,9 +7597,9 @@
                     let midIndex;
                     if (params.dynamicBullets) {
                         bulletSize = elementOuterSize(bullets[0], swiper.isHorizontal() ? "width" : "height", true);
-                        el.forEach((subEl => {
+                        el.forEach(subEl => {
                             subEl.style[swiper.isHorizontal() ? "width" : "height"] = `${bulletSize * (params.dynamicMainBullets + 4)}px`;
-                        }));
+                        });
                         if (params.dynamicMainBullets > 1 && previousIndex !== void 0) {
                             dynamicBulletIndex += current - (previousIndex || 0);
                             if (dynamicBulletIndex > params.dynamicMainBullets - 1) dynamicBulletIndex = params.dynamicMainBullets - 1; else if (dynamicBulletIndex < 0) dynamicBulletIndex = 0;
@@ -7605,11 +7608,11 @@
                         lastIndex = firstIndex + (Math.min(bullets.length, params.dynamicMainBullets) - 1);
                         midIndex = (lastIndex + firstIndex) / 2;
                     }
-                    bullets.forEach((bulletEl => {
-                        const classesToRemove = [ ...[ "", "-next", "-next-next", "-prev", "-prev-prev", "-main" ].map((suffix => `${params.bulletActiveClass}${suffix}`)) ].map((s => typeof s === "string" && s.includes(" ") ? s.split(" ") : s)).flat();
+                    bullets.forEach(bulletEl => {
+                        const classesToRemove = [ ...[ "", "-next", "-next-next", "-prev", "-prev-prev", "-main" ].map(suffix => `${params.bulletActiveClass}${suffix}`) ].map(s => typeof s === "string" && s.includes(" ") ? s.split(" ") : s).flat();
                         bulletEl.classList.remove(...classesToRemove);
-                    }));
-                    if (el.length > 1) bullets.forEach((bullet => {
+                    });
+                    if (el.length > 1) bullets.forEach(bullet => {
                         const bulletIndex = utils_elementIndex(bullet);
                         if (bulletIndex === current) bullet.classList.add(...params.bulletActiveClass.split(" ")); else if (swiper.isElement) bullet.setAttribute("part", "bullet");
                         if (params.dynamicBullets) {
@@ -7617,12 +7620,12 @@
                             if (bulletIndex === firstIndex) setSideBullets(bullet, "prev");
                             if (bulletIndex === lastIndex) setSideBullets(bullet, "next");
                         }
-                    })); else {
+                    }); else {
                         const bullet = bullets[current];
                         if (bullet) bullet.classList.add(...params.bulletActiveClass.split(" "));
-                        if (swiper.isElement) bullets.forEach(((bulletEl, bulletIndex) => {
+                        if (swiper.isElement) bullets.forEach((bulletEl, bulletIndex) => {
                             bulletEl.setAttribute("part", bulletIndex === current ? "bullet-active" : "bullet");
-                        }));
+                        });
                         if (params.dynamicBullets) {
                             const firstDisplayedBullet = bullets[firstIndex];
                             const lastDisplayedBullet = bullets[lastIndex];
@@ -7635,19 +7638,19 @@
                         const dynamicBulletsLength = Math.min(bullets.length, params.dynamicMainBullets + 4);
                         const bulletsOffset = (bulletSize * dynamicBulletsLength - bulletSize) / 2 - midIndex * bulletSize;
                         const offsetProp = rtl ? "right" : "left";
-                        bullets.forEach((bullet => {
+                        bullets.forEach(bullet => {
                             bullet.style[swiper.isHorizontal() ? offsetProp : "top"] = `${bulletsOffset}px`;
-                        }));
+                        });
                     }
                 }
-                el.forEach(((subEl, subElIndex) => {
+                el.forEach((subEl, subElIndex) => {
                     if (params.type === "fraction") {
-                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.currentClass)).forEach((fractionEl => {
+                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.currentClass)).forEach(fractionEl => {
                             fractionEl.textContent = params.formatFractionCurrent(current + 1);
-                        }));
-                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.totalClass)).forEach((totalEl => {
+                        });
+                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.totalClass)).forEach(totalEl => {
                             totalEl.textContent = params.formatFractionTotal(total);
-                        }));
+                        });
                     }
                     if (params.type === "progressbar") {
                         let progressbarDirection;
@@ -7656,20 +7659,20 @@
                         let scaleX = 1;
                         let scaleY = 1;
                         if (progressbarDirection === "horizontal") scaleX = scale; else scaleY = scale;
-                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.progressbarFillClass)).forEach((progressEl => {
+                        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.progressbarFillClass)).forEach(progressEl => {
                             progressEl.style.transform = `translate3d(0,0,0) scaleX(${scaleX}) scaleY(${scaleY})`;
                             progressEl.style.transitionDuration = `${swiper.params.speed}ms`;
-                        }));
+                        });
                     }
                     if (params.type === "custom" && params.renderCustom) {
-                        subEl.innerHTML = params.renderCustom(swiper, current + 1, total);
+                        utils_setInnerHTML(subEl, params.renderCustom(swiper, current + 1, total));
                         if (subElIndex === 0) emit("paginationRender", subEl);
                     } else {
                         if (subElIndex === 0) emit("paginationRender", subEl);
                         emit("paginationUpdate", subEl);
                     }
                     if (swiper.params.watchOverflow && swiper.enabled) subEl.classList[swiper.isLocked ? "add" : "remove"](params.lockClass);
-                }));
+                });
             }
             function render() {
                 const params = swiper.params.pagination;
@@ -7686,10 +7689,10 @@
                 if (params.type === "fraction") if (params.renderFraction) paginationHTML = params.renderFraction.call(swiper, params.currentClass, params.totalClass); else paginationHTML = `<span class="${params.currentClass}"></span>` + " / " + `<span class="${params.totalClass}"></span>`;
                 if (params.type === "progressbar") if (params.renderProgressbar) paginationHTML = params.renderProgressbar.call(swiper, params.progressbarFillClass); else paginationHTML = `<span class="${params.progressbarFillClass}"></span>`;
                 swiper.pagination.bullets = [];
-                el.forEach((subEl => {
-                    if (params.type !== "custom") subEl.innerHTML = paginationHTML || "";
+                el.forEach(subEl => {
+                    if (params.type !== "custom") utils_setInnerHTML(subEl, paginationHTML || "");
                     if (params.type === "bullets") swiper.pagination.bullets.push(...subEl.querySelectorAll(classes_to_selector_classesToSelector(params.bulletClass)));
-                }));
+                });
                 if (params.type !== "custom") emit("paginationRender", el[0]);
             }
             function init() {
@@ -7705,17 +7708,17 @@
                 if (!el || el.length === 0) return;
                 if (swiper.params.uniqueNavElements && typeof params.el === "string" && Array.isArray(el) && el.length > 1) {
                     el = [ ...swiper.el.querySelectorAll(params.el) ];
-                    if (el.length > 1) el = el.find((subEl => {
+                    if (el.length > 1) el = el.find(subEl => {
                         if (utils_elementParents(subEl, ".swiper")[0] !== swiper.el) return false;
                         return true;
-                    }));
+                    });
                 }
                 if (Array.isArray(el) && el.length === 1) el = el[0];
                 Object.assign(swiper.pagination, {
                     el
                 });
                 el = utils_makeElementsArray(el);
-                el.forEach((subEl => {
+                el.forEach(subEl => {
                     if (params.type === "bullets" && params.clickable) subEl.classList.add(...(params.clickableClass || "").split(" "));
                     subEl.classList.add(params.modifierClass + params.type);
                     subEl.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
@@ -7727,7 +7730,7 @@
                     if (params.type === "progressbar" && params.progressbarOpposite) subEl.classList.add(params.progressbarOppositeClass);
                     if (params.clickable) subEl.addEventListener("click", onBulletClick);
                     if (!swiper.enabled) subEl.classList.add(params.lockClass);
-                }));
+                });
             }
             function destroy() {
                 const params = swiper.params.pagination;
@@ -7735,7 +7738,7 @@
                 let el = swiper.pagination.el;
                 if (el) {
                     el = utils_makeElementsArray(el);
-                    el.forEach((subEl => {
+                    el.forEach(subEl => {
                         subEl.classList.remove(params.hiddenClass);
                         subEl.classList.remove(params.modifierClass + params.type);
                         subEl.classList.remove(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
@@ -7743,66 +7746,66 @@
                             subEl.classList.remove(...(params.clickableClass || "").split(" "));
                             subEl.removeEventListener("click", onBulletClick);
                         }
-                    }));
+                    });
                 }
-                if (swiper.pagination.bullets) swiper.pagination.bullets.forEach((subEl => subEl.classList.remove(...params.bulletActiveClass.split(" "))));
+                if (swiper.pagination.bullets) swiper.pagination.bullets.forEach(subEl => subEl.classList.remove(...params.bulletActiveClass.split(" ")));
             }
-            on("changeDirection", (() => {
+            on("changeDirection", () => {
                 if (!swiper.pagination || !swiper.pagination.el) return;
                 const params = swiper.params.pagination;
                 let {el} = swiper.pagination;
                 el = utils_makeElementsArray(el);
-                el.forEach((subEl => {
+                el.forEach(subEl => {
                     subEl.classList.remove(params.horizontalClass, params.verticalClass);
                     subEl.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
-                }));
-            }));
-            on("init", (() => {
+                });
+            });
+            on("init", () => {
                 if (swiper.params.pagination.enabled === false) disable(); else {
                     init();
                     render();
                     update();
                 }
-            }));
-            on("activeIndexChange", (() => {
+            });
+            on("activeIndexChange", () => {
                 if (typeof swiper.snapIndex === "undefined") update();
-            }));
-            on("snapIndexChange", (() => {
+            });
+            on("snapIndexChange", () => {
                 update();
-            }));
-            on("snapGridLengthChange", (() => {
+            });
+            on("snapGridLengthChange", () => {
                 render();
                 update();
-            }));
-            on("destroy", (() => {
+            });
+            on("destroy", () => {
                 destroy();
-            }));
-            on("enable disable", (() => {
+            });
+            on("enable disable", () => {
                 let {el} = swiper.pagination;
                 if (el) {
                     el = utils_makeElementsArray(el);
-                    el.forEach((subEl => subEl.classList[swiper.enabled ? "remove" : "add"](swiper.params.pagination.lockClass)));
+                    el.forEach(subEl => subEl.classList[swiper.enabled ? "remove" : "add"](swiper.params.pagination.lockClass));
                 }
-            }));
-            on("lock unlock", (() => {
+            });
+            on("lock unlock", () => {
                 update();
-            }));
-            on("click", ((_s, e) => {
+            });
+            on("click", (_s, e) => {
                 const targetEl = e.target;
                 const el = utils_makeElementsArray(swiper.pagination.el);
                 if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && el && el.length > 0 && !targetEl.classList.contains(swiper.params.pagination.bulletClass)) {
                     if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
                     const isHidden = el[0].classList.contains(swiper.params.pagination.hiddenClass);
                     if (isHidden === true) emit("paginationShow"); else emit("paginationHide");
-                    el.forEach((subEl => subEl.classList.toggle(swiper.params.pagination.hiddenClass)));
+                    el.forEach(subEl => subEl.classList.toggle(swiper.params.pagination.hiddenClass));
                 }
-            }));
+            });
             const enable = () => {
                 swiper.el.classList.remove(swiper.params.pagination.paginationDisabledClass);
                 let {el} = swiper.pagination;
                 if (el) {
                     el = utils_makeElementsArray(el);
-                    el.forEach((subEl => subEl.classList.remove(swiper.params.pagination.paginationDisabledClass)));
+                    el.forEach(subEl => subEl.classList.remove(swiper.params.pagination.paginationDisabledClass));
                 }
                 init();
                 render();
@@ -7813,7 +7816,7 @@
                 let {el} = swiper.pagination;
                 if (el) {
                     el = utils_makeElementsArray(el);
-                    el.forEach((subEl => subEl.classList.add(swiper.params.pagination.paginationDisabledClass)));
+                    el.forEach(subEl => subEl.classList.add(swiper.params.pagination.paginationDisabledClass));
                 }
                 destroy();
             };
@@ -7873,13 +7876,13 @@
                 const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - (new Date).getTime();
                 swiper.autoplay.timeLeft = timeLeft;
                 emit("autoplayTimeLeft", timeLeft, timeLeft / autoplayDelayTotal);
-                raf = requestAnimationFrame((() => {
+                raf = requestAnimationFrame(() => {
                     calcTimeLeft();
-                }));
+                });
             };
             const getSlideDelay = () => {
                 let activeSlideEl;
-                if (swiper.virtual && swiper.params.virtual.enabled) activeSlideEl = swiper.slides.find((slideEl => slideEl.classList.contains("swiper-slide-active"))); else activeSlideEl = swiper.slides[swiper.activeIndex];
+                if (swiper.virtual && swiper.params.virtual.enabled) activeSlideEl = swiper.slides.find(slideEl => slideEl.classList.contains("swiper-slide-active")); else activeSlideEl = swiper.slides[swiper.activeIndex];
                 if (!activeSlideEl) return;
                 const currentSlideDelay = parseInt(activeSlideEl.getAttribute("data-swiper-autoplay"), 10);
                 return currentSlideDelay;
@@ -7918,19 +7921,19 @@
                     }
                     if (swiper.params.cssMode) {
                         autoplayStartTime = (new Date).getTime();
-                        requestAnimationFrame((() => {
+                        requestAnimationFrame(() => {
                             run();
-                        }));
+                        });
                     }
                 };
                 if (delay > 0) {
                     clearTimeout(timeout);
-                    timeout = setTimeout((() => {
+                    timeout = setTimeout(() => {
                         proceed();
-                    }), delay);
-                } else requestAnimationFrame((() => {
+                    }, delay);
+                } else requestAnimationFrame(() => {
                     proceed();
-                }));
+                });
                 return delay;
             };
             const start = () => {
@@ -8017,29 +8020,29 @@
                 const document = ssr_window_esm_getDocument();
                 document.removeEventListener("visibilitychange", onVisibilityChange);
             };
-            on("init", (() => {
+            on("init", () => {
                 if (swiper.params.autoplay.enabled) {
                     attachMouseEvents();
                     attachDocumentEvents();
                     start();
                 }
-            }));
-            on("destroy", (() => {
+            });
+            on("destroy", () => {
                 detachMouseEvents();
                 detachDocumentEvents();
                 if (swiper.autoplay.running) stop();
-            }));
-            on("_freeModeStaticRelease", (() => {
+            });
+            on("_freeModeStaticRelease", () => {
                 if (pausedByTouch || pausedByInteraction) resume();
-            }));
-            on("_freeModeNoMomentumRelease", (() => {
+            });
+            on("_freeModeNoMomentumRelease", () => {
                 if (!swiper.params.autoplay.disableOnInteraction) pause(true, true); else stop();
-            }));
-            on("beforeTransitionStart", ((_s, speed, internal) => {
+            });
+            on("beforeTransitionStart", (_s, speed, internal) => {
                 if (swiper.destroyed || !swiper.autoplay.running) return;
                 if (internal || !swiper.params.autoplay.disableOnInteraction) pause(true, true); else stop();
-            }));
-            on("sliderFirstMove", (() => {
+            });
+            on("sliderFirstMove", () => {
                 if (swiper.destroyed || !swiper.autoplay.running) return;
                 if (swiper.params.autoplay.disableOnInteraction) {
                     stop();
@@ -8048,13 +8051,13 @@
                 isTouched = true;
                 pausedByTouch = false;
                 pausedByInteraction = false;
-                touchStartTimeout = setTimeout((() => {
+                touchStartTimeout = setTimeout(() => {
                     pausedByInteraction = true;
                     pausedByTouch = true;
                     pause(true);
-                }), 200);
-            }));
-            on("touchEnd", (() => {
+                }, 200);
+            });
+            on("touchEnd", () => {
                 if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;
                 clearTimeout(touchStartTimeout);
                 clearTimeout(timeout);
@@ -8066,11 +8069,11 @@
                 if (pausedByTouch && swiper.params.cssMode) resume();
                 pausedByTouch = false;
                 isTouched = false;
-            }));
-            on("slideChange", (() => {
+            });
+            on("slideChange", () => {
                 if (swiper.destroyed || !swiper.autoplay.running) return;
                 slideChanged = true;
-            }));
+            });
             Object.assign(swiper.autoplay, {
                 start,
                 stop,
@@ -8101,9 +8104,9 @@
                 on: {}
             });
         };
-        window.addEventListener("load", (() => {
+        window.addEventListener("load", () => {
             initSliders();
-        }));
+        });
         let addWindowScrollEvent = false;
         function headerScroll() {
             addWindowScrollEvent = true;
@@ -8113,35 +8116,35 @@
             const startPoint = header.dataset.scroll ? +header.dataset.scroll : 1;
             let scrollDirection = 0;
             let timer;
-            document.addEventListener("windowScroll", (() => {
+            document.addEventListener("windowScroll", () => {
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
                 if (scrollTop >= startPoint) {
                     toogleClass(header, "header--scroll", true);
                     if (headerShow) {
                         if (scrollTop > scrollDirection) toogleClass(header, "header--show", false); else toogleClass(header, "header--show", true);
-                        timer = setTimeout((() => {
+                        timer = setTimeout(() => {
                             toogleClass(header, "header--show", true);
-                        }), headerShowTimer);
+                        }, headerShowTimer);
                     }
                 } else {
                     toogleClass(header, "header--scroll", false);
                     if (headerShow) toogleClass(header, "header--show", false);
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
-            }));
+            });
             function toogleClass(element, className, condition) {
                 if (condition) !element.classList.contains(className) ? element.classList.add(className) : null; else element.classList.contains(className) ? element.classList.remove(className) : null;
             }
         }
-        setTimeout((() => {
+        setTimeout(() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
-                window.addEventListener("scroll", (() => {
+                window.addEventListener("scroll", () => {
                     document.dispatchEvent(windowScroll);
-                }));
+                });
             }
-        }), 0);
+        }, 0);
         function paginationMoveIndicator() {
             const pagination = document.querySelector(".pagination");
             if (pagination) {
@@ -8151,20 +8154,20 @@
                 const paginationArrowNext = pagination.querySelector(".pagination__arrow--next");
                 updateArrowVisibility();
                 positionIndicator();
-                window.addEventListener("resize", (() => {
+                window.addEventListener("resize", () => {
                     positionIndicator();
-                }));
-                pagination.addEventListener("pointerover", (e => {
+                });
+                pagination.addEventListener("pointerover", e => {
                     const target = e.target.closest(".pagination__item, .pagination__arrow");
                     if (target && !target.classList.contains("pagination__item--active")) moveIndicator(target); else positionIndicator();
-                }));
-                pagination.addEventListener("pointerleave", (() => positionIndicator()));
+                });
+                pagination.addEventListener("pointerleave", () => positionIndicator());
                 function positionIndicator() {
                     const activeItem = pagination.querySelector(".pagination__item.pagination__item--active");
                     if (activeItem) moveIndicator(activeItem);
                 }
                 function updateArrowVisibility() {
-                    const activeIndex = [ ...paginationItems ].findIndex((item => item.classList.contains("pagination__item--active")));
+                    const activeIndex = [ ...paginationItems ].findIndex(item => item.classList.contains("pagination__item--active"));
                     if (paginationArrowPrev) paginationArrowPrev.style.display = activeIndex === 0 ? "none" : "";
                     if (paginationArrowNext) paginationArrowNext.style.display = activeIndex === paginationItems.length - 1 ? "none" : "";
                 }
@@ -8200,7 +8203,7 @@
                     return;
                 }
                 this.scrollWatcherLogging(`Стежу за об'єктами (${watchItems.length})...`);
-                const uniqParams = uniqArray(Array.from(watchItems).map((item => {
+                const uniqParams = uniqArray(Array.from(watchItems).map(item => {
                     if (item.dataset.watch === "navigator" && !item.dataset.watchThreshold) {
                         let valueOfThreshold;
                         if (item.clientHeight > 2) {
@@ -8211,24 +8214,24 @@
                     }
                     let {watchRoot, watchMargin, watchThreshold} = item.dataset;
                     return `${watchRoot || null}|${watchMargin || "0px"}|${watchThreshold || 0}`;
-                })));
-                uniqParams.forEach((uniqParam => {
+                }));
+                uniqParams.forEach(uniqParam => {
                     const [rootParam, marginParam, thresholdParam] = uniqParam.split("|");
                     const paramsWatch = {
                         root: rootParam,
                         margin: marginParam,
                         threshold: thresholdParam
                     };
-                    const groupItems = Array.from(watchItems).filter((item => {
+                    const groupItems = Array.from(watchItems).filter(item => {
                         let {watchRoot, watchMargin, watchThreshold} = item.dataset;
                         watchRoot = watchRoot ? watchRoot : null;
                         watchMargin = watchMargin ? watchMargin : "0px";
                         watchThreshold = watchThreshold ? watchThreshold : 0;
                         if (String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold) return item;
-                    }));
+                    });
                     let configWatcher = this.getScrollWatcherConfig(paramsWatch);
                     this.scrollWatcherInit(groupItems, configWatcher);
-                }));
+                });
             }
             getScrollWatcherConfig(paramsWatch) {
                 const {root, margin, threshold} = paramsWatch;
@@ -8250,14 +8253,14 @@
             }
             scrollWatcherInit(items, configWatcher) {
                 this.scrollWatcherCreate(configWatcher);
-                items.forEach((item => this.observer.observe(item)));
+                items.forEach(item => this.observer.observe(item));
             }
             scrollWatcherCreate(configWatcher) {
-                this.observer = new IntersectionObserver(((entries, observer) => {
-                    entries.forEach((entry => {
+                this.observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
                         this.scrollWatcherCallback(entry, observer);
-                    }));
-                }), configWatcher);
+                    });
+                }, configWatcher);
             }
             scrollWatcherCallback(entry, observer) {
                 const {target, isIntersecting} = entry;
@@ -8287,7 +8290,7 @@
             }
         }
         objectModules.watcher = new ScrollWatcher({});
-        /*! choices.js v11.0.3 | © 2024 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
+        /*! choices.js v11.1.0 | © 2025 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
         var extendStatics = function(d, b) {
             extendStatics = Object.setPrototypeOf || {
                 __proto__: []
@@ -8424,9 +8427,9 @@
         var generateChars = function(length) {
             return Array.from({
                 length
-            }, (function() {
+            }, function() {
                 return getRandomNumber(0, 36).toString(36);
-            })).join("");
+            }).join("");
         };
         var generateId = function(element, prefix) {
             var id = element.id || element.name && "".concat(element.name, "-").concat(generateChars(2)) || generateChars(4);
@@ -8522,17 +8525,17 @@
         var diff = function(a, b) {
             var aKeys = Object.keys(a).sort();
             var bKeys = Object.keys(b).sort();
-            return aKeys.filter((function(i) {
+            return aKeys.filter(function(i) {
                 return bKeys.indexOf(i) < 0;
-            }));
+            });
         };
         var getClassNames = function(ClassNames) {
             return Array.isArray(ClassNames) ? ClassNames : [ ClassNames ];
         };
         var getClassNamesSelector = function(option) {
-            if (option && Array.isArray(option)) return option.map((function(item) {
+            if (option && Array.isArray(option)) return option.map(function(item) {
                 return ".".concat(item);
-            })).join("");
+            }).join("");
             return ".".concat(option);
         };
         var addClassesToElement = function(element, className) {
@@ -8787,9 +8790,9 @@
                 var elementHeight = element.offsetHeight;
                 var elementPos = element.offsetTop + elementHeight;
                 var destination = direction > 0 ? this.element.scrollTop + elementPos - listScrollPosition : element.offsetTop;
-                requestAnimationFrame((function() {
+                requestAnimationFrame(function() {
                     _this._animateScroll(destination, direction);
-                }));
+                });
             };
             List.prototype._scrollDown = function(scrollPos, strength, destination) {
                 var easing = (destination - scrollPos) / strength;
@@ -8813,9 +8816,9 @@
                     this._scrollUp(choiceListScrollTop, strength, destination);
                     if (choiceListScrollTop > destination) continueAnimation = true;
                 }
-                if (continueAnimation) requestAnimationFrame((function() {
+                if (continueAnimation) requestAnimationFrame(function() {
                     _this._animateScroll(destination, direction);
-                }));
+                });
             };
             return List;
         }();
@@ -8899,9 +8902,9 @@
             return typeof arg === "undefined" ? defaultValue : !!arg;
         };
         var stringToHtmlClass = function(input) {
-            if (typeof input === "string") input = input.split(" ").filter((function(s) {
+            if (typeof input === "string") input = input.split(" ").filter(function(s) {
                 return s.length;
-            }));
+            });
             if (Array.isArray(input) && input.length) return input;
             return;
         };
@@ -8924,9 +8927,9 @@
             if ("choices" in groupOrChoice) {
                 if (!allowGroup) throw new TypeError("optGroup is not allowed");
                 var group = groupOrChoice;
-                var choices = group.choices.map((function(e) {
+                var choices = group.choices.map(function(e) {
                     return mapInputToChoice(e, false);
-                }));
+                });
                 var result_2 = {
                     id: 0,
                     label: unwrapStringForRaw(group.label) || group.value,
@@ -8989,21 +8992,21 @@
             WrappedSelect.prototype.addOptions = function(choices) {
                 var _this = this;
                 var fragment = document.createDocumentFragment();
-                choices.forEach((function(obj) {
+                choices.forEach(function(obj) {
                     var choice = obj;
                     if (choice.element) return;
                     var option = _this.template(choice);
                     fragment.appendChild(option);
                     choice.element = option;
-                }));
+                });
                 this.element.appendChild(fragment);
             };
             WrappedSelect.prototype.optionsAsChoices = function() {
                 var _this = this;
                 var choices = [];
-                this.element.querySelectorAll(":scope > option, :scope > optgroup").forEach((function(e) {
+                this.element.querySelectorAll(":scope > option, :scope > optgroup").forEach(function(e) {
                     if (isHtmlOption(e)) choices.push(_this._optionToChoice(e)); else if (isHtmlOptgroup(e)) choices.push(_this._optgroupToChoice(e));
-                }));
+                });
                 return choices;
             };
             WrappedSelect.prototype._optionToChoice = function(option) {
@@ -9017,7 +9020,7 @@
                     score: 0,
                     rank: 0,
                     value: option.value,
-                    label: option.innerText,
+                    label: option.label,
                     element: option,
                     active: true,
                     selected: this.extractPlaceholder ? option.selected : option.hasAttribute("selected"),
@@ -9032,9 +9035,9 @@
             WrappedSelect.prototype._optgroupToChoice = function(optgroup) {
                 var _this = this;
                 var options = optgroup.querySelectorAll("option");
-                var choices = Array.from(options).map((function(option) {
+                var choices = Array.from(options).map(function(option) {
                     return _this._optionToChoice(option);
-                }));
+                });
                 return {
                     id: 0,
                     label: optgroup.label || "",
@@ -9177,23 +9180,23 @@
                     if (select && isHtmlSelectElement(select) && select.type === PassedElementTypes.SelectOne) select.value = "";
                 }
                 removeItem(action.item);
-                state = state.filter((function(choice) {
+                state = state.filter(function(choice) {
                     return choice.id !== action.item.id;
-                }));
+                });
                 break;
 
               case ActionType.REMOVE_CHOICE:
                 removeItem(action.choice);
-                state = state.filter((function(item) {
+                state = state.filter(function(item) {
                     return item.id !== action.choice.id;
-                }));
+                });
                 break;
 
               case ActionType.HIGHLIGHT_ITEM:
                 var highlighted = action.highlighted;
-                var item = state.find((function(obj) {
+                var item = state.find(function(obj) {
                     return obj.id === action.item.id;
-                }));
+                });
                 if (item && item.highlighted !== highlighted) {
                     item.highlighted = highlighted;
                     if (context) updateClassList(item, highlighted ? context.classNames.highlightedState : context.classNames.selectedState, highlighted ? context.classNames.selectedState : context.classNames.highlightedState);
@@ -9240,12 +9243,12 @@
 
               case ActionType.REMOVE_CHOICE:
                 action.choice.choiceEl = void 0;
-                if (action.choice.group) action.choice.group.choices = action.choice.group.choices.filter((function(obj) {
+                if (action.choice.group) action.choice.group.choices = action.choice.group.choices.filter(function(obj) {
                     return obj.id !== action.choice.id;
-                }));
-                state = state.filter((function(obj) {
+                });
+                state = state.filter(function(obj) {
                     return obj.id !== action.choice.id;
-                }));
+                });
                 break;
 
               case ActionType.ADD_ITEM:
@@ -9255,10 +9258,10 @@
 
               case ActionType.FILTER_CHOICES:
                 var scoreLookup_1 = [];
-                action.results.forEach((function(result) {
+                action.results.forEach(function(result) {
                     scoreLookup_1[result.item.id] = result;
-                }));
-                state.forEach((function(choice) {
+                });
+                state.forEach(function(choice) {
                     var result = scoreLookup_1[choice.id];
                     if (result !== void 0) {
                         choice.score = result.score;
@@ -9270,14 +9273,14 @@
                         choice.active = false;
                     }
                     if (context && context.appendGroupInSearch) choice.choiceEl = void 0;
-                }));
+                });
                 break;
 
               case ActionType.ACTIVATE_CHOICES:
-                state.forEach((function(choice) {
+                state.forEach(function(choice) {
                     choice.active = action.active;
                     if (context && context.appendGroupInSearch) choice.choiceEl = void 0;
-                }));
+                });
                 break;
 
               case ActionType.CLEAR_CHOICES:
@@ -9326,9 +9329,9 @@
             Store.prototype.reset = function() {
                 this._state = this.defaultState;
                 var changes = this.changeSet(true);
-                if (this._txn) this._changeSet = changes; else this._listeners.forEach((function(l) {
+                if (this._txn) this._changeSet = changes; else this._listeners.forEach(function(l) {
                     return l(changes);
-                }));
+                });
             };
             Store.prototype.subscribe = function(onChange) {
                 this._listeners.push(onChange);
@@ -9339,17 +9342,17 @@
                 var state = this._state;
                 var hasChanges = false;
                 var changes = this._changeSet || this.changeSet(false);
-                Object.keys(reducers).forEach((function(key) {
+                Object.keys(reducers).forEach(function(key) {
                     var stateUpdate = reducers[key](state[key], action, _this._context);
                     if (stateUpdate.update) {
                         hasChanges = true;
                         changes[key] = true;
                         state[key] = stateUpdate.state;
                     }
-                }));
-                if (hasChanges) if (this._txn) this._changeSet = changes; else this._listeners.forEach((function(l) {
+                });
+                if (hasChanges) if (this._txn) this._changeSet = changes; else this._listeners.forEach(function(l) {
                     return l(changes);
-                }));
+                });
             };
             Store.prototype.withTxn = function(func) {
                 this._txn++;
@@ -9361,9 +9364,9 @@
                         var changeSet_1 = this._changeSet;
                         if (changeSet_1) {
                             this._changeSet = void 0;
-                            this._listeners.forEach((function(l) {
+                            this._listeners.forEach(function(l) {
                                 return l(changeSet_1);
-                            }));
+                            });
                         }
                     }
                 }
@@ -9384,9 +9387,9 @@
             });
             Object.defineProperty(Store.prototype, "highlightedActiveItems", {
                 get: function() {
-                    return this.items.filter((function(item) {
-                        return !item.disabled && item.active && item.highlighted;
-                    }));
+                    return this.items.filter(function(item) {
+                        return item.active && item.highlighted;
+                    });
                 },
                 enumerable: false,
                 configurable: true
@@ -9400,18 +9403,18 @@
             });
             Object.defineProperty(Store.prototype, "activeChoices", {
                 get: function() {
-                    return this.choices.filter((function(choice) {
+                    return this.choices.filter(function(choice) {
                         return choice.active;
-                    }));
+                    });
                 },
                 enumerable: false,
                 configurable: true
             });
             Object.defineProperty(Store.prototype, "searchableChoices", {
                 get: function() {
-                    return this.choices.filter((function(choice) {
+                    return this.choices.filter(function(choice) {
                         return !choice.disabled && !choice.placeholder;
-                    }));
+                    });
                 },
                 enumerable: false,
                 configurable: true
@@ -9426,13 +9429,13 @@
             Object.defineProperty(Store.prototype, "activeGroups", {
                 get: function() {
                     var _this = this;
-                    return this.state.groups.filter((function(group) {
+                    return this.state.groups.filter(function(group) {
                         var isActive = group.active && !group.disabled;
-                        var hasActiveOptions = _this.state.choices.some((function(choice) {
+                        var hasActiveOptions = _this.state.choices.some(function(choice) {
                             return choice.active && !choice.disabled;
-                        }));
+                        });
                         return isActive && hasActiveOptions;
-                    }), []);
+                    }, []);
                 },
                 enumerable: false,
                 configurable: true
@@ -9441,14 +9444,14 @@
                 return this._txn > 0;
             };
             Store.prototype.getChoiceById = function(id) {
-                return this.activeChoices.find((function(choice) {
+                return this.activeChoices.find(function(choice) {
                     return choice.id === id;
-                }));
+                });
             };
             Store.prototype.getGroupById = function(id) {
-                return this.groups.find((function(group) {
+                return this.groups.find(function(group) {
                     return group.id === id;
-                }));
+                });
             };
             return Store;
         }();
@@ -9470,20 +9473,20 @@
             var t = Object.keys(e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(e);
-                r && (o = o.filter((function(r) {
+                r && (o = o.filter(function(r) {
                     return Object.getOwnPropertyDescriptor(e, r).enumerable;
-                }))), t.push.apply(t, o);
+                })), t.push.apply(t, o);
             }
             return t;
         }
         function _objectSpread2(e) {
             for (var r = 1; r < arguments.length; r++) {
                 var t = null != arguments[r] ? arguments[r] : {};
-                r % 2 ? ownKeys(Object(t), !0).forEach((function(r) {
+                r % 2 ? ownKeys(Object(t), !0).forEach(function(r) {
                     _defineProperty(e, r, t[r]);
-                })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach((function(r) {
+                }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r) {
                     Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-                }));
+                });
             }
             return e;
         }
@@ -9548,15 +9551,15 @@
                 this._keys = [];
                 this._keyMap = {};
                 let totalWeight = 0;
-                keys.forEach((key => {
+                keys.forEach(key => {
                     let obj = createKey(key);
                     this._keys.push(obj);
                     this._keyMap[obj.id] = obj;
                     totalWeight += obj.weight;
-                }));
-                this._keys.forEach((key => {
+                });
+                this._keys.forEach(key => {
                     key.weight /= totalWeight;
-                }));
+                });
             }
             get(keyId) {
                 return this._keyMap[keyId];
@@ -9681,18 +9684,18 @@
             setKeys(keys = []) {
                 this.keys = keys;
                 this._keysMap = {};
-                keys.forEach(((key, idx) => {
+                keys.forEach((key, idx) => {
                     this._keysMap[key.id] = idx;
-                }));
+                });
             }
             create() {
                 if (this.isCreated || !this.docs.length) return;
                 this.isCreated = true;
-                if (isString(this.docs[0])) this.docs.forEach(((doc, docIndex) => {
+                if (isString(this.docs[0])) this.docs.forEach((doc, docIndex) => {
                     this._addString(doc, docIndex);
-                })); else this.docs.forEach(((doc, docIndex) => {
+                }); else this.docs.forEach((doc, docIndex) => {
                     this._addObject(doc, docIndex);
-                }));
+                });
                 this.norm.clear();
             }
             add(doc) {
@@ -9723,7 +9726,7 @@
                     i: docIndex,
                     $: {}
                 };
-                this.keys.forEach(((key, keyIndex) => {
+                this.keys.forEach((key, keyIndex) => {
                     let value = key.getFn ? key.getFn(doc) : this.getFn(doc, key.path);
                     if (!isDefined(value)) return;
                     if (isArray(value)) {
@@ -9742,12 +9745,12 @@
                                     n: this.norm.get(value)
                                 };
                                 subRecords.push(subRecord);
-                            } else if (isArray(value)) value.forEach(((item, k) => {
+                            } else if (isArray(value)) value.forEach((item, k) => {
                                 stack.push({
                                     nestedArrIndex: k,
                                     value: item
                                 });
-                            }));
+                            });
                         }
                         record.$[keyIndex] = subRecords;
                     } else if (isString(value) && !isBlank(value)) {
@@ -9757,7 +9760,7 @@
                         };
                         record.$[keyIndex] = subRecord;
                     }
-                }));
+                });
                 this.records.push(record);
             }
             toJSON() {
@@ -9964,7 +9967,7 @@
                 let allIndices = [];
                 let totalScore = 0;
                 let hasMatches = false;
-                this.chunks.forEach((({pattern, alphabet, startIndex}) => {
+                this.chunks.forEach(({pattern, alphabet, startIndex}) => {
                     const {isMatch, score, indices} = search(text, pattern, alphabet, {
                         location: location + startIndex,
                         distance,
@@ -9977,7 +9980,7 @@
                     if (isMatch) hasMatches = true;
                     totalScore += score;
                     if (isMatch && indices) allIndices = [ ...allIndices, ...indices ];
-                }));
+                });
                 let result = {
                     isMatch: hasMatches,
                     score: hasMatches ? totalScore / this.chunks.length : 1
@@ -10197,8 +10200,8 @@
         const SPACE_RE = / +(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/;
         const OR_TOKEN = "|";
         function parseQuery(pattern, options = {}) {
-            return pattern.split(OR_TOKEN).map((item => {
-                let query = item.trim().split(SPACE_RE).filter((item => item && !!item.trim()));
+            return pattern.split(OR_TOKEN).map(item => {
+                let query = item.trim().split(SPACE_RE).filter(item => item && !!item.trim());
                 let results = [];
                 for (let i = 0, len = query.length; i < len; i += 1) {
                     const queryItem = query[i];
@@ -10224,7 +10227,7 @@
                     }
                 }
                 return results;
-            }));
+            });
         }
         const MultiMatchSet = new Set([ FuzzyMatch.type, IncludeMatch.type ]);
         class ExtendedSearch {
@@ -10316,9 +10319,9 @@
         const isPath = query => !!query[KeyType.PATH];
         const isLeaf = query => !isArray(query) && choices_isObject(query) && !isExpression(query);
         const convertToExplicit = query => ({
-            [LogicalOperator.AND]: Object.keys(query).map((key => ({
+            [LogicalOperator.AND]: Object.keys(query).map(key => ({
                 [key]: query[key]
-            })))
+            }))
         });
         function parse(query, options, {auto = true} = {}) {
             const next = query => {
@@ -10340,32 +10343,32 @@
                     children: [],
                     operator: keys[0]
                 };
-                keys.forEach((key => {
+                keys.forEach(key => {
                     const value = query[key];
-                    if (isArray(value)) value.forEach((item => {
+                    if (isArray(value)) value.forEach(item => {
                         node.children.push(next(item));
-                    }));
-                }));
+                    });
+                });
                 return node;
             };
             if (!isExpression(query)) query = convertToExplicit(query);
             return next(query);
         }
         function computeScore(results, {ignoreFieldNorm = Config.ignoreFieldNorm}) {
-            results.forEach((result => {
+            results.forEach(result => {
                 let totalScore = 1;
-                result.matches.forEach((({key, norm, score}) => {
+                result.matches.forEach(({key, norm, score}) => {
                     const weight = key ? key.weight : null;
                     totalScore *= Math.pow(score === 0 && weight ? Number.EPSILON : score, (weight || 1) * (ignoreFieldNorm ? 1 : norm));
-                }));
+                });
                 result.score = totalScore;
-            }));
+            });
         }
         function transformMatches(result, data) {
             const matches = result.matches;
             data.matches = [];
             if (!isDefined(matches)) return;
-            matches.forEach((match => {
+            matches.forEach(match => {
                 if (!isDefined(match.indices) || !match.indices.length) return;
                 const {indices, value} = match;
                 let obj = {
@@ -10375,7 +10378,7 @@
                 if (match.key) obj.key = match.key.src;
                 if (match.idx > -1) obj.refIndex = match.idx;
                 data.matches.push(obj);
-            }));
+            });
         }
         function transformScore(result, data) {
             data.score = result.score;
@@ -10384,17 +10387,17 @@
             const transformers = [];
             if (includeMatches) transformers.push(transformMatches);
             if (includeScore) transformers.push(transformScore);
-            return results.map((result => {
+            return results.map(result => {
                 const {idx} = result;
                 const data = {
                     item: docs[idx],
                     refIndex: idx
                 };
-                if (transformers.length) transformers.forEach((transformer => {
+                if (transformers.length) transformers.forEach(transformer => {
                     transformer(result, data);
-                }));
+                });
                 return data;
-            }));
+            });
         }
         class Fuse {
             constructor(docs, options = {}, index) {
@@ -10453,7 +10456,7 @@
                 const searcher = createSearcher(query, this.options);
                 const {records} = this._myIndex;
                 const results = [];
-                records.forEach((({v: text, i: idx, n: norm}) => {
+                records.forEach(({v: text, i: idx, n: norm}) => {
                     if (!isDefined(text)) return;
                     const {isMatch, score, indices} = searcher.searchIn(text);
                     if (isMatch) results.push({
@@ -10466,7 +10469,7 @@
                             indices
                         } ]
                     });
-                }));
+                });
                 return results;
             }
             _searchLogical(query) {
@@ -10497,7 +10500,7 @@
                 const records = this._myIndex.records;
                 const resultMap = {};
                 const results = [];
-                records.forEach((({$: item, i: idx}) => {
+                records.forEach(({$: item, i: idx}) => {
                     if (isDefined(item)) {
                         let expResults = evaluate(expression, item, idx);
                         if (expResults.length) {
@@ -10509,40 +10512,40 @@
                                 };
                                 results.push(resultMap[idx]);
                             }
-                            expResults.forEach((({matches}) => {
+                            expResults.forEach(({matches}) => {
                                 resultMap[idx].matches.push(...matches);
-                            }));
+                            });
                         }
                     }
-                }));
+                });
                 return results;
             }
             _searchObjectList(query) {
                 const searcher = createSearcher(query, this.options);
                 const {keys, records} = this._myIndex;
                 const results = [];
-                records.forEach((({$: item, i: idx}) => {
+                records.forEach(({$: item, i: idx}) => {
                     if (!isDefined(item)) return;
                     let matches = [];
-                    keys.forEach(((key, keyIndex) => {
+                    keys.forEach((key, keyIndex) => {
                         matches.push(...this._findMatches({
                             key,
                             value: item[keyIndex],
                             searcher
                         }));
-                    }));
+                    });
                     if (matches.length) results.push({
                         idx,
                         item,
                         matches
                     });
-                }));
+                });
                 return results;
             }
             _findMatches({key, value, searcher}) {
                 if (!isDefined(value)) return [];
                 let matches = [];
-                if (isArray(value)) value.forEach((({v: text, i: idx, n: norm}) => {
+                if (isArray(value)) value.forEach(({v: text, i: idx, n: norm}) => {
                     if (!isDefined(text)) return;
                     const {isMatch, score, indices} = searcher.searchIn(text);
                     if (isMatch) matches.push({
@@ -10553,7 +10556,7 @@
                         norm,
                         indices
                     });
-                })); else {
+                }); else {
                     const {v: text, n: norm} = value;
                     const {isMatch, score, indices} = searcher.searchIn(text);
                     if (isMatch) matches.push({
@@ -10595,13 +10598,13 @@
             SearchByFuse.prototype.search = function(needle) {
                 if (!this._fuse) this._fuse = new Fuse(this._haystack, this._fuseOptions);
                 var results = this._fuse.search(needle);
-                return results.map((function(value, i) {
+                return results.map(function(value, i) {
                     return {
                         item: value.item,
                         score: value.score || 0,
                         rank: i + 1
                     };
-                }));
+                });
             };
             return SearchByFuse;
         }();
@@ -10787,7 +10790,6 @@
                 inp.autocomplete = "off";
                 inp.autocapitalize = "off";
                 inp.spellcheck = false;
-                inp.setAttribute("role", "textbox");
                 inp.setAttribute("aria-autocomplete", "list");
                 if (placeholderValue) inp.setAttribute("aria-label", placeholderValue); else if (!labelId) addAriaLabel(this._docRoot, this.passedElement.element.id, inp);
                 return inp;
@@ -10854,9 +10856,9 @@
                 this._lastAddedGroupId = 0;
                 var defaults = Choices.defaults;
                 this.config = __assign(__assign(__assign({}, defaults.allOptions), defaults.options), userConfig);
-                ObjectsInConfig.forEach((function(key) {
+                ObjectsInConfig.forEach(function(key) {
                     _this.config[key] = __assign(__assign(__assign({}, defaults.allOptions[key]), defaults.options[key]), userConfig[key]);
-                }));
+                });
                 var config = this.config;
                 if (!config.silent) this._validateConfig();
                 var docRoot = config.shadowRoot || document.documentElement;
@@ -10949,9 +10951,9 @@
                     return;
                 }
                 this.init();
-                this._initialItems = this._store.items.map((function(choice) {
+                this._initialItems = this._store.items.map(function(choice) {
                     return choice.value;
-                }));
+                });
             }
             Object.defineProperty(Choices, "defaults", {
                 get: function() {
@@ -11020,9 +11022,9 @@
             Choices.prototype.highlightItem = function(item, runEvent) {
                 if (runEvent === void 0) runEvent = true;
                 if (!item || !item.id) return this;
-                var choice = this._store.items.find((function(c) {
+                var choice = this._store.items.find(function(c) {
                     return c.id === item.id;
-                }));
+                });
                 if (!choice || choice.highlighted) return this;
                 this._store.dispatch(highlightItem(choice, true));
                 if (runEvent) this.passedElement.triggerEvent(EventType.highlightItem, this._getChoiceForOutput(choice));
@@ -11031,9 +11033,9 @@
             Choices.prototype.unhighlightItem = function(item, runEvent) {
                 if (runEvent === void 0) runEvent = true;
                 if (!item || !item.id) return this;
-                var choice = this._store.items.find((function(c) {
+                var choice = this._store.items.find(function(c) {
                     return c.id === item.id;
-                }));
+                });
                 if (!choice || !choice.highlighted) return this;
                 this._store.dispatch(highlightItem(choice, false));
                 if (runEvent) this.passedElement.triggerEvent(EventType.unhighlightItem, this._getChoiceForOutput(choice));
@@ -11041,79 +11043,79 @@
             };
             Choices.prototype.highlightAll = function() {
                 var _this = this;
-                this._store.withTxn((function() {
-                    _this._store.items.forEach((function(item) {
+                this._store.withTxn(function() {
+                    _this._store.items.forEach(function(item) {
                         if (!item.highlighted) {
                             _this._store.dispatch(highlightItem(item, true));
                             _this.passedElement.triggerEvent(EventType.highlightItem, _this._getChoiceForOutput(item));
                         }
-                    }));
-                }));
+                    });
+                });
                 return this;
             };
             Choices.prototype.unhighlightAll = function() {
                 var _this = this;
-                this._store.withTxn((function() {
-                    _this._store.items.forEach((function(item) {
+                this._store.withTxn(function() {
+                    _this._store.items.forEach(function(item) {
                         if (item.highlighted) {
                             _this._store.dispatch(highlightItem(item, false));
                             _this.passedElement.triggerEvent(EventType.highlightItem, _this._getChoiceForOutput(item));
                         }
-                    }));
-                }));
+                    });
+                });
                 return this;
             };
             Choices.prototype.removeActiveItemsByValue = function(value) {
                 var _this = this;
-                this._store.withTxn((function() {
-                    _this._store.items.filter((function(item) {
+                this._store.withTxn(function() {
+                    _this._store.items.filter(function(item) {
                         return item.value === value;
-                    })).forEach((function(item) {
+                    }).forEach(function(item) {
                         return _this._removeItem(item);
-                    }));
-                }));
+                    });
+                });
                 return this;
             };
             Choices.prototype.removeActiveItems = function(excludedId) {
                 var _this = this;
-                this._store.withTxn((function() {
-                    _this._store.items.filter((function(_a) {
+                this._store.withTxn(function() {
+                    _this._store.items.filter(function(_a) {
                         var id = _a.id;
                         return id !== excludedId;
-                    })).forEach((function(item) {
+                    }).forEach(function(item) {
                         return _this._removeItem(item);
-                    }));
-                }));
+                    });
+                });
                 return this;
             };
             Choices.prototype.removeHighlightedItems = function(runEvent) {
                 var _this = this;
                 if (runEvent === void 0) runEvent = false;
-                this._store.withTxn((function() {
-                    _this._store.highlightedActiveItems.forEach((function(item) {
+                this._store.withTxn(function() {
+                    _this._store.highlightedActiveItems.forEach(function(item) {
                         _this._removeItem(item);
                         if (runEvent) _this._triggerChange(item.value);
-                    }));
-                }));
+                    });
+                });
                 return this;
             };
             Choices.prototype.showDropdown = function(preventInputFocus) {
                 var _this = this;
                 if (this.dropdown.isActive) return this;
                 if (preventInputFocus === void 0) preventInputFocus = !this._canSearch;
-                requestAnimationFrame((function() {
+                requestAnimationFrame(function() {
                     _this.dropdown.show();
                     var rect = _this.dropdown.element.getBoundingClientRect();
                     _this.containerOuter.open(rect.bottom, rect.height);
                     if (!preventInputFocus) _this.input.focus();
                     _this.passedElement.triggerEvent(EventType.showDropdown);
-                }));
+                });
                 return this;
             };
             Choices.prototype.hideDropdown = function(preventInputBlur) {
                 var _this = this;
                 if (!this.dropdown.isActive) return this;
-                requestAnimationFrame((function() {
+                requestAnimationFrame(function() {
                     _this.dropdown.hide();
                     _this.containerOuter.close();
                     if (!preventInputBlur && _this._canSearch) {
@@ -11121,14 +11123,14 @@
                         _this.input.blur();
                     }
                     _this.passedElement.triggerEvent(EventType.hideDropdown);
-                }));
+                });
                 return this;
             };
             Choices.prototype.getValue = function(valueOnly) {
                 var _this = this;
-                var values = this._store.items.map((function(item) {
+                var values = this._store.items.map(function(item) {
                     return valueOnly ? item.value : _this._getChoiceForOutput(item);
-                }));
+                });
                 return this._isSelectOneElement || this.config.singleModeForMultiSelect ? values[0] : values;
             };
             Choices.prototype.setValue = function(items) {
@@ -11137,11 +11139,11 @@
                     this._warnChoicesInitFailed("setValue");
                     return this;
                 }
-                this._store.withTxn((function() {
-                    items.forEach((function(value) {
+                this._store.withTxn(function() {
+                    items.forEach(function(value) {
                         if (value) _this._addChoice(mapInputToChoice(value, false));
-                    }));
-                }));
+                    });
+                });
                 this._searcher.reset();
                 return this;
             };
@@ -11152,57 +11154,58 @@
                     return this;
                 }
                 if (this._isTextElement) return this;
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     var choiceValue = Array.isArray(value) ? value : [ value ];
-                    choiceValue.forEach((function(val) {
+                    choiceValue.forEach(function(val) {
                         return _this._findAndSelectChoiceByValue(val);
-                    }));
+                    });
                     _this.unhighlightAll();
-                }));
+                });
                 this._searcher.reset();
                 return this;
             };
-            Choices.prototype.setChoices = function(choicesArrayOrFetcher, value, label, replaceChoices, clearSearchFlag) {
+            Choices.prototype.setChoices = function(choicesArrayOrFetcher, value, label, replaceChoices, clearSearchFlag, replaceItems) {
                 var _this = this;
                 if (choicesArrayOrFetcher === void 0) choicesArrayOrFetcher = [];
                 if (value === void 0) value = "value";
                 if (label === void 0) label = "label";
                 if (replaceChoices === void 0) replaceChoices = false;
                 if (clearSearchFlag === void 0) clearSearchFlag = true;
+                if (replaceItems === void 0) replaceItems = false;
                 if (!this.initialisedOK) {
                     this._warnChoicesInitFailed("setChoices");
                     return this;
                 }
                 if (!this._isSelectElement) throw new TypeError("setChoices can't be used with INPUT based Choices");
                 if (typeof value !== "string" || !value) throw new TypeError("value parameter must be a name of 'value' field in passed objects");
-                if (replaceChoices) this.clearChoices();
                 if (typeof choicesArrayOrFetcher === "function") {
                     var fetcher_1 = choicesArrayOrFetcher(this);
-                    if (typeof Promise === "function" && fetcher_1 instanceof Promise) return new Promise((function(resolve) {
+                    if (typeof Promise === "function" && fetcher_1 instanceof Promise) return new Promise(function(resolve) {
                         return requestAnimationFrame(resolve);
-                    })).then((function() {
+                    }).then(function() {
                         return _this._handleLoadingState(true);
-                    })).then((function() {
+                    }).then(function() {
                         return fetcher_1;
-                    })).then((function(data) {
-                        return _this.setChoices(data, value, label, replaceChoices);
-                    })).catch((function(err) {
+                    }).then(function(data) {
+                        return _this.setChoices(data, value, label, replaceChoices, clearSearchFlag, replaceItems);
+                    }).catch(function(err) {
                         if (!_this.config.silent) console.error(err);
-                    })).then((function() {
+                    }).then(function() {
                         return _this._handleLoadingState(false);
-                    })).then((function() {
+                    }).then(function() {
                         return _this;
-                    }));
+                    });
                     if (!Array.isArray(fetcher_1)) throw new TypeError(".setChoices first argument function must return either array of choices or Promise, got: ".concat(typeof fetcher_1));
                     return this.setChoices(fetcher_1, value, label, false);
                 }
                 if (!Array.isArray(choicesArrayOrFetcher)) throw new TypeError(".setChoices must be called either with array of choices with a function resulting into Promise of array of choices");
                 this.containerOuter.removeLoadingState();
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     if (clearSearchFlag) _this._isSearching = false;
+                    if (replaceChoices) _this.clearChoices(true, replaceItems);
                     var isDefaultValue = value === "value";
                     var isDefaultLabel = label === "label";
-                    choicesArrayOrFetcher.forEach((function(groupOrChoice) {
+                    choicesArrayOrFetcher.forEach(function(groupOrChoice) {
                         if ("choices" in groupOrChoice) {
                             var group = groupOrChoice;
                             if (!isDefaultLabel) group = __assign(__assign({}, group), {
@@ -11215,11 +11218,13 @@
                                 value: choice[value],
                                 label: choice[label]
                             });
-                            _this._addChoice(mapInputToChoice(choice, false));
+                            var choiceFull = mapInputToChoice(choice, false);
+                            _this._addChoice(choiceFull);
+                            if (choiceFull.placeholder && !_this._hasNonChoicePlaceholder) _this._placeholderValue = unwrapStringForEscaped(choiceFull.label);
                         }
-                    }));
+                    });
                     _this.unhighlightAll();
-                }));
+                });
                 this._searcher.reset();
                 return this;
             };
@@ -11232,32 +11237,32 @@
                     if (!this.config.silent) console.warn("refresh method can only be used on choices backed by a <select> element");
                     return this;
                 }
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     var choicesFromOptions = _this.passedElement.optionsAsChoices();
                     var existingItems = {};
-                    if (!deselectAll) _this._store.items.forEach((function(choice) {
-                        if (choice.id && choice.active && choice.selected && !choice.disabled) existingItems[choice.value] = true;
-                    }));
+                    if (!deselectAll) _this._store.items.forEach(function(choice) {
+                        if (choice.id && choice.active && choice.selected) existingItems[choice.value] = true;
+                    });
                     _this.clearStore(false);
                     var updateChoice = function(choice) {
                         if (deselectAll) _this._store.dispatch(removeItem$1(choice)); else if (existingItems[choice.value]) choice.selected = true;
                     };
-                    choicesFromOptions.forEach((function(groupOrChoice) {
+                    choicesFromOptions.forEach(function(groupOrChoice) {
                         if ("choices" in groupOrChoice) {
                             groupOrChoice.choices.forEach(updateChoice);
                             return;
                         }
                         updateChoice(groupOrChoice);
-                    }));
+                    });
                     _this._addPredefinedChoices(choicesFromOptions, selectFirstOption, withEvents);
                     if (_this._isSearching) _this._searchChoices(_this.input.value);
-                }));
+                });
                 return this;
             };
             Choices.prototype.removeChoice = function(value) {
-                var choice = this._store.choices.find((function(c) {
+                var choice = this._store.choices.find(function(c) {
                     return c.value === value;
-                }));
+                });
                 if (!choice) return this;
                 this._clearNotice();
                 this._store.dispatch(removeChoice(choice));
@@ -11265,27 +11270,33 @@
                 if (choice.selected) this.passedElement.triggerEvent(EventType.removeItem, this._getChoiceForOutput(choice));
                 return this;
             };
-            Choices.prototype.clearChoices = function() {
+            Choices.prototype.clearChoices = function(clearOptions, clearItems) {
                 var _this = this;
-                this._store.withTxn((function() {
-                    _this._store.choices.forEach((function(choice) {
-                        if (!choice.selected) _this._store.dispatch(removeChoice(choice));
-                    }));
-                }));
+                if (clearOptions === void 0) clearOptions = true;
+                if (clearItems === void 0) clearItems = false;
+                if (clearOptions) if (clearItems) this.passedElement.element.replaceChildren(""); else this.passedElement.element.querySelectorAll(":not([selected])").forEach(function(el) {
+                    el.remove();
+                });
+                this.itemList.element.replaceChildren("");
+                this.choiceList.element.replaceChildren("");
+                this._clearNotice();
+                this._store.withTxn(function() {
+                    var items = clearItems ? [] : _this._store.items;
+                    _this._store.reset();
+                    items.forEach(function(item) {
+                        _this._store.dispatch(addChoice(item));
+                        _this._store.dispatch(addItem(item));
+                    });
+                });
                 this._searcher.reset();
                 return this;
             };
             Choices.prototype.clearStore = function(clearOptions) {
                 if (clearOptions === void 0) clearOptions = true;
+                this.clearChoices(clearOptions, true);
                 this._stopSearch();
-                if (clearOptions) this.passedElement.element.replaceChildren("");
-                this.itemList.element.replaceChildren("");
-                this.choiceList.element.replaceChildren("");
-                this._clearNotice();
-                this._store.reset();
                 this._lastAddedChoiceId = 0;
                 this._lastAddedGroupId = 0;
-                this._searcher.reset();
                 return this;
             };
             Choices.prototype.clearInput = function() {
@@ -11321,16 +11332,16 @@
                 var renderLimit = 0;
                 if (isSearching && config.searchResultLimit > 0) renderLimit = config.searchResultLimit; else if (config.renderChoiceLimit > 0) renderLimit = config.renderChoiceLimit;
                 if (this._isSelectElement) {
-                    var backingOptions = activeChoices.filter((function(choice) {
+                    var backingOptions = activeChoices.filter(function(choice) {
                         return !choice.element;
-                    }));
+                    });
                     if (backingOptions.length) this.passedElement.addOptions(backingOptions);
                 }
                 var fragment = document.createDocumentFragment();
                 var renderableChoices = function(choices) {
-                    return choices.filter((function(choice) {
+                    return choices.filter(function(choice) {
                         return !choice.placeholder && (isSearching ? !!choice.rank : config.renderSelectedChoices || !choice.selected);
-                    }));
+                    });
                 };
                 var selectableChoices = false;
                 var renderChoices = function(choices, withinGroup, groupLabel) {
@@ -11338,27 +11349,27 @@
                     var choiceLimit = choices.length;
                     choiceLimit = !withinGroup && renderLimit && choiceLimit > renderLimit ? renderLimit : choiceLimit;
                     choiceLimit--;
-                    choices.every((function(choice, index) {
+                    choices.every(function(choice, index) {
                         var dropdownItem = choice.choiceEl || _this._templates.choice(config, choice, config.itemSelectText, groupLabel);
                         choice.choiceEl = dropdownItem;
                         fragment.appendChild(dropdownItem);
-                        if (!choice.disabled && (isSearching || !choice.selected)) selectableChoices = true;
+                        if (isSearching || !choice.selected) selectableChoices = true;
                         return index < choiceLimit;
-                    }));
+                    });
                 };
                 if (activeChoices.length) {
-                    if (config.resetScrollPosition) requestAnimationFrame((function() {
+                    if (config.resetScrollPosition) requestAnimationFrame(function() {
                         return _this.choiceList.scrollToTop();
-                    }));
-                    if (!this._hasNonChoicePlaceholder && !isSearching && this._isSelectOneElement) renderChoices(activeChoices.filter((function(choice) {
+                    });
+                    if (!this._hasNonChoicePlaceholder && !isSearching && this._isSelectOneElement) renderChoices(activeChoices.filter(function(choice) {
                         return choice.placeholder && !choice.group;
-                    })), false, void 0);
+                    }), false, void 0);
                     if (activeGroups.length && !isSearching) {
                         if (config.shouldSort) activeGroups.sort(config.sorter);
-                        renderChoices(activeChoices.filter((function(choice) {
+                        renderChoices(activeChoices.filter(function(choice) {
                             return !choice.placeholder && !choice.group;
-                        })), false, void 0);
-                        activeGroups.forEach((function(group) {
+                        }), false, void 0);
+                        activeGroups.forEach(function(group) {
                             var groupChoices = renderableChoices(group.choices);
                             if (groupChoices.length) {
                                 if (group.label) {
@@ -11369,10 +11380,10 @@
                                 }
                                 renderChoices(groupChoices, true, config.appendGroupInSearch && isSearching ? group.label : void 0);
                             }
-                        }));
+                        });
                     } else renderChoices(renderableChoices(activeChoices), false, void 0);
                 }
-                if (!selectableChoices) {
+                if (!selectableChoices && (isSearching || !fragment.children.length || !config.renderSelectedChoices)) {
                     if (!this._notice) this._notice = {
                         text: resolveStringFunction(isSearching ? config.noResultsText : config.noChoicesText),
                         type: isSearching ? NoticeTypes.noResults : NoticeTypes.noChoices
@@ -11400,40 +11411,40 @@
                     fragment.appendChild(el);
                 };
                 items.forEach(addItemToFragment);
-                var addItems = !!fragment.childNodes.length;
-                if (this._isSelectOneElement && this._hasNonChoicePlaceholder) {
+                var addedItems = !!fragment.childNodes.length;
+                if (this._isSelectOneElement) {
                     var existingItems = itemList.children.length;
-                    if (addItems || existingItems > 1) {
+                    if (addedItems || existingItems > 1) {
                         var placeholder = itemList.querySelector(getClassNamesSelector(config.classNames.placeholder));
                         if (placeholder) placeholder.remove();
-                    } else if (!existingItems) {
-                        addItems = true;
+                    } else if (!addedItems && !existingItems && this._placeholderValue) {
+                        addedItems = true;
                         addItemToFragment(mapInputToChoice({
                             selected: true,
                             value: "",
-                            label: config.placeholderValue || "",
+                            label: this._placeholderValue,
                             placeholder: true
                         }, false));
                     }
                 }
-                if (addItems) {
+                if (addedItems) {
                     itemList.append(fragment);
                     if (config.shouldSortItems && !this._isSelectOneElement) {
                         items.sort(config.sorter);
-                        items.forEach((function(item) {
+                        items.forEach(function(item) {
                             var el = itemFromList(item);
                             if (el) {
                                 el.remove();
                                 fragment.append(el);
                             }
-                        }));
+                        });
                         itemList.append(fragment);
                     }
                 }
-                if (this._isTextElement) this.passedElement.value = items.map((function(_a) {
+                if (this._isTextElement) this.passedElement.value = items.map(function(_a) {
                     var value = _a.value;
                     return value;
-                })).join(config.delimiter);
+                }).join(config.delimiter);
             };
             Choices.prototype._displayNotice = function(text, type, openDropdown) {
                 if (openDropdown === void 0) openDropdown = true;
@@ -11491,24 +11502,24 @@
                 var items = this._store.items;
                 if (!items.length || !this.config.removeItems || !this.config.removeItemButton) return;
                 var id = element && parseDataSetId(element.parentElement);
-                var itemToRemove = id && items.find((function(item) {
+                var itemToRemove = id && items.find(function(item) {
                     return item.id === id;
-                }));
+                });
                 if (!itemToRemove) return;
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     _this._removeItem(itemToRemove);
                     _this._triggerChange(itemToRemove.value);
                     if (_this._isSelectOneElement && !_this._hasNonChoicePlaceholder) {
-                        var placeholderChoice = _this._store.choices.reverse().find((function(choice) {
-                            return !choice.disabled && choice.placeholder;
-                        }));
+                        var placeholderChoice = (_this.config.shouldSort ? _this._store.choices.reverse() : _this._store.choices).find(function(choice) {
+                            return choice.placeholder;
+                        });
                         if (placeholderChoice) {
                             _this._addItem(placeholderChoice);
                             _this.unhighlightAll();
                             if (placeholderChoice.value) _this._triggerChange(placeholderChoice.value);
                         }
                     }
-                }));
+                });
             };
             Choices.prototype._handleItemAction = function(element, hasShiftKey) {
                 var _this = this;
@@ -11517,9 +11528,9 @@
                 if (!items.length || !this.config.removeItems || this._isSelectOneElement) return;
                 var id = parseDataSetId(element);
                 if (!id) return;
-                items.forEach((function(item) {
+                items.forEach(function(item) {
                     if (item.id === id && !item.highlighted) _this.highlightItem(item); else if (!hasShiftKey && item.highlighted) _this.unhighlightItem(item);
-                }));
+                });
                 this.input.focus();
             };
             Choices.prototype._handleChoiceAction = function(element) {
@@ -11530,11 +11541,11 @@
                 var hasActiveDropdown = this.dropdown.isActive;
                 if (!choice.selected) {
                     if (!this._canAddItems()) return true;
-                    this._store.withTxn((function() {
+                    this._store.withTxn(function() {
                         _this._addItem(choice, true, true);
                         _this.clearInput();
                         _this.unhighlightAll();
-                    }));
+                    });
                     this._triggerChange(choice.value);
                 }
                 if (hasActiveDropdown && this.config.closeDropdownOnSelect) {
@@ -11547,9 +11558,9 @@
                 var config = this.config;
                 if (!config.removeItems || !items.length) return;
                 var lastItem = items[items.length - 1];
-                var hasHighlightedItems = items.some((function(item) {
+                var hasHighlightedItems = items.some(function(item) {
                     return item.highlighted;
-                }));
+                });
                 if (config.editItems && !hasHighlightedItems && lastItem) {
                     this.input.value = lastItem.value;
                     this.input.setWidth();
@@ -11565,22 +11576,22 @@
                 var _this = this;
                 var config = this.config;
                 if (this._isTextElement) {
-                    this._presetChoices = config.items.map((function(e) {
+                    this._presetChoices = config.items.map(function(e) {
                         return mapInputToChoice(e, false);
-                    }));
+                    });
                     if (this.passedElement.value) {
-                        var elementItems = this.passedElement.value.split(config.delimiter).map((function(e) {
+                        var elementItems = this.passedElement.value.split(config.delimiter).map(function(e) {
                             return mapInputToChoice(e, false, _this.config.allowHtmlUserInput);
-                        }));
+                        });
                         this._presetChoices = this._presetChoices.concat(elementItems);
                     }
-                    this._presetChoices.forEach((function(choice) {
+                    this._presetChoices.forEach(function(choice) {
                         choice.selected = true;
-                    }));
+                    });
                 } else if (this._isSelectElement) {
-                    this._presetChoices = config.choices.map((function(e) {
+                    this._presetChoices = config.choices.map(function(e) {
                         return mapInputToChoice(e, true);
-                    }));
+                    });
                     var choicesFromOptions = this.passedElement.optionsAsChoices();
                     if (choicesFromOptions) (_a = this._presetChoices).push.apply(_a, choicesFromOptions);
                 }
@@ -11609,9 +11620,9 @@
                         value,
                         resultCount
                     });
-                } else if (this._store.choices.some((function(option) {
+                } else if (this._store.choices.some(function(option) {
                     return !option.active;
-                }))) this._stopSearch();
+                })) this._stopSearch();
             };
             Choices.prototype._canAddItems = function() {
                 var config = this.config;
@@ -11622,6 +11633,7 @@
                     this._displayNotice(typeof maxItemText === "function" ? maxItemText(maxItemCount) : maxItemText, NoticeTypes.addChoice);
                     return false;
                 }
+                if (this._notice && this._notice.type === NoticeTypes.addChoice) this._clearNotice();
                 return true;
             };
             Choices.prototype._canCreateItem = function(value) {
@@ -11633,17 +11645,18 @@
                     notice = resolveNoticeFunction(config.customAddItemText, value);
                 }
                 if (canAddItem) {
-                    var foundChoice = this._store.choices.find((function(choice) {
+                    var foundChoice = this._store.choices.find(function(choice) {
                         return config.valueComparer(choice.value, value);
-                    }));
-                    if (this._isSelectElement) {
-                        if (foundChoice) {
+                    });
+                    if (foundChoice) {
+                        if (this._isSelectElement) {
                             this._displayNotice("", NoticeTypes.addChoice);
                             return false;
                         }
-                    } else if (this._isTextElement && !config.duplicateItemsAllowed) if (foundChoice) {
-                        canAddItem = false;
-                        notice = resolveNoticeFunction(config.uniqueItemText, value);
+                        if (!config.duplicateItemsAllowed) {
+                            canAddItem = false;
+                            notice = resolveNoticeFunction(config.uniqueItemText, value);
+                        }
                     }
                 }
                 if (canAddItem) notice = resolveNoticeFunction(config.addItemText, value);
@@ -11817,7 +11830,7 @@
                 }
                 if (!this._canAddItems()) return;
                 var addedItem = false;
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     addedItem = _this._findAndSelectChoiceByValue(value, true);
                     if (!addedItem) {
                         if (!_this._canAddUserChoices) return;
@@ -11827,7 +11840,7 @@
                     }
                     _this.clearInput();
                     _this.unhighlightAll();
-                }));
+                });
                 if (!addedItem) return;
                 this._triggerChange(value);
                 if (this.config.closeDropdownOnSelect) this.hideDropdown(true);
@@ -11938,7 +11951,10 @@
                         containerOuter.removeFocusState();
                         this.hideDropdown(true);
                         if (this._isTextElement || this._isSelectMultipleElement) this.unhighlightAll();
-                    } else if (target === this.containerOuter.element) containerOuter.removeFocusState();
+                    } else if (target === this.containerOuter.element) {
+                        containerOuter.removeFocusState();
+                        if (!this._canSearch) this.hideDropdown(true);
+                    }
                 } else {
                     this._isScrollingOnIe = false;
                     this.input.element.focus();
@@ -11946,12 +11962,12 @@
             };
             Choices.prototype._onFormReset = function() {
                 var _this = this;
-                this._store.withTxn((function() {
+                this._store.withTxn(function() {
                     _this.clearInput();
                     _this.hideDropdown();
                     _this.refresh(false, false, true);
                     if (_this._initialItems.length) _this.setChoiceByValue(_this._initialItems);
-                }));
+                });
             };
             Choices.prototype._highlightChoice = function(el) {
                 if (el === void 0) el = null;
@@ -11960,10 +11976,10 @@
                 var passedEl = el;
                 var highlightedState = this.config.classNames.highlightedState;
                 var highlightedChoices = Array.from(this.dropdown.element.querySelectorAll(getClassNamesSelector(highlightedState)));
-                highlightedChoices.forEach((function(choice) {
+                highlightedChoices.forEach(function(choice) {
                     removeClassesFromElement(choice, highlightedState);
                     choice.setAttribute("aria-selected", "false");
-                }));
+                });
                 if (passedEl) this._highlightPosition = choices.indexOf(passedEl); else {
                     if (choices.length > this._highlightPosition) passedEl = choices[this._highlightPosition]; else passedEl = choices[choices.length - 1];
                     if (!passedEl) passedEl = choices[0];
@@ -12001,9 +12017,9 @@
                 if (userTriggered === void 0) userTriggered = false;
                 if (choice.id) throw new TypeError("Can not re-add a choice which has already been added");
                 var config = this.config;
-                if ((this._isSelectElement || !config.duplicateItemsAllowed) && this._store.choices.find((function(c) {
+                if (!config.duplicateItemsAllowed && this._store.choices.find(function(c) {
                     return config.valueComparer(c.value, choice.value);
-                }))) return;
+                })) return;
                 this._lastAddedChoiceId++;
                 choice.id = this._lastAddedChoiceId;
                 choice.elementId = "".concat(this._baseId, "-").concat(this._idNames.itemChoice, "-").concat(choice.id);
@@ -12023,11 +12039,11 @@
                 if (!group.choices) return;
                 this._lastAddedGroupId++;
                 group.id = this._lastAddedGroupId;
-                group.choices.forEach((function(item) {
+                group.choices.forEach(function(item) {
                     item.group = group;
                     if (group.disabled) item.disabled = true;
                     _this._addChoice(item, withEvents);
-                }));
+                });
             };
             Choices.prototype._createTemplates = function() {
                 var _this = this;
@@ -12035,9 +12051,9 @@
                 var userTemplates = {};
                 if (typeof callbackOnCreateTemplates === "function") userTemplates = callbackOnCreateTemplates.call(this, strToEl, escapeForTemplate, getClassNames);
                 var templating = {};
-                Object.keys(this._templates).forEach((function(name) {
+                Object.keys(this._templates).forEach(function(name) {
                     if (name in userTemplates) templating[name] = userTemplates[name].bind(_this); else templating[name] = _this._templates[name].bind(_this);
-                }));
+                });
                 this._templates = templating;
             };
             Choices.prototype._createElements = function() {
@@ -12095,9 +12111,9 @@
             };
             Choices.prototype._initStore = function() {
                 var _this = this;
-                this._store.subscribe(this._render).withTxn((function() {
+                this._store.subscribe(this._render).withTxn(function() {
                     _this._addPredefinedChoices(_this._presetChoices, _this._isSelectOneElement && !_this._hasNonChoicePlaceholder, false);
-                }));
+                });
                 if (!this._store.choices.length || this._isSelectOneElement && this._hasNonChoicePlaceholder) this._render();
             };
             Choices.prototype._addPredefinedChoices = function(choices, selectFirstOption, withEvents) {
@@ -12105,27 +12121,27 @@
                 if (selectFirstOption === void 0) selectFirstOption = false;
                 if (withEvents === void 0) withEvents = true;
                 if (selectFirstOption) {
-                    var noSelectedChoices = choices.findIndex((function(choice) {
+                    var noSelectedChoices = choices.findIndex(function(choice) {
                         return choice.selected;
-                    })) === -1;
-                    if (noSelectedChoices) choices.some((function(choice) {
+                    }) === -1;
+                    if (noSelectedChoices) choices.some(function(choice) {
                         if (choice.disabled || "choices" in choice) return false;
                         choice.selected = true;
                         return true;
-                    }));
+                    });
                 }
-                choices.forEach((function(item) {
+                choices.forEach(function(item) {
                     if ("choices" in item) {
                         if (_this._isSelectElement) _this._addGroup(item, withEvents);
                     } else _this._addChoice(item, withEvents);
-                }));
+                });
             };
             Choices.prototype._findAndSelectChoiceByValue = function(value, userTriggered) {
                 var _this = this;
                 if (userTriggered === void 0) userTriggered = false;
-                var foundChoice = this._store.choices.find((function(choice) {
+                var foundChoice = this._store.choices.find(function(choice) {
                     return _this.config.valueComparer(choice.value, value);
-                }));
+                });
                 if (foundChoice && !foundChoice.disabled && !foundChoice.selected) {
                     this._addItem(foundChoice, true, userTriggered);
                     return true;
@@ -12146,7 +12162,7 @@
                 if (this.config.silent) return;
                 if (!this.initialised) throw new TypeError("".concat(caller, " called on a non-initialised instance of Choices")); else if (!this.initialisedOK) throw new TypeError("".concat(caller, " called for an element which has multiple instances of Choices initialised on it"));
             };
-            Choices.version = "11.0.3";
+            Choices.version = "11.1.0";
             return Choices;
         }();
         const selectCatalog = document.querySelector(".select-catalog");
@@ -12159,9 +12175,9 @@
                 itemSelectText: ""
             });
             addSpanSelectItem();
-            objectModules.select.passedElement.element.addEventListener("change", (function(e) {
+            objectModules.select.passedElement.element.addEventListener("change", function(e) {
                 addSpanSelectItem();
-            }));
+            });
             function addSpanSelectItem() {
                 const choicesInner = document.querySelector(".choices__inner");
                 const choicesItem = choicesInner.querySelector(".choices__item.choices__item--selectable");
@@ -12170,7 +12186,7 @@
         }
         if (selectsUserForm.length > 0) {
             objectModules.selects = [];
-            selectsUserForm.forEach((selectUserForm => {
+            selectsUserForm.forEach(selectUserForm => {
                 const select = new Choices(selectUserForm, {
                     shouldSort: false,
                     position: "bottom",
@@ -12180,10 +12196,10 @@
                     itemSelectText: ""
                 });
                 objectModules.selects.push(select);
-            }));
+            });
         }
         function filterBlockClear() {
-            document.addEventListener("click", (e => {
+            document.addEventListener("click", e => {
                 const {target} = e;
                 if (target.closest("input[type=checkbox]") && target.closest("[data-filter]")) {
                     const filterBlock = target.closest(".filter__block");
@@ -12194,60 +12210,58 @@
                     clearCheckedInputs(filterBlock);
                     clearButtonShowHide(target, false);
                 }
-            }));
-            function clearButtonShowHide(target) {
-                let show = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : true;
+            });
+            function clearButtonShowHide(target, show = true) {
                 const filterBlock = target.closest(".filter__block");
                 const clearButton = filterBlock.querySelector(".filter__clear");
                 show ? clearButton.classList.add("is-visible") : clearButton.classList.remove("is-visible");
             }
             function checkedInputs(filterBlock) {
                 const checkboxInputs = filterBlock.querySelectorAll(".checkbox__input");
-                return [ ...checkboxInputs ].some((checkbox => checkbox.checked));
+                return [ ...checkboxInputs ].some(checkbox => checkbox.checked);
             }
             function clearCheckedInputs(filterBlock) {
                 const checkboxInputs = filterBlock.querySelectorAll(".checkbox__input");
-                checkboxInputs.forEach((checkbox => checkbox.checked ? checkbox.checked = false : null));
+                checkboxInputs.forEach(checkbox => checkbox.checked ? checkbox.checked = false : null);
             }
         }
         function openFilterMenu() {
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (bodyLockStatus && target.closest("[data-button-filter-menu]")) {
                     document.documentElement.classList.add("filter-menu-open");
                     return;
                 }
                 if (target.closest(".filter__close") && document.documentElement.classList.contains("filter-menu-open")) document.documentElement.classList.remove("filter-menu-open");
                 if (!target.closest("[data-filter]") && document.documentElement.classList.contains("filter-menu-open")) document.documentElement.classList.remove("filter-menu-open");
-            }));
+            });
         }
         function tabs() {
             const tabs = document.querySelectorAll("[data-tabs]");
             if (!tabs.length > 0) return;
             const hash = getHash();
             let tabsActiveHash = hash && hash.startsWith("tab-") ? hash.replace("tab-", "").split("-") : [];
-            tabs.forEach(((tabsBlock, index) => {
+            tabs.forEach((tabsBlock, index) => {
                 initTabs(tabsBlock, index);
                 tabsBlock.addEventListener("click", tabsAction);
                 tabsBlock.addEventListener("keydown", keyDownAction);
-            }));
+            });
             let mdQueriesArray = dataMediaQueries(tabs, "tabs");
-            if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
-                mdQueriesItem.matchMedia.addEventListener("change", (() => {
+            if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach(mdQueriesItem => {
+                mdQueriesItem.matchMedia.addEventListener("change", () => {
                     updateControlPosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-                }));
+                });
                 updateControlPosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-            }));
+            });
             function updateControlPosition(tabsMediaArray, matchMedia) {
-                tabsMediaArray.forEach((tabsMediaItem => {
+                tabsMediaArray.forEach(tabsMediaItem => {
                     tabsMediaItem = tabsMediaItem.item;
                     const tabsControl = tabsMediaItem.querySelector("[data-tabs-controls]");
                     const tabsControls = tabsMediaItem.querySelectorAll("[data-tabs-control]");
                     const tabsContent = tabsMediaItem.querySelector("[data-tabs-content]");
                     const tabsContentItems = tabsMediaItem.querySelectorAll("[data-tabs-item]");
-                    const tabsControlArray = Array.from(tabsControls).filter((tabControl => tabControl.closest("[data-tabs]") === tabsMediaItem));
-                    const tabsContentArray = Array.from(tabsContentItems).filter((tabContentItem => tabContentItem.closest("[data-tabs]") === tabsMediaItem));
-                    tabsContentArray.forEach(((tabsContentItem, index) => {
+                    const tabsControlArray = Array.from(tabsControls).filter(tabControl => tabControl.closest("[data-tabs]") === tabsMediaItem);
+                    const tabsContentArray = Array.from(tabsContentItems).filter(tabContentItem => tabContentItem.closest("[data-tabs]") === tabsMediaItem);
+                    tabsContentArray.forEach((tabsContentItem, index) => {
                         if (matchMedia.matches) {
                             tabsContent.append(tabsControlArray[index]);
                             tabsContent.append(tabsContentItem);
@@ -12256,8 +12270,8 @@
                             tabsControl.append(tabsControlArray[index]);
                             tabsMediaItem.classList.remove("tab-accordion");
                         }
-                    }));
-                }));
+                    });
+                });
             }
             function initTabs(tabsBlock, index) {
                 tabsBlock.classList.add("tab-init");
@@ -12272,7 +12286,7 @@
                     tabControlActive ? tabControlActive.classList.remove("is-active") : null;
                 }
                 tabsControlNavigation.setAttribute("role", "tablist");
-                tabsContentItems.forEach(((tabsContentItem, index) => {
+                tabsContentItems.forEach((tabsContentItem, index) => {
                     tabsControlButtons[index].setAttribute("data-tabs-control", "");
                     tabsControlButtons[index].setAttribute("role", "tab");
                     tabsControlButtons[index].setAttribute("id", `${tabsBlock.classList[0]}-${index + 1}`);
@@ -12287,7 +12301,7 @@
                         tabsControlButtons[index].setAttribute("tabindex", "-1");
                         tabsControlButtons[index].setAttribute("aria-selected", false);
                     }
-                }));
+                });
             }
             function updateTabsStatus(tabsBlock) {
                 const tabsControls = tabsBlock.querySelectorAll("[data-tabs-control]");
@@ -12295,10 +12309,10 @@
                 const tabsBlockAnimateDuration = getTabsAnimateDuration(tabsBlock);
                 const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
                 if (tabsContentItems.length > 0) {
-                    const tabsContentArray = Array.from(tabsContentItems).filter((item => item.closest("[data-tabs]") === tabsBlock));
-                    const tabsControlsArray = Array.from(tabsControls).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                    const tabsContentArray = Array.from(tabsContentItems).filter(item => item.closest("[data-tabs]") === tabsBlock);
+                    const tabsControlsArray = Array.from(tabsControls).filter(item => item.closest("[data-tabs]") === tabsBlock);
                     const isHash = tabsBlock.hasAttribute("data-tabs-hash");
-                    tabsContentArray.forEach(((tabsContentItem, index) => {
+                    tabsContentArray.forEach((tabsContentItem, index) => {
                         if (tabsControlsArray[index].classList.contains("is-active")) {
                             tabsContentItem.removeAttribute("tabindex");
                             contentTabsToggle(tabsContentItem, tabsBlockAnimateDuration);
@@ -12307,11 +12321,10 @@
                             tabsContentItem.setAttribute("tabindex", "-1");
                             contentTabsToggle(tabsContentItem, tabsBlockAnimateDuration, false);
                         }
-                    }));
+                    });
                 }
             }
-            function contentTabsToggle(tabsContentItem, animateDuration) {
-                let isActive = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : true;
+            function contentTabsToggle(tabsContentItem, animateDuration, isActive = true) {
                 if (isActive) {
                     animateDuration ? _slideDown(tabsContentItem, animateDuration) : tabsContentItem.hidden = false;
                     window.scrollTo({
@@ -12327,7 +12340,7 @@
                 const tabsBlock = tabControl.closest("[data-tabs]");
                 const tabsControlItems = tabsBlock.querySelectorAll("[data-tabs-control]");
                 if (!tabControl.classList.contains("is-active") && !tabsBlock.querySelector(".slide")) {
-                    const [tabActiveControl] = Array.from(tabsControlItems).filter((item => item.classList.contains("is-active") && item.closest("[data-tabs]") === tabsBlock));
+                    const [tabActiveControl] = Array.from(tabsControlItems).filter(item => item.classList.contains("is-active") && item.closest("[data-tabs]") === tabsBlock);
                     tabActiveControl ? toggleTabSelected(tabActiveControl) : null;
                     toggleTabSelected(tabControl, true);
                     updateTabsStatus(tabsBlock);
@@ -12341,8 +12354,8 @@
                 const tabsBlock = tabControl.closest("[data-tabs]");
                 const tabsControls = Array.from(tabsBlock.querySelectorAll("[data-tabs-control]"));
                 if (tabControl.classList.contains("is-active") && !tabsBlock.querySelector(".slide")) {
-                    const currentIndex = tabsControls.findIndex((itemIndex => itemIndex === tabControl));
-                    const [tabActiveControl] = tabsControls.filter((item => item.classList.contains("is-active") && item.closest("[data-tabs]") === tabsBlock));
+                    const currentIndex = tabsControls.findIndex(itemIndex => itemIndex === tabControl);
+                    const [tabActiveControl] = tabsControls.filter(item => item.classList.contains("is-active") && item.closest("[data-tabs]") === tabsBlock);
                     let nextIndex;
                     if (key === "ArrowRight" || key === "ArrowDown") nextIndex = currentIndex === tabsControls.length - 1 ? 0 : currentIndex + 1; else if (key === "ArrowLeft" || key === "ArrowUp") nextIndex = currentIndex === 0 ? tabsControls.length - 1 : currentIndex - 1; else return;
                     tabActiveControl ? toggleTabSelected(tabActiveControl) : null;
@@ -12354,53 +12367,48 @@
             function getTabsAnimateDuration(tabsBlock) {
                 if (tabsBlock.hasAttribute("data-tabs-animate")) return +tabsBlock.dataset.tabsAnimate || 500;
             }
-            function toggleTabSelected(tabControl) {
-                let isActive = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
+            function toggleTabSelected(tabControl, isActive = false) {
                 !isActive ? tabControl.setAttribute("tabindex", "-1") : tabControl.removeAttribute("tabindex");
                 tabControl.setAttribute("aria-selected", `${!isActive ? false : true}`);
                 tabControl.classList.toggle("is-active");
             }
         }
         function showInputsPasswords() {
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (target.closest("[data-change-password]")) {
                     const passwordInputsBlock = document.querySelector(".form-user__password");
                     if (passwordInputsBlock && !passwordInputsBlock.classList.contains("is-visible")) passwordInputsBlock.classList.add("is-visible");
                 }
-            }));
+            });
         }
         function openAccountMenu() {
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (bodyLockStatus && target.closest("[data-button-account-menu]")) {
                     document.documentElement.classList.add("account-menu-open");
                     return;
                 }
                 if (target.closest(".menu-account__close") && document.documentElement.classList.contains("account-menu-open")) document.documentElement.classList.remove("account-menu-open");
                 if (!target.closest("[data-menu-account]") && document.documentElement.classList.contains("account-menu-open")) document.documentElement.classList.remove("account-menu-open");
-            }));
+            });
         }
         function removeOrder() {
             const accountSection = document.querySelector(".account");
             if (!accountSection) return;
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (target.closest("[data-remove-order-button]")) {
                     const removeButton = target.closest("[data-remove-order-button]");
                     const order = removeButton.closest(".order");
                     const bodyStyles = window.getComputedStyle(document.body);
                     const speedStyle = +bodyStyles.getPropertyValue("--remove-duration").replace("ms", "");
                     order ? order.classList.add("remove") : null;
-                    setTimeout((() => {
+                    setTimeout(() => {
                         order.remove();
-                    }), speedStyle);
+                    }, speedStyle);
                 }
-            }));
+            });
         }
         function quantity() {
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) {
                     const targetEl = target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]");
                     const quantityPlus = target.closest("[data-quantity]").querySelector("[data-quantity-plus]");
@@ -12425,12 +12433,12 @@
                     }
                     target.closest("[data-quantity]").querySelector("[data-quantity-value]").value = value;
                 }
-            }));
+            });
         }
         const cartSection = document.querySelector(".cart");
-        if (cartSection) window.addEventListener("load", (() => {
+        if (cartSection) window.addEventListener("load", () => {
             cartLoad();
-        }));
+        });
         function cartLoad() {
             const titleCountItems = cartSection.querySelector(".cart__title span");
             const totalBlock = cartSection.querySelector(".total-cart");
@@ -12440,36 +12448,35 @@
             updateTitleItems();
             productCartPriceTotal();
             totalCart();
-            document.addEventListener("click", (_ref => {
-                let {target} = _ref;
+            document.addEventListener("click", ({target}) => {
                 if (target.closest("[data-remove-order-button]")) {
                     const removeButton = target.closest("[data-remove-order-button]");
                     const order = removeButton.closest(".products-cart__item");
                     order ? order.classList.add("remove") : null;
-                    setTimeout((() => {
+                    setTimeout(() => {
                         order.remove();
                         updateTitleItems();
                         totalCart();
-                    }), speedStyle);
+                    }, speedStyle);
                 }
                 if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) {
                     const quantityInput = target.closest("[data-quantity]").querySelector("[data-quantity-value]");
                     updateProductCartPriceTotal(quantityInput);
                     totalCart();
                 }
-            }));
+            });
             function totalCart() {
                 const totalPriceArr = [];
                 let currency;
                 const productsCartItems = cartSection.querySelectorAll(".products-cart__item");
                 if (productsCartItems.length > 0) {
-                    productsCartItems.forEach((item => {
+                    productsCartItems.forEach(item => {
                         const product = item.querySelector(".products-cart__order");
                         currency = product.dataset.currency;
                         const {total} = item.querySelector(".products-cart__total").dataset;
                         totalPriceArr.push(+total);
-                    }));
-                    const totalSumCart = totalPriceArr.reduce(((sum, price) => sum + price), 0);
+                    });
+                    const totalSumCart = totalPriceArr.reduce((sum, price) => sum + price, 0);
                     totalValue.innerHTML = `<span>${currency}</span>${totalSumCart}`;
                 } else totalValue.innerHTML = `0`;
             }
@@ -12484,7 +12491,7 @@
             }
             function productCartPriceTotal() {
                 const productsCartItems = cartSection.querySelectorAll(".products-cart__item");
-                productsCartItems.forEach((item => {
+                productsCartItems.forEach(item => {
                     const product = item.querySelector(".products-cart__order");
                     const quantity = item.querySelector("[data-quantity-value]").value;
                     const totalValue = item.querySelector(".products-cart__total");
@@ -12493,7 +12500,7 @@
                     priceValue.innerHTML = `<span>${currency}</span>${price}`;
                     totalValue.innerHTML = `<span>${currency}</span>${price * quantity}`;
                     totalValue.setAttribute("data-total", price);
-                }));
+                });
             }
             function productsCartLength(cartSection) {
                 const productsCart = cartSection.querySelectorAll(".products-cart__item");
@@ -12506,13 +12513,10 @@
         const productsContainer = document.querySelector(".catalog-main__items") || document.querySelector(".catalog__items");
         const data = "assets/products.json";
         let productsLoaded = false;
-        window.addEventListener("load", (() => {
-            if (productsContainer) productsRender(data);
-        }));
-        document.addEventListener("watcherCallback", (e => {
+        document.addEventListener("watcherCallback", e => {
             const {entry: {target}} = e.detail;
             if (target.classList.contains("catalog-main__items") || target.classList.contains("catalog__items")) productsRender(data);
-        }));
+        });
         async function productsRender(data) {
             if (!productsContainer.classList.contains("watcher-view") || productsLoaded === true) return;
             let productsData;
@@ -12522,17 +12526,17 @@
                     const response = await fetch(data);
                     productsContainer.insertAdjacentHTML("beforeend", `<div class="items-catalog__loading"></div>`);
                     if (!response.ok) throw new Error("Response is not OK");
-                    setTimeout((async () => {
+                    setTimeout(async () => {
                         productsContainer.classList.add("loaded");
                         const productsData = await response.json();
                         productsDisplay(productsData.products);
                         sessionStorage.setItem("productsData", JSON.stringify(productsData));
-                    }), 1e3);
+                    }, 1e3);
                 } catch (error) {
-                    setTimeout((() => {
+                    setTimeout(() => {
                         productsContainer.classList.add("loaded");
                         productsContainer.insertAdjacentHTML("beforeend", `<div class="items-catalog__error">Failed to load products, please try again</div>`);
-                    }), 1e3);
+                    }, 1e3);
                 } finally {
                     productsLoaded = true;
                 }
@@ -12543,11 +12547,11 @@
             productsLoaded = true;
         }
         function productsDisplay(products) {
-            products.forEach((product => {
+            products.forEach(product => {
                 const {id, image, title, currency, price} = product;
-                const templateHTML = `\n                        <article id=${id} data-currency=${currency} data-price=${price} class="items-catalog__item item-catalog">\n                            <div class="item-catalog__header">\n                              <a href="#" class="item-catalog__image">\n                                <img src="img/home/catalog/${image}" width="300" height="455" loading="lazy" alt="${title}">\n                              </a>\n                              <div class="item-catalog__actions actions-catalog">\n                                <button type="button" aria-label="Favorite" class="actions-catalog__favorite">\n                                  <svg>\n                                    <use xlink:href="img/icons/icons.svg#wishlist"></use>\n                                  </svg>\n                                </button>\n                                <button type="button" aria-label="Add to cart" class="actions-catalog__add-to-cart">\n                                  <span>ADD TO CART</span>\n                                  <svg>\n                                    <use xlink:href="img/icons/icons.svg#cart"></use>\n                                  </svg>\n                                </button>\n                              </div>\n                            </div>\n                            <div class="item-catalog__footer">\n                              <h3 class="item-catalog__title">\n                                <a href="#" class="item-catalog__link-title">${title}</a>\n                              </h3>\n                              <div class="item-catalog__price"><span>${currency}</span>${price}</div>\n                            </div>\n                          </article>\n                          `;
+                const templateHTML = `\n          <article id=${id} data-currency=${currency} data-price=${price} class="items-catalog__item item-catalog">\n            <div class="item-catalog__header">\n              <a href="#" class="item-catalog__image">\n                <img src="img/home/catalog/${image}" width="300" height="455" loading="lazy" alt="${title}">\n              </a>\n              <div class="item-catalog__actions actions-catalog">\n                <button type="button" aria-label="Favorite" class="actions-catalog__favorite">\n                  <svg>\n                    <use xlink:href="img/icons/icons.svg#wishlist"></use>\n                  </svg>\n                </button>\n                <button type="button" aria-label="Add to cart" class="actions-catalog__add-to-cart">\n                  <span>ADD TO CART</span>\n                    <svg>\n                      <use xlink:href="img/icons/icons.svg#cart"></use>\n                    </svg>\n                  </button>\n                </div>\n              </div>\n              <div class="item-catalog__footer">\n                <h3 class="item-catalog__title">\n                  <a href="#" class="item-catalog__link-title">${title}</a>\n                </h3>\n                <div class="item-catalog__price"><span>${currency}</span>${price}</div>\n              </div>\n            </article>\n          `;
                 productsContainer.insertAdjacentHTML("beforeend", templateHTML);
-            }));
+            });
         }
         const checkoutPage = document.querySelector(".checkout");
         if (checkoutPage) {
@@ -12561,7 +12565,7 @@
             let totalCheck = 0;
             if (orders.length > 0) {
                 let currency;
-                orders.forEach((order => {
+                orders.forEach(order => {
                     const itemPrice = order.querySelector(".list-order__item--price");
                     const quantityValue = order.querySelector("[data-quantity-value]").value;
                     const {price} = itemPrice.dataset;
@@ -12569,8 +12573,8 @@
                     itemPrice.innerHTML = `<span>${currency}</span>${price}`;
                     cartTotal.push(+price);
                     quantityArr.push(+quantityValue);
-                }));
-                totalCheck = [ ...cartTotal ].map(((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item * 1)).reduce(((sum, price) => sum + price), 0);
+                });
+                totalCheck = [ ...cartTotal ].map((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item * 1).reduce((sum, price) => sum + price, 0);
                 checkSubTotal.innerHTML = `<span>${currency}</span>${totalCheck}`;
                 checkSubTotal.setAttribute("data-total", totalCheck);
                 total.innerHTML = `<span>${currency}</span>${totalCheck}`;
@@ -12578,23 +12582,23 @@
             document.addEventListener("click", checkoutTotalCount);
             function checkoutTotalCount(e) {
                 const {target} = e;
-                if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) setTimeout((() => {
+                if (target.closest("[data-quantity-plus]") || target.closest("[data-quantity-minus]")) setTimeout(() => {
                     updateCartSubTotal();
-                }), 100);
+                }, 100);
             }
             function updateCartSubTotal() {
                 cartTotal = [];
                 quantityArr = [];
                 let currency;
-                orders.forEach((order => {
+                orders.forEach(order => {
                     const itemPrice = order.querySelector(".list-order__item--price");
                     const quantityValue = order.querySelector("[data-quantity-value]").value;
                     const {price} = itemPrice.dataset;
                     currency = itemPrice.dataset.currency;
                     cartTotal.push(+price);
                     quantityArr.push(+quantityValue);
-                }));
-                totalCheck = [ ...cartTotal ].map(((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item = 0)).reduce(((sum, price) => sum + price), 0);
+                });
+                totalCheck = [ ...cartTotal ].map((item, index) => quantityArr[index] !== 0 ? item * quantityArr[index] : item = 0).reduce((sum, price) => sum + price, 0);
                 checkSubTotal.innerHTML = `<span>${currency}</span>${totalCheck}`;
                 checkSubTotal.setAttribute("data-total", totalCheck);
                 total.innerHTML = `<span>${currency}</span>${totalCheck}`;

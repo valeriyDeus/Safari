@@ -1263,16 +1263,10 @@ body {
   align-items: start
 }
 .form-user__password {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-transition: opacity .3s,visibility .3s;
-  transition: opacity .3s,visibility .3s
+  display: none
 }
 .form-user__password.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto
+  display: block
 }
 .form-user__item {
   display: grid;
@@ -4046,7 +4040,7 @@ body {
     width: 50%;
     z-index: 50;
     height: 1.875rem;
-    background-color: #fff;
+    background-color: #f5f5f5;
     -webkit-transform: translate(100%,-50%);
     -ms-transform: translate(100%,-50%);
     transform: translate(100%,-50%);
